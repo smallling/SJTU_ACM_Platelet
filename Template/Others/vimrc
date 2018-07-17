@@ -17,9 +17,9 @@ vmap <C-V> "_d"+p
 nmap <C-A> ggVG
 nmap <C-V> "+p
 
-autocmd filetype cpp map <F9> :w<CR>:!g++ % -std=c++14 -O2 && ./a.out<CR>
-autocmd filetype cpp map <S-F9> :w<CR>:!g++ % -std=c++14 -O2 && time ./a.out < in<CR>
-autocmd filetype cpp map <C-S-F9> :w<CR>:!g++ % -std=c++14 -O2 && time ./a.out < 
+autocmd filetype cpp map <F9> :w<CR>:!g++ % -std=c++14 -Wall -Wextra -O2 && ./a.out<CR>
+autocmd filetype cpp map <S-F9> :w<CR>:!g++ % -std=c++14 -Wall -Wextra -O2 && time ./a.out < in<CR>
+autocmd filetype cpp map <C-S-F9> :w<CR>:!g++ % -std=c++14 -Wall -Wextra -O2 && time ./a.out < 
 
 autocmd filetype python map <F9> :w<CR>:!python %<CR>
 autocmd filetype python map <S-F9> :w<CR>:!time python % < in<CR>
