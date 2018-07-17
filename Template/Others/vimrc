@@ -1,4 +1,7 @@
-" vimrc
+if has("syntax")
+  syntax on
+endif
+
 set number
 set cindent
 set expandtab
@@ -25,3 +28,7 @@ autocmd filetype python map <C-S-F9> :w<CR>:!time python % <
 autocmd filetype java map <F9> :w<CR>:!javac % && java %<<CR>
 autocmd filetype java map <S-F9> :w<CR>:!javac % && time java %< < in<CR>
 autocmd filetype java map <C-S-F9> :w<CR>:!javac % && time java %< < 
+
+autocmd filetype kotlin map <F9> :w<CR>:!cp % TempKotlin.kt && kotlinc TempKotlin.kt && echo "Compilation complete" && kotlin TempKotlinKt<CR>
+autocmd filetype kotlin map <S-F9> :w<CR>:!cp % TempKotlin.kt && kotlinc TempKotlin.kt && echo "Compilation complete" && time kotlin TempKotlinKt < in<CR>
+autocmd filetype kotlin map <C-S-F9> :w<CR>:!cp % TempKotlin.kt && kotlinc TempKotlin.kt && echo "Compilation complete" && time kotlin TempKotlinKt < 
