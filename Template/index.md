@@ -12,9 +12,9 @@
 
     1.5.1 最小割 (text)
 
-    1.5.2 最大流 (ok)
+    1.5.2 最大流 (ok, ct)
 
-    1.5.3 费用流 (ok)
+    1.5.3 费用流 (ok, ct)
 
     1.5.4 有上下界的网络流 (text)
 
@@ -62,7 +62,7 @@
 
   2.3 Miller-Rabin + Rho (empty)
 
-  2.4 FFT (search)
+  2.4 FFT (ok, gy)
 
   2.5 高斯消元 (search)
 
@@ -74,9 +74,9 @@
 
   2.9 中国剩余定理 (search)
 
-  2.10 exgcd (ok)
+  2.10 exgcd (ok, ct, gy)
 
-  2.11 矩阵乘法 (ok)
+  2.11 矩阵乘法 (ok, ct)
 
 #3. Geometry
 
@@ -98,7 +98,7 @@
 
   4.2 AC自动机 (?)
 
-  4.3 后缀数组 (search)
+  4.3 后缀数组 (ok, gy)
 
   4.4 后缀自动机 (?)
 
@@ -148,13 +148,13 @@
 
   6.5 输入输出优化 (?)
   
-  6.7 Java读入优化及常用库 (ok)
+  6.7 Java读入优化及常用库 (ok, gy)
   
-  6.8 Java高精度分数 (kt)
+  6.8 Java高精度分数 (kt, gy)
 
 #7. Config
 
-  7.1 vimvc (gy)
+  7.1 vimvc (ok, gy)
 
 
 
