@@ -1,4 +1,4 @@
-# 1. Graph Theory #
+﻿# 1. Graph Theory #
 
     1.1 欧拉回路 (search)
 
@@ -80,7 +80,7 @@
 
 # 3. Geometry #
 
-    3.1 向量的基本运算
+    3.1 基本点类、直线类 (?, gy)
 
     3.2 凸包
 
@@ -154,7 +154,7 @@
 
 # 7. Config #
 
-    7.1 vimvc (ok, gy)
+    7.1 vimrc (ok, gy)
 
 
 # description #
