@@ -1,4 +1,4 @@
-#1. Graph Theory
+# 1. Graph Theory #
 
     1.1 欧拉回路 (search)
 
@@ -54,7 +54,7 @@
 
     1.13 弦图 (text)
 
-#2. Math
+# 2. Math #
 
     2.1 BSGS (empty)
 
@@ -70,7 +70,7 @@
 
     2.7 伯努利数 (empty)
 
-    2.8 $O(m^2 logn)$求递推式第$n$项 (empty)
+    2.8 O(m^2 logn)求递推式第n项 (empty)
 
     2.9 中国剩余定理 (search)
 
@@ -78,7 +78,7 @@
 
     2.11 矩阵乘法 (ok, ct)
 
-#3. Geometry
+# 3. Geometry #
 
     3.1 向量的基本运算
 
@@ -92,7 +92,7 @@
 
     3.6 最小圆覆盖
 
-#4. String
+# 4. String #
 
     4.1 KMP (?)
 
@@ -108,7 +108,7 @@
 
     4.7 最小表示法 (?)
 
-#5. Data Structure
+# 5. Data Structure #
 
     5.1 莫队 (?)
 
@@ -136,7 +136,7 @@
 
     5.7 cdq分治 (?)
 
-#6. Others
+# 6. Others #
 
     6.1 模拟退火 (search)
 
@@ -152,12 +152,12 @@
   
     6.8 Java高精度分数 (kt, gy)
 
-#7. Config
+# 7. Config #
 
     7.1 vimvc (ok, gy)
 
 
-
+# description #
 * (ok) 代表已经check过代码风格且正确的代码
 * (?) 表示是ct高中的时候写的代码，正确性大体可以保证，但代码风格还未统一。
 * (search) 表示暂时还缺，但找一下就有代码的算法
