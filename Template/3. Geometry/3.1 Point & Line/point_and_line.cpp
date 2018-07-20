@@ -51,9 +51,11 @@ struct point {
     friend point operator /(const point &a, const num &b) {
         return point(a.x / b, a.y / b);
     }
+    // det
     friend num operator *(const point &a, const point &b) {
         return a.x * b.y - a.y * b.x;
     }
+    // dot
     friend num operator ^(const point &a, const point &b) {
         return a.x * b.x + a.y * b.y;
     }
@@ -62,6 +64,15 @@ struct point {
 // AB * AC
 num det(point a, point b, point c) {
     return (b - a) * (c - a);
+}
+
+// AB dot AC
+num dot(point a, point b, point c) {
+    return (b - a) ^ (c - a);
+}
+
+num dis2(point a, point b) {
+    return (b - a).len2();
 }
 
 num dis(point a, point b) {
@@ -90,7 +101,7 @@ bool parallel(line a, line b) {
     return cmp(a.v() * b.v()) == 0;
 }
 
-point intersect(line a, line b) {
+point intersection(line a, line b) {
     num s1 = det(a.a, a.b, b.a);
     num s2 = det(a.a, a.b, b.b);
     return (b.a * s2 - b.b * s1) / (s2 - s1);
