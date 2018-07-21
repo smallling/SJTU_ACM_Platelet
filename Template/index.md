@@ -1,28 +1,28 @@
-﻿# 1. Graph Theory #
+# 1. Graph Theory #
 
-    1.1 欧拉回路 (search)
+    1.1 欧拉回路 (?)
 
-    1.2 堆优化Dijkstra (search)
+    1.2 堆优化Dijkstra (?)
 
-    1.3 差分约束 (search)
+    1.3 差分约束 (text, empty)
 
-    1.4 2-SAT (empty)
+    1.4 2-SAT (ok, ct)
 
     1.5 网络流
 
-        1.5.1 最小割 (text)
+        1.5.1 最小割 (text, empty)
 
         1.5.2 最大流 (ok, ct)
 
         1.5.3 费用流 (ok, ct)
 
-        1.5.4 有上下界的网络流 (text)
+        1.5.4 有上下界的网络流 (text, empty)
 
         1.5.5 zkw费用流 (empty)
 
     1.6 树
 
-        1.6.1 虚树 (search)
+        1.6.1 虚树 (ok,ct)
 
         1.6.2 矩阵树定理 (empty)
 
@@ -45,38 +45,41 @@
     1.10 边双、点双 (?)
 
     1.11 HK算法 (empty)
-    
+
     1.12 支配树
 
-        1.12.1 DAG (search)
+        1.12.1 DAG (?)
 
         1.12.2 一般图 (empty)
 
-    1.13 弦图 (text)
+    1.13 弦图 (text, empty)
 
 # 2. Math #
 
-    2.1 BSGS (empty)
+    2.1 BSGS (?)
 
-    2.2 杜教筛 (empty)
+    2.2 杜教筛 (ok, ct)
 
     2.3 Miller-Rabin + Rho (empty)
 
-    2.4 FFT (ok, gy)
+    2.4 FFT (ok, gy, ct)
 
-    2.5 高斯消元 (search)
+    2.5 高斯消元 (ok, ct)
 
-    2.6 拉格朗日插值 (search)
+    2.6 拉格朗日插值 (ok, ct)
 
     2.7 伯努利数 (empty)
 
     2.8 O(m^2 logn)求递推式第n项 (empty)
 
-    2.9 中国剩余定理 (search)
+    2.9 中国剩余定理 (empty)
 
     2.10 exgcd (ok, ct, gy)
 
     2.11 矩阵乘法 (ok, ct)
+```
+2.12 Lucas (?)
+```
 
 # 3. Geometry #
 
@@ -84,15 +87,15 @@
 
     3.2 圆相关 (?, gy)
 
-    3.3 凸包
+    3.3 凸包 (?, ct)
 
-    3.4 半平面交
+    3.4 半平面交 (empty)
 
-    3.5 旋转卡壳
+    3.5 旋转卡壳 (empty)
 
-    3.6 自适应辛普森积分
+    3.6 自适应辛普森积分 (?)
 
-    3.7 最小圆覆盖
+    3.7 最小圆覆盖 (?)
 
 # 4. String #
 
@@ -100,13 +103,13 @@
 
     4.2 AC自动机 (?)
 
-    4.3 后缀数组 (ok, gy)
+    4.3 后缀数组 (ok, gy, ct)
 
     4.4 后缀自动机 (?)
 
-    4.5 manacher (search)
+    4.5 manacher (?)
 
-    4.6 回文自动机 (search)
+    4.6 回文自动机 (?)
 
     4.7 最小表示法 (?)
 
@@ -114,9 +117,9 @@
 
     5.1 莫队 (?)
 
-    5.2 ST表 (search)
+    5.2 ST表 (ok, ct)
 
-    5.3 可并堆 (search)
+    5.3 可并堆 (ok, ct)
 
     5.4 线段树
 
@@ -140,18 +143,18 @@
 
 # 6. Others #
 
-    6.1 模拟退火 (search)
+    6.1 模拟退火 (ok, ct)
 
-    6.2 三分 (search)
+    6.2 三分 (ok, ct)
 
     6.3 单纯形 (empty)
 
     6.4 积分表 (text)
 
     6.5 输入输出优化 (?)
-  
+
     6.7 Java读入优化及常用库 (ok, gy)
-  
+
     6.8 Java高精度分数 (kt, gy)
 
 # 7. Config #
