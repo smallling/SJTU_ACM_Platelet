@@ -7,12 +7,12 @@ num sqr(num x) {
     return x * x;
 }
 
-int cmp(num x) {
+int sgn(num x) {
     return (x > eps) - (x < -eps);
 }
 
-int cmp(num x, num y) {
-    return cmp(x - y);
+int sgn(num x, num y) {
+    return sgn(x - y);
 }
 
 struct point {
@@ -37,7 +37,7 @@ struct point {
     }
 
     friend bool operator ==(const point &a, const point &b) {
-        return !cmp(a.x, b.x) && !cmp(a.y, b.y);
+        return !sgn(a.x, b.x) && !sgn(a.y, b.y);
     }
     friend point operator +(const point &a, const point &b) {
         return point(a.x + b.x, a.y + b.y);
@@ -90,15 +90,15 @@ struct line {
 };
 
 bool onLine(point p, line l) {
-    return cmp((l.a - p) * (l.b - p)) == 0;
+    return sgn((l.a - p) * (l.b - p)) == 0;
 }
 
 bool onSeg(point p, line l) {
-    return onLine(p, l) && cmp((l.b - l.a) ^ (p - l.a)) >= 0 && cmp((l.a - l.b) ^ (p - l.b)) >= 0;
+    return onLine(p, l) && sgn((l.b - l.a) ^ (p - l.a)) >= 0 && sgn((l.a - l.b) ^ (p - l.b)) >= 0;
 }
 
 bool parallel(line a, line b) {
-    return cmp(a.v() * b.v()) == 0;
+    return sgn(a.v() * b.v()) == 0;
 }
 
 point intersection(line a, line b) {
