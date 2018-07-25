@@ -5,15 +5,20 @@
 struct circle {
     point o;
     num r;
-
-    explicit circle(point o = point(), num r = 0) : o(o), r(r) {}
+    // from center and radium
+    explicit circle(point o = point(), num r = 0) : o(o), r(r) {
+    }
+    // from diameter
+    explicit circle(line l) {
+        o = (l.a + l.b) / 2;
+        r = l.len() / 2;
+    }
 };
 
-// 1: in    0: on    -1: out of
+// 1: in    0: on   -1: out of
 int inCircle(const point &p, const circle &c) {
     return sgn(sqr(c.r), dis2(p, c.o));
 }
-
 // 1: in    0: intersect    -1: out of
 int segInCircle(const line &l, const circle &c) {
     int in1 = inCircle(l.a, c);
@@ -30,7 +35,10 @@ int segInCircle(const line &l, const circle &c) {
         return 0;
     return -1;
 }
-
+// 1: two   0: tangent  -1: no
+int hasIntersection(const circle &a, const line &l) {
+    return sgn(a.r, dis(a.o, l));
+}
 bool intersect(const circle &a, const line &l, point &p1, point &p2) {
     num x = ((l.a - a.o) ^ (l.b - l.a));
     num y = (l.b - l.a).len2();
@@ -44,7 +52,6 @@ bool intersect(const circle &a, const line &l, point &p1, point &p2) {
     p2 = p - delta;
     return true;
 }
-
 // connot handle coincident circle
 bool intersect(const circle &a, const circle &b, point &p1, point &p2) {
     num s1 = (a.o - b.o).len();
@@ -61,7 +68,6 @@ bool intersect(const circle &a, const circle &b, point &p1, point &p2) {
     p2 = o - delta;
     return true;
 }
-
 bool tangentPoint(const point &p0, const circle &c, point &p1, point &p2) {
     num x = (p0 - c.o).len2();
     num d = x - sqr(c.r);
@@ -73,9 +79,11 @@ bool tangentPoint(const point &p0, const circle &c, point &p1, point &p2) {
     p2 = c.o + p - delta;
     return true;
 }
-
 std::vector<line> exTangentLine(const circle &c1, const circle &c2) {
     std::vector<line> ans = std::vector<line>();
+    int status = sgn(dis(c1.o, c2.o), std::abs(c1.r - c2.r));
+    if (status < 0)
+        return ans;
     if (sgn(c1.r - c2.r) == 0) {
         point dir = c2.o - c1.o;
         dir = (dir * (c1.r / dir.len())).turn90();
@@ -83,6 +91,10 @@ std::vector<line> exTangentLine(const circle &c1, const circle &c2) {
         ans.push_back(line(c1.o - dir, c2.o - dir));
     } else {
         point p = (c2.o * c1.r - c1.o * c2.r) / (c1.r - c2.r);
+        if (status == 0) {
+            ans.push_back(line(p, p + (c1.o - p).turn90()));
+            return ans;
+        }
         point p1, p2, q1, q2;
         if (tangentPoint(p, c1, p1, p1) && tangentPoint(p, c2, q1, q2)) {
             ans.push_back(line(p1, q1));
@@ -91,10 +103,16 @@ std::vector<line> exTangentLine(const circle &c1, const circle &c2) {
     }
     return ans;
 }
-
 std::vector<line> inTangentLine(const circle &c1, const circle &c2) {
     std::vector<line> ans = std::vector<line>();
+    int status = sgn(dis(c1.o, c2.o), c1.r + c2.r);
+    if (status < 0)
+        return ans;
     point p = (c2.o * c1.r + c1.o * c2.r) / (c1.r + c2.r);
+    if (status == 0) {
+        ans.push_back(line(p, p + (c1.o - p).turn90()));
+        return ans;
+    }
     point p1, p2, q1, q2;
     if (tangentPoint(p, c1, p1, p2) && tangentPoint(p, c2, q1, q2)) {
         ans.push_back(line(p1, q1));
@@ -102,5 +120,7 @@ std::vector<line> inTangentLine(const circle &c1, const circle &c2) {
     }
     return ans;
 }
-
-// unchecked
+// tangentLine of circle c passing p, which is on the circle
+line tangentLine(const point &p, const circle &c) {
+    return line(p, p + (c.o - p).turn90());
+}
