@@ -1,7 +1,7 @@
 #include <cmath>
 
 using num = long double;
-const num eps = 1e-6;
+const num eps = 1e-10;
 
 num sqr(num x) {
     return x * x;
@@ -16,14 +16,14 @@ struct point {
     num x, y;
     explicit point(num x = 0, num y = 0) : x(x), y(y) {
     }
-    
+
     num len2() const {
         return sqr(x) + sqr(y);
     }
     num len() const {
         return std::sqrt(len2());
     }
-    // counterclockwis rotate
+    // counterclockwise rotate
     point turn90() const {
         return point(-y, x);
     }
@@ -89,6 +89,9 @@ num dis(const point &a, const point &b) {
 bool onLine(const point &p, const line &l) {
     return sgn((l.a - p) * (l.b - p)) == 0;
 }
+bool onLeft(const point &p, const line &l) {
+    return sgn(l.v() * (p - l.a)) > 0;
+}
 bool onSeg(const point &p, const line &l) {
     return onLine(p, l) && sgn(l.v() ^ (p - l.a)) >= 0 && sgn(l.v() ^ (p - l.b)) >= 0;
 }
@@ -106,7 +109,7 @@ bool coincident(const line &a, const line &b) {
 point projection(const point &p, const line &l) {
     return l.a + l.v() * ((p - l.a) ^ l.v()) / l.v().len2();
 }
-num dis(const point p, const line l) {
+num dis(const point &p, const line &l) {
     return std::abs((p - l.a) * l.v()) / l.v().len();
 }
 
