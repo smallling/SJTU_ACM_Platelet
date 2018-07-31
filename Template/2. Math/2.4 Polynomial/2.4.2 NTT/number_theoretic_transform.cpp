@@ -1,4 +1,4 @@
-/* fast_fourier transform */
+/* number_theoretic_transform */
 /*
  * Set $N to be at least ${(n+m)*2}
  * Call ntt_main($a, $b, $n, $m) where $n and $m stand for the number of terms of the
