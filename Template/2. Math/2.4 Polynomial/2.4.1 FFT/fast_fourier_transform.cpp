@@ -1,9 +1,9 @@
 /* fast_fourier transform */
 /*
  * Set $N to be at least ${(n+m)*2}
- * Call fft_main($a, $b, $n, $m) where $n and $m stand for the exponents of the
- *     two polymials, while $a and $b represent the two polymials 0-based, to
- *     get the 0-based result polymial.
+ * Call fft_main($a, $b, $n, $m) where $n and $m stand for the number of terms of the
+ *     two polynomials, while $a and $b represent the two polynomials 0-based, to
+ *     get the 0-based result polynomial.
  * Reset $a and $b from 0 to at least ${(n+m)*2} to prevent undefined behavior
  *     caused by multiple test cases.
  */
@@ -58,7 +58,7 @@ namespace fast_fourier_transform {
         static int nn, len;
         static comp aa[N], bb[N];
         len = 0;
-        for (nn = 1; nn <= m + n; nn <<= 1)
+        for (nn = 1; nn < m + n; nn <<= 1)
             len++;
         for (int i = 0; i < nn; i++) {
             aa[i] = comp(a[i], 0);
@@ -88,7 +88,7 @@ int main() {
         scanf("%d", a + i);
     for (int i = 0; i <= m; i++)
         scanf("%d", b + i);
-    ans = fast_fourier_transform::fft_main(a, b, n, m);
+    ans = fast_fourier_transform::fft_main(a, b, n + 1, m + 1);
     printf("%d", ans[0]);
     for (int i = 1; i <= n + m; i++)
         printf(" %d", ans[i]);

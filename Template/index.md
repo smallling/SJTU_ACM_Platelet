@@ -9,31 +9,19 @@
     1.4 2-SAT (ok, ct)
 
     1.5 网络流
-
         1.5.1 最小割 (text, empty)
-
         1.5.2 最大流 (ok, ct)
-
         1.5.3 费用流 (ok, ct)
-
         1.5.4 有上下界的网络流 (text, empty)
-
         1.5.5 zkw费用流 (empty)
 
     1.6 树
-
         1.6.1 虚树 (ok,ct)
-
         1.6.2 矩阵树定理 (empty)
-
         1.6.3 点分治 (?)
-
         1.6.4 prufer编码 (empty)
-
         1.6.5 link-cut tree (?)
-
         1.6.6 树上倍增 (empty)
-
         1.6.7 树链剖分 (?)
 
     1.7 仙人掌 (empty)
@@ -47,9 +35,7 @@
     1.11 HK算法 (empty)
 
     1.12 支配树
-
         1.12.1 DAG (?)
-
         1.12.2 一般图 (empty)
 
     1.13 弦图 (text, empty)
@@ -62,7 +48,10 @@
 
     2.3 Miller-Rabin + Rho (empty)
 
-    2.4 FFT (ok, gy, ct)
+    2.4 多项式
+        2.4.1 FTT (ok, gy, ct)
+        2.4.2 NTT (ok, gy)
+        2.4.3 多项式求逆 (empty)
 
     2.5 高斯消元 (ok, ct)
 
@@ -123,19 +112,13 @@
     5.3 可并堆 (ok, ct)
 
     5.4 线段树
-
         5.4.1 ZKW线段树 (?)
-
-    5.4.2 可持久化线段树 (?)
+        5.4.2 可持久化线段树 (?)
 
     5.5 平衡树
-
         5.5.1 splay (?)
-
         5.5.2 treap (?)
-
         5.5.3 可持久化treap (?)
-
         5.5.4 替罪羊树 (empty)
 
     5.6 KD-tree (empty)
