@@ -46,7 +46,7 @@
 
     2.2 杜教筛 (ok, ct)
 
-    2.3 Miller-Rabin + Rho (empty)
+    2.3 Miller-Rabin + Rho (ok, gy)
 
     2.4 多项式
         2.4.1 FTT (ok, gy, ct)
@@ -85,7 +85,7 @@
 
     3.7 最小圆覆盖 (?)
     
-    3.8 V Graph
+    3.8 V Graph (empty)
 
 # 4. String #
 
@@ -133,23 +133,22 @@
 
     6.3 单纯形 (empty)
 
-    6.4 积分表 (text)
+    6.4 积分表 (text, empty)
 
     6.5 输入输出优化 (?)
 
-    6.7 Java读入优化及常用库 (ok, gy)
+    6.7 Java Hints (java, ok, gy)
 
-    6.8 Java高精度分数 (kt, gy)
+    6.8 高精度分数 (kt, ok, gy)
 
 # 7. Config #
 
-    7.1 vimrc (ok, gy)
+    7.1 vimrc (text, ok, gy)
 
 
-# description #
-* (ok) 代表已经check过代码风格且正确的代码
-* (?) 表示是ct高中的时候写的代码，正确性大体可以保证，但代码风格还未统一。
-* (search) 表示暂时还缺，但找一下就有代码的算法
-* (empty) 表示暂时还缺，目前也不会的算法
-* (text) 表示这类将以或已经以文本的方式给出
-* (kt) 表示暂时用Kotlin代码替代Java代码（因为gy很懒）
+# Description #
+* (ok) 表示正确的部分
+* (\?) 表示待check的部分
+* (empty) 表示暂缺的部分
+* (text|java|kt) 表示这部分以非c++代码的形式给出
+* ((ct|gy)*) 表示这部分的给出者，存在多个表示有多份代码
