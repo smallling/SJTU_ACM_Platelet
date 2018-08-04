@@ -68,6 +68,8 @@
     2.11 矩阵乘法 (ok, ct)
     
     2.12 Lucas (?)
+    
+    2.13 常用数列及定理 (text, updating, gy)
 
 # 3. Geometry #
 
@@ -140,6 +142,8 @@
     6.7 Java Hints (java, ok, gy)
 
     6.8 高精度分数 (kt, ok, gy)
+    
+    6.9 博弈论模型 (text, updating, gy)
 
 # 7. Config #
 
@@ -152,3 +156,4 @@
 * (empty) 表示暂缺的部分
 * (text|java|kt) 表示这部分以非c++代码的形式给出
 * ((ct|gy)*) 表示这部分的给出者，存在多个表示有多份代码
+* (updating) 表示这个部分可能会有更新
