@@ -1,0 +1,41 @@
+" Essence
+se cin et ts=4 sw=4 sts=4 nu sc sm lbr mouse=a popt=duplex:off is hls
+ino <Tab> <C-N>
+ino <S-Tab> <Tab>
+au filetype cpp se mp=g++\ %\ -std=c++14\ -Wall\ -Wextra\ -O2
+au filetype cpp cm <F5> g++ % -std=c++14 -Wall -Wextra -O2
+au filetype cpp cm <S-F5> ./a.out
+nm <F7> :w<CR>:make<CR>:cl<CR>
+nm <F9> :w<CR>:!<F5> && <S-F5><CR>
+nm <S-F9> :w<CR>:!<F5> && time <S-F5> < in<CR>
+nm <C-S-F9> :w<CR>:!<F5> &> out && echo "" >> out && (time <S-F5> < in &>> out) &>> out<CR><C-T>out<CR><S-F11>-20<CR>/error<CR>
+
+" Advanced
+se si stl=%{strftime('%H:%M:%S')}\ %t\ %03.l\ %03.c\ [%{&ft}]\ [%{&enc}]\ %F\ %m fcs=stl:\  ls=2 spr
+nm <C-A> ggVG
+nm <C-V> aa<Esc>v<C-V>
+vm <C-A> <Esc><C-A>
+vm <C-X> "+d
+vm <C-C> "+y
+vm <C-V> "+p
+im <C-V> a<Esc>v<C-V>a
+map <C-P> :ha<CR>
+nm <F12> :x<CR>
+nm <S-F12> <C-W>l:q<CR>
+nm <C-T> :vs 
+nm <S-F11> :vert res 
+sy on
+cno <C-T> syntax keyword Type <C-R><C-W>
+au filetype cpp,java se fdm=syntax
+nm <SPACE> za
+
+" Non-C++ languages
+au filetype java se mp=javac\ %
+au filetype java cm <F5> javac %
+au filetype java cm <S-F5> java %<
+au filetype python cm <F5> echo -n
+au filetype python cm <S-F5> python %
+au filetype kotlin cm <F5> cp % TempKotlin.kt && kotlinc TempKotlin.kt
+au filetype kotlin cm <S-F5> kotlin TempKotlinKt
+au filetype sh cm <F5> chmod +x %
+au filetype sh cm <S-F5> ./%
