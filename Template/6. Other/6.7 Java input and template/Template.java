@@ -56,7 +56,7 @@ public class Template {
         // if scale omitted, b.scale is used
         BigDecimal d = c.divide(b, 50, RoundingMode.HALF_EVEN);
         // since Java 9
-        // BigDecimal e = d.sqrt(new MathContext(50, RoundingMode.HALF_EVEN));
+        BigDecimal e = d.sqrt(new MathContext(50, RoundingMode.HALF_EVEN));
         BigDecimal x = new BigDecimal(BigInteger.ZERO);
         BigInteger y = BigDecimal.ZERO.toBigInteger(); // RoundingMode.DOWN
         y = BigDecimal.ZERO.setScale(0, RoundingMode.HALF_EVEN).unscaledValue();
