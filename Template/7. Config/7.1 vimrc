@@ -4,7 +4,7 @@ ino <tab> <c-n>
 ino <s-tab> <tab>
 au winnew * winc L
 
-nm <f6> ggvg"+y
+nm <f6> ggVG"+y
 nm <f7> :w<cr>:make<cr>
 nm <f8> :!@@<cr>
 nm <f9> :!@@ < in<cr>
