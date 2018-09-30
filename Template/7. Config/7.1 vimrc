@@ -18,4 +18,4 @@ se pheader=%n\ %f
 au filetype java cm @@ java %< | se cin fdm=syntax mp=javac\ %
 au filetype python cm @@ python % | se si fdm=indent
 au bufenter *.kt setf kotlin
-au filetype kotlin cm @@ kotlin _%<Kt | se mp=kotlinc\ %
+au filetype kotlin cm @@ kotlin _%<Kt | se si mp=kotlinc\ %
