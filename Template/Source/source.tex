@@ -1,0 +1,25 @@
+\documentclass[a4page]{book}
+\usepackage[cache=false]{minted}
+\usepackage{xeCJK}
+\usepackage{geometry}
+\begin{document}
+	\begin{titlepage}
+		\newgeometry{margin=3cm}
+		\centering
+		\vspace*{\stretch{1}}
+		\Huge Platelet\\
+		\vspace{\stretch{0.5}}
+		\normalsize Team Reference Material\\
+		\vspace{\stretch{1}}
+		\begin{tabular}{l|l|l}
+			凌皓煜 & 陈彤 & 顾逸
+		\end{tabular}
+	\end{titlepage}
+	\tableofcontents
+	\input{graph_theory.tex}
+	\input{math.tex}
+	\input{geometry.tex}
+	\input{string.tex}
+	\input{data_structure.tex}
+	\input{others.tex}
+\end{document}
