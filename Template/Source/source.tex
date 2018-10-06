@@ -1,0 +1,43 @@
+\documentclass[titlepage, a4page, openany]{book}
+\usepackage[cache=false]{minted}
+\usepackage{xeCJK}
+\usepackage{geometry}
+\usepackage{titlesec}
+\geometry{a4paper,scale=0.8}
+\setminted[cpp]{
+	linenos,numbersep=1mm,
+	fontsize=\small,
+	frame=single,framesep=1mm,framerule=1pt,
+	breaklines=true,breaksymbolsepleft=2pt,breakbytoken=false
+}
+\setminted[java]{
+	linenos,numbersep=1mm,
+	fontsize=\small,
+	frame=single,framesep=1mm,framerule=3pt,
+	breaklines=true,breaksymbolsepleft=2pt,breakbytoken=false
+}
+\setminted[kotlin]{
+	linenos,numbersep=1mm,
+	fontsize=\small,
+	frame=single,framesep=1mm,framerule=3pt,
+	breaklines=true,breaksymbolsepleft=2pt,breakbytoken=false
+}
+\setminted[vim]{
+	linenos,numbersep=1mm,
+	fontsize=\small,
+	frame=single,framesep=1mm,framerule=3pt,
+	breaklines=true,breaksymbolsepleft=2pt,breakbytoken=false
+}
+\title{\Huge{Platelet}\\[2ex]\Large{Team Reference Material}}
+\author{凌皓煜\ 陈彤\ 顾逸}
+\date{2018}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\input{graph_theory.tex}
+	\input{math.tex}
+	\input{geometry.tex}
+	\input{string.tex}
+	\input{data_structure.tex}
+	\input{others.tex}
+\end{document}
