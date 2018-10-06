@@ -1,20 +1,38 @@
-\documentclass[a4page]{book}
+\documentclass[titlepage, a4page, openany]{book}
 \usepackage[cache=false]{minted}
 \usepackage{xeCJK}
 \usepackage{geometry}
+\usepackage{titlesec}
+\geometry{a4paper,scale=0.8}
+\setminted[cpp]{
+	linenos,numbersep=1mm,
+	fontsize=\small,
+	frame=single,framesep=1mm,framerule=1pt,
+	breaklines=true,breaksymbolsepleft=2pt,breakbytoken=false
+}
+\setminted[java]{
+	linenos,numbersep=1mm,
+	fontsize=\small,
+	frame=single,framesep=1mm,framerule=3pt,
+	breaklines=true,breaksymbolsepleft=2pt,breakbytoken=false
+}
+\setminted[kotlin]{
+	linenos,numbersep=1mm,
+	fontsize=\small,
+	frame=single,framesep=1mm,framerule=3pt,
+	breaklines=true,breaksymbolsepleft=2pt,breakbytoken=false
+}
+\setminted[vim]{
+	linenos,numbersep=1mm,
+	fontsize=\small,
+	frame=single,framesep=1mm,framerule=3pt,
+	breaklines=true,breaksymbolsepleft=2pt,breakbytoken=false
+}
+\title{\Huge{Platelet}\\[2ex]\Large{Team Reference Material}}
+\author{凌皓煜\ 陈彤\ 顾逸}
+\date{2018}
 \begin{document}
-	\begin{titlepage}
-		\newgeometry{margin=3cm}
-		\centering
-		\vspace*{\stretch{1}}
-		\Huge Platelet\\
-		\vspace{\stretch{0.5}}
-		\normalsize Team Reference Material\\
-		\vspace{\stretch{1}}
-		\begin{tabular}{l|l|l}
-			凌皓煜 & 陈彤 & 顾逸
-		\end{tabular}
-	\end{titlepage}
+	\maketitle
 	\tableofcontents
 	\input{graph_theory.tex}
 	\input{math.tex}
