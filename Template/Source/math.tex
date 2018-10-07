@@ -1,12 +1,14 @@
 \chapter{Math}
 \section{int64相乘取模}
-\section{扩展欧几里得}
+\section{扩展欧几里得\ \small(gy)}
+\inputminted{cpp}{Math/extend_gcd.cpp}
 \section{中国剩余定理}
 \section{组合数}
 \subsection{Lucas定理}
 \subsection{组合数合数取模}
 \section{高斯消元}
-\section{Miller\ Rabin\ \&\ Pollard\ Rho}
+\section{Miller\ Rabin\ \&\ Pollard\ Rho\ \small(gy)}
+\inputminted{cpp}{Math/miller_rabin_and_pollard_rho.cpp}
 \section{$ O(m ^ 2 \log n) $线性递推}
 \section{Polynomial}
 \subsection{FFT}
@@ -20,8 +22,11 @@
 \section{单纯形}
 \section{辛普森积分}
 \section{常用数列定理}
-\subsection{第一类斯特林数}
-\subsection{第二类斯特林数}
-\subsection{卡特兰数}
-\subsection{伯努利数}
+\begin{itemize}
+	\item 第一类Stirling Number
+	\item 第二类Stirling Number
+	\item Catalan Number\\$ c_n $表示长度为$ 2n $的合法括号序的数量\\$ c_1 = 1 $, $ c_{n+1} = \sum\limits_{i=1}^{n} c_i \times c_{n + 1 - i} $\\$ c_n = \frac{\binom{2n}{n}}{n + 1} $
+	\item Bell Number
+	\item Bernoulli Number
+\end{itemize}
 \section{积分表}

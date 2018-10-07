@@ -36,14 +36,3 @@ inline T solve(T a, T b, T p) {
     b = (b % p + p) % p;
     return solve_equ(a, p, b);
 }
-
-// Test "local test" passed
-#include <cstdio>
-int main() {
-    int x, y, res = extend_gcd(16, 36, x, y);
-    printf("%d %d %d\n", res, x, y);
-    printf("%d\n", solve_equ(16, 36, 1));
-    printf("%d\n", solve_equ(16, 36, 100));
-    printf("%d\n", solve(16, 100, 36));
-    return 0;
-}
