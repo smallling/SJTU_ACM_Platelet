@@ -1,6 +1,3 @@
-#include <cmath>
-#include <algorithm>
-
 using number = long double;
 const number eps = 1e-8;
 
