@@ -1,8 +1,3 @@
-#include <cstdio>
- 
-#define dmax(_a, _b) ((_a) > (_b) ? (_a) : (_b))
- 
-#define maxn 200010
 int a[maxn], f[20][maxn], n;
 int Log[maxn];
  
