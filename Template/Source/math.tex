@@ -1,8 +1,14 @@
 \chapter{Math}
-\section{int64相乘取模}
+\section{int64相乘取模\ \small(Durandal)}
+\inputminted{cpp}{Math/int64_multiply_mod.cpp}
 \section{扩展欧几里得\ \small(gy)}
 \inputminted{cpp}{Math/extend_gcd.cpp}
-\section{中国剩余定理}
+\section{中国剩余定理\ \small(Durandal)}
+返回是否可行，余数和模数结果为$ r_1 $, $ m_1 $
+\inputminted{cpp}{Math/chinese_remainder_theorem.cpp}
+\section{线性同余不等式\ \small(Durandal)}
+必须满足$ 0 \leq d < m $, $ 0 \leq l \leq r < m $，返回$ \min\lbrace x \geq 0 | l \leq x \cdot d \mod m \leq r \rbrace $，无解返回$ -1 $ 
+\inputminted{cpp}{Math/linear_congruence_inequality.cpp}
 \section{组合数}
 \subsection{Lucas定理}
 \subsection{组合数合数取模}
@@ -18,7 +24,9 @@
 \section{BSGS}
 \subsection{BSGS}
 \subsection{扩展BSGS}
-\section{直线下整点个数}
+\section{直线下整点个数\ \small(gy)}
+必须满足$ a \geq 0 $, $ b \geq 0 $, $ m > 0 $，返回$ \sum\limits_{i=0}^{n-1} \frac{a + bi}{m} $
+\inputminted{cpp}{Math/points_below_line.cpp}
 \section{单纯形}
 \section{辛普森积分}
 \section{常用数列定理}

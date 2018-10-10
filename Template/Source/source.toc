@@ -1,98 +1,98 @@
 \contentsline {chapter}{\numberline {1}Graph Theory}{5}
-\contentsline {section}{\numberline {1.1}Dijkstra}{6}
-\contentsline {section}{\numberline {1.2}2-SAT}{6}
-\contentsline {section}{\numberline {1.3}双连通分量}{6}
-\contentsline {subsection}{\numberline {1.3.1}点双连通分量}{6}
-\contentsline {subsection}{\numberline {1.3.2}边双连通分量}{6}
-\contentsline {section}{\numberline {1.4}K短路}{6}
-\contentsline {section}{\numberline {1.5}最大团}{6}
-\contentsline {section}{\numberline {1.6}一般图最大匹配}{6}
-\contentsline {section}{\numberline {1.7}树}{6}
-\contentsline {subsection}{\numberline {1.7.1}虚树}{6}
-\contentsline {subsection}{\numberline {1.7.2}矩阵树定理}{6}
-\contentsline {subsection}{\numberline {1.7.3}点分治}{6}
-\contentsline {subsection}{\numberline {1.7.4}Prufer编码}{6}
-\contentsline {subsection}{\numberline {1.7.5}Link-Cut\ Tree}{6}
-\contentsline {subsection}{\numberline {1.7.6}树上倍增}{6}
-\contentsline {subsection}{\numberline {1.7.7}数链剖分}{6}
-\contentsline {section}{\numberline {1.8}仙人掌}{6}
-\contentsline {section}{\numberline {1.9}带花树}{6}
-\contentsline {section}{\numberline {1.10}KM算法}{6}
-\contentsline {section}{\numberline {1.11}支配树}{6}
-\contentsline {subsection}{\numberline {1.11.1}DAG}{6}
-\contentsline {subsection}{\numberline {1.11.2}一般图}{6}
-\contentsline {section}{\numberline {1.12}弦图}{6}
-\contentsline {section}{\numberline {1.13}网络流}{6}
-\contentsline {subsection}{\numberline {1.13.1}最小割}{6}
-\contentsline {subsection}{\numberline {1.13.2}最大流}{6}
-\contentsline {subsection}{\numberline {1.13.3}费用流}{6}
-\contentsline {subsection}{\numberline {1.13.4}有上下界的网络流}{6}
-\contentsline {subsection}{\numberline {1.13.5}zkw费用流}{6}
-\contentsline {section}{\numberline {1.14}差分约束}{6}
+\contentsline {section}{\numberline {1.1}2-SAT}{6}
+\contentsline {section}{\numberline {1.2}双连通分量}{6}
+\contentsline {subsection}{\numberline {1.2.1}点双连通分量}{6}
+\contentsline {subsection}{\numberline {1.2.2}边双连通分量}{6}
+\contentsline {section}{\numberline {1.3}K短路}{6}
+\contentsline {section}{\numberline {1.4}最大团}{6}
+\contentsline {section}{\numberline {1.5}一般图最大匹配}{6}
+\contentsline {section}{\numberline {1.6}树}{6}
+\contentsline {subsection}{\numberline {1.6.1}虚树}{6}
+\contentsline {subsection}{\numberline {1.6.2}矩阵树定理}{6}
+\contentsline {subsection}{\numberline {1.6.3}点分治}{6}
+\contentsline {subsection}{\numberline {1.6.4}Prufer编码}{6}
+\contentsline {subsection}{\numberline {1.6.5}Link-Cut\ Tree}{6}
+\contentsline {subsection}{\numberline {1.6.6}树上倍增}{6}
+\contentsline {subsection}{\numberline {1.6.7}数链剖分}{6}
+\contentsline {section}{\numberline {1.7}仙人掌}{6}
+\contentsline {section}{\numberline {1.8}带花树}{6}
+\contentsline {section}{\numberline {1.9}KM算法}{6}
+\contentsline {section}{\numberline {1.10}支配树}{6}
+\contentsline {subsection}{\numberline {1.10.1}DAG}{6}
+\contentsline {subsection}{\numberline {1.10.2}一般图}{6}
+\contentsline {section}{\numberline {1.11}弦图}{6}
+\contentsline {section}{\numberline {1.12}网络流}{6}
+\contentsline {subsection}{\numberline {1.12.1}最小割}{6}
+\contentsline {subsection}{\numberline {1.12.2}最大流}{6}
+\contentsline {subsection}{\numberline {1.12.3}费用流}{6}
+\contentsline {subsection}{\numberline {1.12.4}有上下界的网络流}{6}
+\contentsline {subsection}{\numberline {1.12.5}zkw费用流}{6}
+\contentsline {section}{\numberline {1.13}差分约束}{6}
 \contentsline {chapter}{\numberline {2}Math}{7}
-\contentsline {section}{\numberline {2.1}int64相乘取模}{7}
+\contentsline {section}{\numberline {2.1}int64相乘取模\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (Durandal)}{7}
 \contentsline {section}{\numberline {2.2}扩展欧几里得\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{7}
-\contentsline {section}{\numberline {2.3}中国剩余定理}{8}
-\contentsline {section}{\numberline {2.4}组合数}{8}
-\contentsline {subsection}{\numberline {2.4.1}Lucas定理}{8}
-\contentsline {subsection}{\numberline {2.4.2}组合数合数取模}{8}
-\contentsline {section}{\numberline {2.5}高斯消元}{8}
-\contentsline {section}{\numberline {2.6}Miller\ Rabin\ \&\ Pollard\ Rho\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{8}
-\contentsline {section}{\numberline {2.7}$ O(m ^ 2 \qopname \relax o{log}n) $线性递推}{10}
-\contentsline {section}{\numberline {2.8}Polynomial}{10}
-\contentsline {subsection}{\numberline {2.8.1}FFT}{10}
-\contentsline {subsection}{\numberline {2.8.2}NTT\ \&多项式求逆}{10}
-\contentsline {section}{\numberline {2.9}拉格朗日插值}{10}
-\contentsline {section}{\numberline {2.10}杜教筛}{10}
-\contentsline {section}{\numberline {2.11}BSGS}{10}
-\contentsline {subsection}{\numberline {2.11.1}BSGS}{10}
-\contentsline {subsection}{\numberline {2.11.2}扩展BSGS}{10}
-\contentsline {section}{\numberline {2.12}直线下整点个数}{10}
-\contentsline {section}{\numberline {2.13}单纯形}{10}
-\contentsline {section}{\numberline {2.14}辛普森积分}{10}
-\contentsline {section}{\numberline {2.15}常用数列定理}{10}
-\contentsline {section}{\numberline {2.16}积分表}{10}
-\contentsline {chapter}{\numberline {3}Geometry}{11}
-\contentsline {section}{\numberline {3.1}点、直线、圆}{11}
-\contentsline {section}{\numberline {3.2}点到凸包切线}{11}
-\contentsline {section}{\numberline {3.3}直线凸包交点}{11}
-\contentsline {section}{\numberline {3.4}凸包游戏}{11}
-\contentsline {section}{\numberline {3.5}半平面交}{11}
-\contentsline {section}{\numberline {3.6}旋转卡壳}{11}
-\contentsline {section}{\numberline {3.7}判断圆是否有交}{11}
-\contentsline {section}{\numberline {3.8}最小圆覆盖}{11}
-\contentsline {section}{\numberline {3.9}最小球覆盖}{11}
-\contentsline {section}{\numberline {3.10}$ O(n ^ 2 \qopname \relax o{log}n) $圆交面积和重心}{11}
-\contentsline {section}{\numberline {3.11}圆与多边形交}{11}
-\contentsline {section}{\numberline {3.12}$ O(n \qopname \relax o{log}n) $凸多边形内的最大圆}{11}
-\contentsline {section}{\numberline {3.13}三角形的五心}{11}
-\contentsline {section}{\numberline {3.14}三维凸包}{11}
-\contentsline {section}{\numberline {3.15}三维绕轴旋转}{11}
-\contentsline {section}{\numberline {3.16}几何公式}{11}
-\contentsline {chapter}{\numberline {4}String}{12}
-\contentsline {section}{\numberline {4.1}KMP}{12}
-\contentsline {section}{\numberline {4.2}AC自动机}{12}
-\contentsline {section}{\numberline {4.3}后缀数组}{12}
-\contentsline {section}{\numberline {4.4}后缀自动机}{12}
-\contentsline {section}{\numberline {4.5}Manacher}{12}
-\contentsline {section}{\numberline {4.6}回文自动机}{12}
-\contentsline {section}{\numberline {4.7}最小表示法}{12}
-\contentsline {chapter}{\numberline {5}Data Structure}{13}
-\contentsline {section}{\numberline {5.1}莫队\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{13}
-\contentsline {section}{\numberline {5.2}ST表\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{14}
-\contentsline {section}{\numberline {5.3}可并堆\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{15}
-\contentsline {section}{\numberline {5.4}线段树\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{16}
-\contentsline {subsection}{\numberline {5.4.1}ZKW线段树}{16}
-\contentsline {subsection}{\numberline {5.4.2}主席树}{17}
-\contentsline {section}{\numberline {5.5}平衡树\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{18}
-\contentsline {subsection}{\numberline {5.5.1}Splay}{18}
-\contentsline {subsection}{\numberline {5.5.2}非旋转Treap}{21}
-\contentsline {subsection}{\numberline {5.5.3}可持久化平衡树}{24}
-\contentsline {section}{\numberline {5.6}CDQ分治\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{28}
-\contentsline {chapter}{\numberline {6}Others}{31}
-\contentsline {section}{\numberline {6.1}vimrc\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{31}
-\contentsline {section}{\numberline {6.2}Java Template\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{31}
-\contentsline {section}{\numberline {6.3}Big Fraction\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{34}
-\contentsline {section}{\numberline {6.4}模拟退火\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{34}
-\contentsline {section}{\numberline {6.5}三分\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{35}
-\contentsline {section}{\numberline {6.6}博弈论模型\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{36}
+\contentsline {section}{\numberline {2.3}中国剩余定理\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (Durandal)}{8}
+\contentsline {section}{\numberline {2.4}线性同余不等式\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (Durandal)}{8}
+\contentsline {section}{\numberline {2.5}组合数}{8}
+\contentsline {subsection}{\numberline {2.5.1}Lucas定理}{8}
+\contentsline {subsection}{\numberline {2.5.2}组合数合数取模}{8}
+\contentsline {section}{\numberline {2.6}高斯消元}{8}
+\contentsline {section}{\numberline {2.7}Miller\ Rabin\ \&\ Pollard\ Rho\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{8}
+\contentsline {section}{\numberline {2.8}$ O(m ^ 2 \qopname \relax o{log}n) $线性递推}{10}
+\contentsline {section}{\numberline {2.9}Polynomial}{10}
+\contentsline {subsection}{\numberline {2.9.1}FFT}{10}
+\contentsline {subsection}{\numberline {2.9.2}NTT\ \&多项式求逆}{10}
+\contentsline {section}{\numberline {2.10}拉格朗日插值}{10}
+\contentsline {section}{\numberline {2.11}杜教筛}{10}
+\contentsline {section}{\numberline {2.12}BSGS}{10}
+\contentsline {subsection}{\numberline {2.12.1}BSGS}{10}
+\contentsline {subsection}{\numberline {2.12.2}扩展BSGS}{10}
+\contentsline {section}{\numberline {2.13}直线下整点个数\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{10}
+\contentsline {section}{\numberline {2.14}单纯形}{11}
+\contentsline {section}{\numberline {2.15}辛普森积分}{11}
+\contentsline {section}{\numberline {2.16}常用数列定理}{11}
+\contentsline {section}{\numberline {2.17}积分表}{11}
+\contentsline {chapter}{\numberline {3}Geometry}{12}
+\contentsline {section}{\numberline {3.1}点、直线、圆\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{12}
+\contentsline {section}{\numberline {3.2}点到凸包切线}{16}
+\contentsline {section}{\numberline {3.3}直线凸包交点}{16}
+\contentsline {section}{\numberline {3.4}凸包游戏}{16}
+\contentsline {section}{\numberline {3.5}半平面交}{16}
+\contentsline {section}{\numberline {3.6}旋转卡壳}{16}
+\contentsline {section}{\numberline {3.7}判断圆是否有交}{16}
+\contentsline {section}{\numberline {3.8}最小圆覆盖}{16}
+\contentsline {section}{\numberline {3.9}最小球覆盖}{16}
+\contentsline {section}{\numberline {3.10}$ O(n ^ 2 \qopname \relax o{log}n) $圆交面积和重心}{16}
+\contentsline {section}{\numberline {3.11}圆与多边形交}{16}
+\contentsline {section}{\numberline {3.12}$ O(n \qopname \relax o{log}n) $凸多边形内的最大圆}{16}
+\contentsline {section}{\numberline {3.13}三角形的五心}{16}
+\contentsline {section}{\numberline {3.14}三维凸包}{16}
+\contentsline {section}{\numberline {3.15}三维绕轴旋转}{16}
+\contentsline {section}{\numberline {3.16}几何公式}{16}
+\contentsline {chapter}{\numberline {4}String}{17}
+\contentsline {section}{\numberline {4.1}KMP}{17}
+\contentsline {section}{\numberline {4.2}AC自动机}{17}
+\contentsline {section}{\numberline {4.3}后缀数组}{17}
+\contentsline {section}{\numberline {4.4}后缀自动机}{17}
+\contentsline {section}{\numberline {4.5}Manacher}{17}
+\contentsline {section}{\numberline {4.6}回文自动机}{17}
+\contentsline {section}{\numberline {4.7}最小表示法}{17}
+\contentsline {chapter}{\numberline {5}Data Structure}{18}
+\contentsline {section}{\numberline {5.1}莫队\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{18}
+\contentsline {section}{\numberline {5.2}ST表\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{19}
+\contentsline {section}{\numberline {5.3}可并堆\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{20}
+\contentsline {section}{\numberline {5.4}线段树\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{21}
+\contentsline {subsection}{\numberline {5.4.1}ZKW线段树}{21}
+\contentsline {subsection}{\numberline {5.4.2}主席树}{23}
+\contentsline {section}{\numberline {5.5}平衡树\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{26}
+\contentsline {subsection}{\numberline {5.5.1}Splay}{26}
+\contentsline {subsection}{\numberline {5.5.2}非旋转Treap}{28}
+\contentsline {subsection}{\numberline {5.5.3}可持久化平衡树}{32}
+\contentsline {section}{\numberline {5.6}CDQ分治\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{36}
+\contentsline {chapter}{\numberline {6}Others}{39}
+\contentsline {section}{\numberline {6.1}vimrc\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{39}
+\contentsline {section}{\numberline {6.2}Java Template\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{39}
+\contentsline {section}{\numberline {6.3}Big Fraction\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{42}
+\contentsline {section}{\numberline {6.4}模拟退火\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{42}
+\contentsline {section}{\numberline {6.5}三分\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (ct)}{43}
+\contentsline {section}{\numberline {6.6}博弈论模型\ \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip (gy)}{44}

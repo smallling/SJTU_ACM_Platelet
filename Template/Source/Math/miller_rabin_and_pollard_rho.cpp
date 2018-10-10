@@ -15,10 +15,6 @@
  * 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37 / 318,665,857,834,031,151,167,461 (> Long.MAX_VALUE)
  * 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41 / 3,317,044,064,679,887,385,961,981
  */
-#include <cstdint>
-#include <cstdlib>
-#include <vector>
-
 const int test_case_size = 12;
 const int test_cases[test_case_size] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37};
 
@@ -99,18 +95,4 @@ void factorize(int64_t number, std::vector<int64_t> &divisor) {
             factorize(factor, divisor);
         }
     }
-}
-
-#include <cstdio>
-int main() {
-    static int64_t tar;
-    static std::vector<int64_t> factors;
-    while (scanf("%lld", &tar)) {
-        printf("%d\n", miller_rabin(tar));
-        factors.clear();
-        factorize(tar, factors);
-        for (int64_t i : factors)
-            printf("%lld\n", i);
-    }
-    return 0;
 }
