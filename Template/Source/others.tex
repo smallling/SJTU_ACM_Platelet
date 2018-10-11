@@ -1,6 +1,10 @@
 \chapter{Others}
 \section{vimrc\ \small(gy)}
 \inputminted{vim}{Others/.vimrc}
+\section{STL释放内存\ \small(Durandal)}
+\inputminted{cpp}{Others/stl_clear.cpp}
+\section{开栈\ \small(Durandal)}
+\inputminted{cpp}{Others/rsp.cpp}
 \section{Java Template\ \small(gy)}
 \inputminted{java}{Others/Template.java}
 \section{Big Fraction\ \small(gy)}
@@ -13,4 +17,21 @@
 \begin{itemize}
 	\item Wythoff's game\\给定两堆石子，每次可以从任意一堆中取至少一个石子，或从两堆中取相同的至少一个石子，取走最后石子的胜\\先手胜当且仅当石子数满足：\\$\lfloor (b - a) \times \phi \rfloor=a, (a \leq b, \phi = \frac{\sqrt{5} + 1}{2})$\\先手胜对应的石子数构成两个序列：\\Lower Wythoff sequence: $a_n = \lfloor n \times \phi \rfloor$\\Upper Wythoff sequence: $b_n = \lfloor n \times \phi ^ 2 \rfloor$
 	\item Fibonacci nim\\给定一堆石子，第一次可以取至少一个、少于石子总数数量的石子，之后每次可以取至少一个、不超过上次取石子数量两倍的石子，取走最后石子的胜\\先手胜当且仅当石子数为斐波那契数
+\end{itemize}
+\section{积分表}
+\begin{itemize}
+	\item $ a^x \to \frac{a^x}{\ln a} $
+	\item $ \sin x \to - \cos x $
+	\item $ \cos x \to \sin x $
+	\item $ \tan x \to - \ln \cos x $
+	\item $ \sec x \to \ln \tan (\frac{x}{2} + \frac{\pi}{4}) $
+	\item $ \csc x \to \ln \tan \frac{x}{2}$
+	\item $ \sin^2 x \to \frac{x}{2} - \frac{1}{2} \sin x \cos x $
+	\item $ \cos^2 x \to \frac{x}{2} + \frac{1}{2} \sin x \cos x $
+	\item $ \tan^2 x \to \tan x - x $
+	\item $ \sec^2 x \to \tan x $
+	\item $ \csc^2 x \to - \tan x $
+	\item $ \arcsin x \to \frac{1}{\sqrt{1 - x^2}} $
+	\item $ \arccos x \to - \frac{1}{\sqrt{1 - x^2}} $
+	\item $ \arctan x \to \frac{1}{1 + x^2} $
 \end{itemize}

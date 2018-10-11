@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.2)  8 OCT 2018 13:44
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.2)  11 OCT 2018 17:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1420,23 +1420,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 ] (./source.toc [2
 
-] [3])
+])
 \tf@toc=\write6
 \openout6 = `source.toc'.
 
- (./graph_theory.tex [4]
+ (./graph_theory.tex [3] [4]
 Chapter 1.
-) (./math.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5
-
-]
-Overfull \vbox (198.46892pt too high) has occurred while \output is active []
-
-
-[6]
-Chapter 2.
 runsystem(pygmentize -S default -f latex -P commandprefix=PYG > source.out.pyg)
 ...executed.
 
@@ -1446,7 +1435,7 @@ ut.pyg)...executed.
 
  (./source.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
-ce.out.pyg Math/int64_multiply_mod.cpp)...executed.
+ce.out.pyg GraphTheory/kth_minimum_path.cpp)...executed.
 
  (./source.out.pyg
 *************************************************
@@ -1468,11 +1457,41 @@ ce.out.pyg Math/int64_multiply_mod.cpp)...executed.
 .................................................
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <9> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
-)
+[5
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10> not
+ available
+(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on
+ input line 159.
+ [7])
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
+ce.out.pyg GraphTheory/link_cut_tree.cpp)...executed.
+
+
+(./source.out.pyg
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+[11]) (./math.tex [12]
+Chapter 2.
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
+ce.out.pyg Math/int64_multiply_mod.cpp)...executed.
+
+(./source.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg Math/extend_gcd.cpp)...executed.
 
- (./source.out.pyg [7
+ (./source.out.pyg [13
 
 ])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
@@ -1486,60 +1505,59 @@ ce.out.pyg Math/linear_congruence_inequality.cpp)...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg Math/miller_rabin_and_pollard_rho.cpp)...executed.
 
-
-(./source.out.pyg [8]
+ (./source.out.pyg [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9])
+ [15])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg Math/points_below_line.cpp)...executed.
 
 
-(./source.out.pyg [10])) (./geometry.tex
-LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10> not
- available
-(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on
- input line 1.
- [11]
+(./source.out.pyg)
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 33.
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 44--51
+
+ []
+
+) (./geometry.tex [17]
 Chapter 3.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg Geometry/basic_geometry.cpp)...executed.
 
-(./source.out.pyg [12
+(./source.out.pyg [18
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+ [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]))
+ [20]))
 (./string.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-[16]
+ [21]
+[22]
 Chapter 4.
-) (./data_structure.tex [17
+) (./data_structure.tex [23
 
 ]
 Chapter 5.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg DataStructure/mo_dui.cpp)...executed.
 
-(./source.out.pyg
-
-LaTeX Font Warning: Font shape `TU/FandolFang-Regular(0)/m/it' undefined
-(Font)              using `TU/FandolFang-Regular(0)/m/n' instead on input line 
-9.
-
-[18
-
-])
+(./source.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg DataStructure/st_table.cpp)...executed.
 
- (./source.out.pyg [19])
+ (./source.out.pyg [24
+
+])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg DataStructure/mergeable_heap.cpp)...executed.
 
@@ -1547,106 +1565,90 @@ ce.out.pyg DataStructure/mergeable_heap.cpp)...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg DataStructure/zkw_segment_tree.cpp)...executed.
 
- (./source.out.pyg [20]
-Underfull \vbox (badness 1997) has occurred while \output is active []
-
- [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22])
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
-ce.out.pyg DataStructure/chair_tree.cpp)...executed.
-
-
-(./source.out.pyg [23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24])
+ (./source.out.pyg [25])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg DataStructure/splay.cpp)...executed.
 
-
-(./source.out.pyg
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25]
-Underfull \vbox (badness 1997) has occurred while \output is active []
-
- [26]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27])
+ (./source.out.pyg [26])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
-ce.out.pyg DataStructure/treap_unrotated.cpp)...executed.
+ce.out.pyg DataStructure/splay_arr.cpp)...executed.
 
+ (./source.out.pyg
 
-(./source.out.pyg [28]
+LaTeX Font Warning: Font shape `TU/FandolFang-Regular(0)/m/it' undefined
+(Font)              using `TU/FandolFang-Regular(0)/m/n' instead on input line 
+2.
+
+[27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
+ [28]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [29])
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
+ce.out.pyg DataStructure/treap.cpp)...executed.
 
- [31])
+
+(./source.out.pyg [30])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg DataStructure/functional_treap.cpp)...executed.
 
-
-(./source.out.pyg [32]
+ (./source.out.pyg
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
+ [31]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34])
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg DataStructure/cdq_divide.cpp)...executed.
 
 
-(./source.out.pyg
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(./source.out.pyg [34])
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
+ce.out.pyg DataStructure/bitset.cpp)...executed.
 
- [35]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37]))
-(./others.tex [38]
+ (./source.out.pyg [35])) (./others.tex [36]
 Chapter 6.
 runsystem(pygmentize -l vim -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg Others/.vimrc)...executed.
 
 (./source.out.pyg)
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
+ce.out.pyg Others/stl_clear.cpp)...executed.
+
+ (./source.out.pyg)
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
+ce.out.pyg Others/rsp.cpp)...executed.
+
+ (./source.out.pyg [37
+
+])
 runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -o sou
 rce.out.pyg Others/Template.java)...executed.
 
- (./source.out.pyg [39
-
-]
+ (./source.out.pyg [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40])
+ [39])
 runsystem(pygmentize -l kotlin -f latex -P commandprefix=PYG -F tokenmerge -o s
 ource.out.pyg Others/big_fraction.kt)...executed.
 
 
-(./source.out.pyg
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41])
+(./source.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg Others/simulated_annealing.cpp)...executed.
 
-
-(./source.out.pyg [42])
+ (./source.out.pyg [40])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg Others/cubic_search.cpp)...executed.
 
- (./source.out.pyg [43])) [44] (./source.aux)
+ (./source.out.pyg) [41]) [42]
+(./source.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1654,12 +1656,12 @@ runsystem(rm source.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 23777 strings out of 494517
- 480187 string characters out of 6166425
- 601371 words of memory out of 5000000
- 27388 multiletter control sequences out of 15000+600000
+ 23698 strings out of 494517
+ 473587 string characters out of 6166425
+ 596358 words of memory out of 5000000
+ 27299 multiletter control sequences out of 15000+600000
  535537 words of font info for 73 fonts, out of 8000000 for 9000
  286 hyphenation exceptions out of 8191
- 46i,9n,74p,10434b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,15n,74p,10434b,580s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on source.pdf (44 pages).
+Output written on source.pdf (42 pages).

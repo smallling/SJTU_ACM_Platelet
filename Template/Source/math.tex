@@ -7,11 +7,9 @@
 返回是否可行，余数和模数结果为$ r_1 $, $ m_1 $
 \inputminted{cpp}{Math/chinese_remainder_theorem.cpp}
 \section{线性同余不等式\ \small(Durandal)}
-必须满足$ 0 \leq d < m $, $ 0 \leq l \leq r < m $，返回$ \min\lbrace x \geq 0 | l \leq x \cdot d \mod m \leq r \rbrace $，无解返回$ -1 $ 
+必须满足$ 0 \leq d < m $, $ 0 \leq l \leq r < m $，返回$ \min\lbrace x \geq 0 \mid l \leq x \cdot d \bmod m \leq r \rbrace $，无解返回$ -1 $ 
 \inputminted{cpp}{Math/linear_congruence_inequality.cpp}
 \section{组合数}
-\subsection{Lucas定理}
-\subsection{组合数合数取模}
 \section{高斯消元}
 \section{Miller\ Rabin\ \&\ Pollard\ Rho\ \small(gy)}
 \inputminted{cpp}{Math/miller_rabin_and_pollard_rho.cpp}
@@ -29,12 +27,35 @@
 \inputminted{cpp}{Math/points_below_line.cpp}
 \section{单纯形}
 \section{辛普森积分}
-\section{常用数列定理}
+\section{常用数列定理\ \small(gy)}
 \begin{itemize}
-	\item 第一类Stirling Number
-	\item 第二类Stirling Number
+	\item 第一类Stirling number\\
+	用$ s(n, k) = (-1) ^ {n - k} {n \brack k} $表示第一类Stirling number\\
+	$ {n + 1 \brack k} = n {n \brack k} + {n \brack k - 1}, k > 0 $\\
+	$ {0 \brack 0} = 1, {n \brack 0} = {0 \brack n} = 0, n > 0 $\\
+	$ {n \brack k} $为将$ n $个元素分成$ k $个环的方案数
+	\item 第二类Stirling number\\
+	用$ S(n, k) = {n \brace k} $表示第二类Stirling number\\
+	$ {n + 1 \brace k} = k {n \brace k} + {n \brace k - 1}, k > 0 $\\
+	$ {0 \brace 0} = 1, {n \brace 0} = {0 \brace n} = 0, n > 0 $\\
+	$ {n \brace k} = \frac{1}{k!} \sum\limits_{j = 0}^{k} (-1) ^ {k - j} \binom{k}{j} j ^ n $\\
+	$ {n \brace k} $为将$ n $个元素划分成$ k $个非空集合的方案数
 	\item Catalan Number\\$ c_n $表示长度为$ 2n $的合法括号序的数量\\$ c_1 = 1 $, $ c_{n+1} = \sum\limits_{i=1}^{n} c_i \times c_{n + 1 - i} $\\$ c_n = \frac{\binom{2n}{n}}{n + 1} $
-	\item Bell Number
-	\item Bernoulli Number
+	\item Bell number\\
+	$ B_n $表示基数为$ n $的集合的划分方案数\\
+	$ B_i = \begin{cases}
+	1 & i = 0\\
+	\sum\limits_{k = 0}^{n} \binom{n}{k} B_k & i > 0
+	\end{cases} $\\
+	$ B_n = \sum\limits_{k = 0}^{n} {n \brace k} $\\
+	\item Bernoulli number\\
+	$ \sum\limits_{j = 0}^{m} \binom{m + 1}{j} B_j = 0, m > 0 $\\
+	$ B_i = \begin{cases}
+	1 & i = 0\\
+	-\frac{\sum\limits_{j = 0}^{i - 1} \binom{i + 1}{j}}{i + 1} & i > 0
+	\end{cases} $\\
+	$ \sum\limits_{k = 1}^{n} k ^ m = \frac{1}{m + 1} \sum\limits_{k = 0}^{m} \binom{m + 1}{k} B_k n ^ {m + 1 - k} $
+	\item Lagrange polynomial\\
+	给定次数为$ n $的多项式函数$ L(x) $上的$ n + 1 $个点$ (x_0, y_0), (x_1, y_1), \dots, (x_n, y_n) $\\
+	则$ L(x) = \sum\limits_{j = 0}^{n} y_j \prod\limits_{0 \leq m \leq n, m \ne j} \frac{x - x_m}{x_j - x_m} $
 \end{itemize}
-\section{积分表}
