@@ -1,24 +1,11 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.math.RoundingMode;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.math.*;
+import java.util.*;
 
 public class Template {
     // Input
     private static BufferedReader reader;
     private static StringTokenizer tokenizer;
-
     private static String next() {
         try {
             while (tokenizer == null || !tokenizer.hasMoreTokens())
@@ -28,15 +15,12 @@ public class Template {
         }
         return tokenizer.nextToken();
     }
-
     private static int nextInt() {
         return Integer.parseInt(next());
     }
-
     private static double nextDouble() {
         return Double.parseDouble(next());
     }
-
     private static BigInteger nextBigInteger() {
         return new BigInteger(next());
     }
@@ -61,35 +45,32 @@ public class Template {
         BigInteger y = BigDecimal.ZERO.toBigInteger(); // RoundingMode.DOWN
         y = BigDecimal.ZERO.setScale(0, RoundingMode.HALF_EVEN).unscaledValue();
     }
-
     // sqrt for Java 8
-    private static BigDecimal sqrt(BigDecimal a, int scale, RoundingMode mode) {
-        if (a.equals(BigDecimal.ZERO))
-            return BigDecimal.ZERO;
-        a = a.setScale(scale, mode);
-        BigDecimal ans = a;
-        BigDecimal TWO = BigDecimal.valueOf(2L);
-        for (int i = 1; i <= scale; i++)
-            ans = ans.add(a.divide(ans, scale, mode)).divide(TWO, scale, mode);
-        return ans;
+    // can solve scale=100 for 10000 times in about 1 second
+    private static BigDecimal sqrt(BigDecimal a, int scale) {
+        if (a.compareTo(BigDecimal.ZERO) < 0)
+            return BigDecimal.ZERO.setScale(scale, RoundingMode.HALF_EVEN);
+        int length = a.precision() - a.scale();
+        BigDecimal ret = new BigDecimal(BigInteger.ONE, -length / 2);
+        for (int i = 1; i <= Integer.highestOneBit(scale) + 10; i++)
+            ret = ret.add(a.divide(ret, scale, RoundingMode.HALF_EVEN)).divide(BigDecimal.valueOf(2), scale, RoundingMode.HALF_EVEN);
+        return ret;
     }
-
+    // can solve a=2^10000 for 100000 times in about 1 second
     private static BigInteger sqrt(BigInteger a) {
-        BigInteger about = BigInteger.ZERO.setBit(a.bitLength() / 2);
-        return sqrt(new BigDecimal(a.toString()), new BigDecimal(about.toString())).setScale(0, RoundingMode.FLOOR).unscaledValue();
+        int length = a.bitLength() - 1;
+        BigInteger l = BigInteger.ZERO.setBit(length / 2), r = BigInteger.ZERO.setBit(length / 2);
+        while (!l.equals(r)) {
+            BigInteger m = l.add(r).shiftRight(1);
+            if (m.multiply(m).compareTo(a) < 0)
+                l = m.add(BigInteger.ONE);
+            else
+                r = m;
+        }
+        return l;
     }
 
-    private static BigDecimal sqrt(BigDecimal a, BigDecimal initial) {
-        if (a.equals(BigDecimal.ZERO))
-            return BigDecimal.ZERO;
-        a = a.setScale(50, RoundingMode.HALF_EVEN);
-        BigDecimal ans = initial;
-        for (int i = 1; i <= 10; i++)
-            ans = ans.add(a.divide(ans, RoundingMode.HALF_EVEN)).divide(BigDecimal.valueOf(2), RoundingMode.HALF_EVEN);
-        return ans;
-    }
-
-    // ArrayList
+    // Collections
     private static void arrayList() {
         List<Integer> list = new ArrayList<>();
         // Generic array is banned
@@ -99,23 +80,29 @@ public class Template {
         list.remove(list.get(1));
         list.remove(list.size() - 1);
         list.clear();
-    }
-
-    // Queue
-    private static void queue() {
-        LinkedList<Integer> queue = new LinkedList<>();
+        Queue<Integer> queue = new LinkedList<>();
         // return the value without popping
         queue.peek();
         // pop and return the value
         queue.poll();
+        Queue<Integer> priorityQueue = new PriorityQueue<>();
         Deque<Integer> deque = new ArrayDeque<>();
         deque.peekFirst();
         deque.peekLast();
         deque.pollFirst();
-    }
-
-    // Others
-    private static void others() {
+        TreeSet<Integer> set = new TreeSet<>();
+        TreeSet<Integer> anotherSet = new TreeSet<>(Comparator.reverseOrder());
+        set.ceiling(1);
+        set.floor(1);
+        set.lower(1);
+        set.higher(1);
+        set.contains(1);
+        HashSet<Integer> hashSet = new HashSet<>();
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("", 1);
+        map.get("");
+        map.forEach((string, integer) -> System.out.println(string + integer));
+        TreeMap<String, Integer> treeMap = new TreeMap<>();
         Arrays.sort(new int[10]);
         Arrays.sort(new Integer[10], (a, b) -> {
             if (a.equals(b)) return 0;
