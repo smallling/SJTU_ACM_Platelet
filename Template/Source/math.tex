@@ -7,11 +7,9 @@
 返回是否可行，余数和模数结果为$ r_1 $, $ m_1 $
 \inputminted{cpp}{Math/chinese_remainder_theorem.cpp}
 \section{线性同余不等式\ \small(Durandal)}
-必须满足$ 0 \leq d < m $, $ 0 \leq l \leq r < m $，返回$ \min\lbrace x \geq 0 | l \leq x \cdot d \mod m \leq r \rbrace $，无解返回$ -1 $ 
+必须满足$ 0 \leq d < m $, $ 0 \leq l \leq r < m $，返回$ \min\lbrace x \geq 0 \mid l \leq x \cdot d \bmod m \leq r \rbrace $，无解返回$ -1 $ 
 \inputminted{cpp}{Math/linear_congruence_inequality.cpp}
 \section{组合数}
-\subsection{Lucas定理}
-\subsection{组合数合数取模}
 \section{高斯消元}
 \section{Miller\ Rabin\ \&\ Pollard\ Rho\ \small(gy)}
 \inputminted{cpp}{Math/miller_rabin_and_pollard_rho.cpp}
@@ -29,12 +27,3 @@
 \inputminted{cpp}{Math/points_below_line.cpp}
 \section{单纯形}
 \section{辛普森积分}
-\section{常用数列定理}
-\begin{itemize}
-	\item 第一类Stirling Number
-	\item 第二类Stirling Number
-	\item Catalan Number\\$ c_n $表示长度为$ 2n $的合法括号序的数量\\$ c_1 = 1 $, $ c_{n+1} = \sum\limits_{i=1}^{n} c_i \times c_{n + 1 - i} $\\$ c_n = \frac{\binom{2n}{n}}{n + 1} $
-	\item Bell Number
-	\item Bernoulli Number
-\end{itemize}
-\section{积分表}
