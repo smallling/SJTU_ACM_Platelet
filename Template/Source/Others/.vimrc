@@ -2,18 +2,18 @@ se et ts=4 sw=4 sts=4 nu sc sm lbr is hls mouse=a
 sy on
 ino <tab> <c-n>
 ino <s-tab> <tab>
-au winnew * winc L
+au bufwinenter * winc L
 
 nm <f6> ggVG"+y
 nm <f7> :w<cr>:make<cr>
-nm <f8> :!@@<cr>
-nm <f9> :!@@ < in<cr>
-nm <s-f9> :!(time @@ < in &>> out) &>> out<cr>:sp out<cr>
+nm <f8> :!@<cr>
+nm <f9> :!@ < in<cr>
+nm <s-f9> :!(time @ < in &> out) &>> out<cr>:sp out<cr>
 
-au filetype cpp cm @@ ./a.out | se cin fdm=syntax mp=g++\ %\ -std=c++11\ -Wall\ -Wextra\ -O2
+au filetype cpp cm @ ./a.out | se cin fdm=syntax mp=g++\ %\ -std=c++11\ -Wall\ -Wextra\ -Wconversion\ -O2
 
 map <c-p> :ha<cr>
-se pheader=%n\ %f
+se pheader=%N@%F popt=number:y
 
 au filetype java cm @@ java %< | se cin fdm=syntax mp=javac\ %
 au filetype python cm @@ python % | se si fdm=indent
