@@ -15,7 +15,7 @@ au filetype cpp cm @ ./a.out | se cin fdm=syntax mp=g++\ %\ -std=c++11\ -Wall\ -
 map <c-p> :ha<cr>
 se pheader=%N@%F popt=number:y
 
-au filetype java cm @@ java %< | se cin fdm=syntax mp=javac\ %
-au filetype python cm @@ python % | se si fdm=indent
+au filetype java cm @ java %< | se cin fdm=syntax mp=javac\ %
+au filetype python cm @ python % | se si fdm=indent
 au bufenter *.kt setf kotlin
-au filetype kotlin cm @@ kotlin _%<Kt | se si mp=kotlinc\ %
+au filetype kotlin cm @ kotlin _%<Kt | se si mp=kotlinc\ %

@@ -5,6 +5,7 @@
 \usepackage{titlesec}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{ragged2e}
 \geometry{a4paper,scale=0.8}
 \setminted[cpp]{
 	linenos,numbersep=1mm,numberblanklines=false,tabsize=4,
@@ -30,11 +31,23 @@
 	frame=single,framesep=1mm,framerule=1pt,
 	breaklines=true,breaksymbolsepleft=2pt,breakbytoken=false
 }
-\title{\Huge{Platelet}\\[2ex]\Large{Team Reference Material}}
-\author{凌皓煜\ 陈彤\ 顾逸}
-\date{2018}
 \begin{document}
-	\maketitle
+	\begin{titlepage}
+		\centering
+		\rule{\linewidth}{0.5mm}\\[0.4cm]
+		\textit{\Huge Platelet}\\[\baselineskip]
+		{\Large Team Reference Material}\\
+		{\small (unlimited version)}\\[0.4cm]
+		\rule{\linewidth}{0.5mm}
+		\vfill
+		\includegraphics[scale=0.4]{Platelet.jpg}
+		\vfill
+		\makebox[1.6cm]{\Large 凌 \hfill 皓 \hfill 煜}\\[0.1cm]
+		\makebox[1.6cm]{\Large 陈 \hfill 彤}\\[0.1cm]
+		\makebox[1.6cm]{\Large 顾 \hfill 逸}\\[0.4cm]
+		\rule{\linewidth}{0.3mm}\\[0.4cm]
+		\small{Shanghai Jiao Tong University, 2018}
+	\end{titlepage}
 	\tableofcontents
 	\input{graph_theory.tex}
 	\input{math.tex}

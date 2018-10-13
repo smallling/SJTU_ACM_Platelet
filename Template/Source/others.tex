@@ -142,4 +142,21 @@
 				\item \textbf{矩阵-树定理}
 					\\设$ \mathbf{A}\lbrack G \rbrack $为图$ G $的邻接矩阵、$ \mathbf{D}\lbrack G \rbrack $为图$ G $的度数矩阵，则图$ G $的不同生成树的个数为 $ \mathbf{C}\lbrack G \rbrack = \mathbf{D}\lbrack G \rbrack - \mathbf{A}\lbrack G \rbrack $的任意一个$ n - 1 $阶主子式的行列式值。
 			\end{itemize}
+		\item \textbf{Euler characteristic}
+			\\ 平面图的顶点个数$ V $，边数$ E $，平面被划分的区域数$ F $，组成图形的连通部分的数目$ C $满足：
+			\\$ V - E + F = C + 1 $
+		\item \textbf{Pick theorem}
+			\\顶点为整点的简单多边形，其面积$ A $，内部格点数$ i $，边上格点数$ b $满足：
+			\\$ A = i + \frac{b}{2} - 1 $
+		\item \textbf{平面几何公式}
+			\begin{itemize}
+				\item \textbf{三角形}
+					\\半周长$ p = \frac{a + b + c}{2} $
+					\\面积$ S = \frac{1}{2} a H_a = \frac{1}{2} a b \cdot \sin C = \sqrt{p(p - a)(p - b)(p - c)} = p r = \frac{a b c}{4R} $
+					\\中线长$ M_a = \frac{1}{2} \sqrt{2(b^2 + c^2) - a^2} = \frac{1}{2} \sqrt{b^2 + c^2 + 2 b c \cdot \cos A} $
+					\\角平分线长$ T_a = \frac{\sqrt{bc((b + c)^2 - a^2)}}{b + c} = \frac{2 b c}{b + c} \cos \frac{A}{2} $
+					\\高$ H_a = b \sin C = \sqrt{b^2 - (\frac{a^2 + b^2 - c^2}{2 a})^2} $
+					\\内切圆半径$ r = \frac{S}{p} = 4 R \sin \frac{A}{2} \sin \frac{B}{2} \sin \frac{C}{2} = \sqrt{\frac{(p - a)(p - b)(p - c)}{p}} = p \tan \frac{A}{2} \tan \frac{B}{2} \tan \frac{C}{2} $
+					\\外接圆半径$ R = \frac{a b c}{4 S} = \frac{a}{2 \sin A} $
+			\end{itemize}
 	\end{itemize}
