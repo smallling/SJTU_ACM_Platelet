@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.13)  14 OCT 2018 00:12
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.13)  14 OCT 2018 16:43
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1679,13 +1679,17 @@ ce.out.pyg Others/simulated_annealing.cpp)...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
 ce.out.pyg Others/cubic_search.cpp)...executed.
 
+ (./source.out.pyg)
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o sour
+ce.out.pyg Others/zeller_congruence.cpp)...executed.
+
  (./source.out.pyg) [41] [42]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 84.
+(amsmath)                 on input line 86.
 
-[43]) [44] (./source.aux)
+[43] [44]) [45] (./source.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1693,12 +1697,12 @@ runsystem(rm source.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 23842 strings out of 494517
- 476288 string characters out of 6166424
+ 23844 strings out of 494517
+ 476318 string characters out of 6166424
  600858 words of memory out of 5000000
  27423 multiletter control sequences out of 15000+600000
  533780 words of font info for 69 fonts, out of 8000000 for 9000
  286 hyphenation exceptions out of 8191
  46i,15n,74p,10434b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on source.pdf (44 pages).
+Output written on source.pdf (45 pages).
