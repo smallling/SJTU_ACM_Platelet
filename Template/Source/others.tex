@@ -15,7 +15,7 @@
 	\inputminted{cpp}{Others/simulated_annealing.cpp}
 \section{三分\ \small(ct)}
 	\inputminted{cpp}{Others/cubic_search.cpp}
-\section{Zeller Congruence}
+\section{Zeller\ Congruence\ \small(gy)}
 	\inputminted{cpp}{Others/zeller_congruence.cpp}
 \section{博弈论模型\ \small(gy)}
 	\begin{itemize}
@@ -162,6 +162,7 @@
 					\\高$ H_a = b \sin C = \sqrt{b^2 - (\frac{a^2 + b^2 - c^2}{2 a})^2} $
 					\\内切圆半径$ r = \frac{S}{p} = 4 R \sin \frac{A}{2} \sin \frac{B}{2} \sin \frac{C}{2} = \sqrt{\frac{(p - a)(p - b)(p - c)}{p}} = p \tan \frac{A}{2} \tan \frac{B}{2} \tan \frac{C}{2} $
 					\\外接圆半径$ R = \frac{a b c}{4 S} = \frac{a}{2 \sin A} $
+					\\旁切圆半径$ r_A = \frac{2 S}{- a + b + c} $
 					\\重心$ \left(\frac{x_1 + x_2 + x_3}{3}, \frac{y_1 + y_2 + y_3}{3}\right) $
 					\\外心$ \left(\frac{\left|\begin{array}{cccc}
 							x_1^2 + y_1^2 & y_1 & 1\\
@@ -198,5 +199,6 @@
 						x_2 & y_2 & 1\\
 						x_3 & y_3 & 1
 						\end{array}\right|}\right) $
+					\\旁心$ \left(\frac{- a x_1 + b x_2 + c x_3}{- a + b + c}, \frac{- a y_1 + b y_2 + c y_3}{- a + b + c}\right) $
 			\end{itemize}
 	\end{itemize}

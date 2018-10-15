@@ -1,5 +1,6 @@
 \chapter{Graph Theory}
-\section{2-SAT}
+\section{2-SAT\ \small(ct)}
+	\inputminted{cpp}{GraphTheory/2_sat.cpp}
 \section{双连通分量}
 	\subsection{点双连通分量}
 	\subsection{边双连通分量}
@@ -7,25 +8,28 @@
 	\inputminted{cpp}{GraphTheory/kth_minimum_path.cpp}
 \section{最大团}
 \section{一般图最大匹配}
-\section{树}
-	\subsection{虚树}
-	\subsection{矩阵树定理}
-	\subsection{点分治}
-	\subsection{Prufer编码}
-	\subsection{Link-Cut\ Tree\ \small(ct)}
-		\inputminted{cpp}{GraphTheory/link_cut_tree.cpp}
-	\subsection{树上倍增}
-\section{仙人掌}
 \section{带花树}
 \section{KM算法}
 \section{支配树}
-	\subsection{DAG}
+	\subsection{DAG\ \small(ct)}
+		\inputminted{cpp}{GraphTheory/dominate_tree_dag.cpp}
 	\subsection{一般图}
+\section{虚树\ \small(ct)}
+	\inputminted{cpp}{GraphTheory/virtual_tree.cpp}
+\section{树上点分治\ \small(ct)}
+	\inputminted{cpp}{GraphTheory/divide_conquer_on_tree.cpp}
+\section{树上倍增\ \small(ct)}
+	\inputminted{cpp}{GraphTheory/multiplier_on_tree.cpp}
+\section{Prufer编码}
+\section{Link-Cut\ Tree\ \small(ct)}
+	\inputminted{cpp}{GraphTheory/link_cut_tree.cpp}
+\section{仙人掌}
 \section{弦图}
-\section{网络流}
 \section{最小割}
-\section{最大流}
-\section{费用流}
+\section{最大流\ \small(ct)}
+	\inputminted{cpp}{GraphTheory/dinic.cpp}
+\section{费用流\ \small(ct)}
+	\inputminted{cpp}{GraphTheory/min_cost_max_flow.cpp}
 \section{有上下界的网络流\ \small(Durandal)}
 	$ B(u, v) $表示边$ (u, v) $流量的下界，$ C(u, v) $表示边$ (u, v) $流量的上界，设$ F(u, v) $表示边$ (u, v) $的实际流量\\
 	设$ G(u, v) = F(u, v) - B(u, v) $，则$ 0 \leq G(u, v) \leq C(u, v) - B(u, v) $
