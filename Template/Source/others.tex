@@ -5,6 +5,8 @@
 	\inputminted{cpp}{Others/stl_clear.cpp}
 \section{开栈\ \small(Durandal)}
 	\inputminted{cpp}{Others/rsp.cpp}
+\section{O3\ \small(gy)}
+	\inputminted{cpp}{Others/o3.cpp}
 \section{Java Template\ \small(gy)}
 	\inputminted{java}{Others/Template.java}
 \section{Big Fraction\ \small(gy)}
@@ -160,5 +162,41 @@
 					\\高$ H_a = b \sin C = \sqrt{b^2 - (\frac{a^2 + b^2 - c^2}{2 a})^2} $
 					\\内切圆半径$ r = \frac{S}{p} = 4 R \sin \frac{A}{2} \sin \frac{B}{2} \sin \frac{C}{2} = \sqrt{\frac{(p - a)(p - b)(p - c)}{p}} = p \tan \frac{A}{2} \tan \frac{B}{2} \tan \frac{C}{2} $
 					\\外接圆半径$ R = \frac{a b c}{4 S} = \frac{a}{2 \sin A} $
+					\\重心$ \left(\frac{x_1 + x_2 + x_3}{3}, \frac{y_1 + y_2 + y_3}{3}\right) $
+					\\外心$ \left(\frac{\left|\begin{array}{cccc}
+							x_1^2 + y_1^2 & y_1 & 1\\
+							x_2^2 + y_2^2 & y_2 & 1\\
+							x_3^2 + y_3^2 & y_3 & 1
+						\end{array}\right|}{2 \left|\begin{array}{cccc}
+							x_1 & y_1 & 1\\
+							x_2 & y_2 & 1\\
+							x_3 & y_3 & 1
+						\end{array}\right|}, \frac{\left|\begin{array}{cccc}
+							x_1 & x_1^2 + y_1^2 & 1\\
+							x_2 & x_2^2 + y_2^2 & 1\\
+							x_3 & x_3^2 + y_3^2 & 1
+						\end{array}\right|}{2\left|\begin{array}{cccc}
+							x_1 & y_1 & 1\\
+							x_2 & y_2 & 1\\
+							x_3 & y_3 & 1
+						\end{array}\right|}\right) $
+					\\内心$ \left(\frac{a x_1 + b x_2 + c x_3}{a + b + c}, \frac{a y_1 + b y_2 + c y_3}{a + b + c}\right) $
+					\\垂心$ \left(\frac{\left|\begin{array}{cccc}
+						x_2 x_3 + y_2 y_3 & 1 & y_1\\
+						x_3 x_1 + y_3 y_1 & 1 & y_2\\
+						x_1 x_2 + y_1 y_2 & 1 & y_3
+						\end{array}\right|}{2 \left|\begin{array}{cccc}
+						x_1 & y_1 & 1\\
+						x_2 & y_2 & 1\\
+						x_3 & y_3 & 1
+						\end{array}\right|}, \frac{\left|\begin{array}{cccc}
+						x_2 x_3 + y_2 y_3 & x_1 & 1\\
+						x_3 x_1 + y_3 y_1 & x_2 & 1\\
+						x_1 x_2 + y_1 y_2 & x_3 & 1
+						\end{array}\right|}{2\left|\begin{array}{cccc}
+						x_1 & y_1 & 1\\
+						x_2 & y_2 & 1\\
+						x_3 & y_3 & 1
+						\end{array}\right|}\right) $
 			\end{itemize}
 	\end{itemize}

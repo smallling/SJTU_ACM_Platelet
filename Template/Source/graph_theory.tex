@@ -1,50 +1,49 @@
 \chapter{Graph Theory}
 \section{2-SAT}
 \section{双连通分量}
-\subsection{点双连通分量}
-\subsection{边双连通分量}
+	\subsection{点双连通分量}
+	\subsection{边双连通分量}
 \section{K短路\ \small(lhy)}
-\inputminted{cpp}{GraphTheory/kth_minimum_path.cpp}
+	\inputminted{cpp}{GraphTheory/kth_minimum_path.cpp}
 \section{最大团}
 \section{一般图最大匹配}
 \section{树}
-\subsection{虚树}
-\subsection{矩阵树定理}
-\subsection{点分治}
-\subsection{Prufer编码}
-\subsection{Link-Cut\ Tree\ \small(ct)}
-\inputminted{cpp}{GraphTheory/link_cut_tree.cpp}
-\subsection{树上倍增}
-\subsection{数链剖分}
+	\subsection{虚树}
+	\subsection{矩阵树定理}
+	\subsection{点分治}
+	\subsection{Prufer编码}
+	\subsection{Link-Cut\ Tree\ \small(ct)}
+		\inputminted{cpp}{GraphTheory/link_cut_tree.cpp}
+	\subsection{树上倍增}
 \section{仙人掌}
 \section{带花树}
 \section{KM算法}
 \section{支配树}
-\subsection{DAG}
-\subsection{一般图}
+	\subsection{DAG}
+	\subsection{一般图}
 \section{弦图}
 \section{网络流}
 \section{最小割}
 \section{最大流}
 \section{费用流}
 \section{有上下界的网络流\ \small(Durandal)}
-$ B(u, v) $表示边$ (u, v) $流量的下界，$ C(u, v) $表示边$ (u, v) $流量的上界，设$ F(u, v) $表示边$ (u, v) $的实际流量\\
-设$ G(u, v) = F(u, v) - B(u, v) $，则$ 0 \leq G(u, v) \leq C(u, v) - B(u, v) $
-\begin{itemize}
-	\item 无源汇的上下界可行流\\
-	建立超级源点$ S^\ast $和超级汇点$ T^\ast $，对于原图每一条边$ (u, v) $在新网络中连如下三条边：$ S^\ast \to v $，容量为$ B(u, v) $；$ u \to T^\ast $，容量为$ B(u, v) $；$ u \to v $，容量为$ C(u, v) - B(u, v) $。最后求新网络的最大流，判断从超级源点$ S^\ast $出发的边是否都满流即可，边$ (u, v) $的最终解中的实际流量为$ G(u, v) + B(u, v) $。
-	\item 有源汇的上下界可行流\\
-	从汇点$ T $到源点$ S $连一条上界为$ \infty $，下界为$ 0 $的边。按照无源汇的上下界可行流一样做即可，流量即为$ T \to S $边上的流量。
-	\item 有源汇的上下界最大流
+	$ B(u, v) $表示边$ (u, v) $流量的下界，$ C(u, v) $表示边$ (u, v) $流量的上界，设$ F(u, v) $表示边$ (u, v) $的实际流量\\
+	设$ G(u, v) = F(u, v) - B(u, v) $，则$ 0 \leq G(u, v) \leq C(u, v) - B(u, v) $
 	\begin{itemize}
-		\item 在有源汇的上下界可行流中，从汇点$ T $到源点$ S $的边改为连一条上界为$ \infty $，下界为$ x $的边。$ x $满足二分性质，找到最大的$ x $使得新网络存在有源汇的上下界可行流即为原图的最大流。
-		\item 从汇点$ T $到源点$ S $连一条上界为$ \infty $，下界为$ 0 $的边，变成无源汇的网络。按照无源汇的上下界可行流的方法，建立超级源点$ S^\ast $与超级汇点$ T^\ast $，求一遍$ S^\ast \to T^\ast $的最大流，再将从汇点$ T $到源点$ S $的这条边拆掉，求一次$ S \to T $的最大流即可。
+		\item 无源汇的上下界可行流
+			\\建立超级源点$ S^\ast $和超级汇点$ T^\ast $，对于原图每一条边$ (u, v) $在新网络中连如下三条边：$ S^\ast \to v $，容量为$ B(u, v) $；$ u \to T^\ast $，容量为$ B(u, v) $；$ u \to v $，容量为$ C(u, v) - B(u, v) $。最后求新网络的最大流，判断从超级源点$ S^\ast $出发的边是否都满流即可，边$ (u, v) $的最终解中的实际流量为$ G(u, v) + B(u, v) $。
+		\item 有源汇的上下界可行流
+			\\从汇点$ T $到源点$ S $连一条上界为$ \infty $，下界为$ 0 $的边。按照无源汇的上下界可行流一样做即可，流量即为$ T \to S $边上的流量。
+		\item 有源汇的上下界最大流
+			\begin{itemize}
+				\item 在有源汇的上下界可行流中，从汇点$ T $到源点$ S $的边改为连一条上界为$ \infty $，下界为$ x $的边。$ x $满足二分性质，找到最大的$ x $使得新网络存在有源汇的上下界可行流即为原图的最大流。
+				\item 从汇点$ T $到源点$ S $连一条上界为$ \infty $，下界为$ 0 $的边，变成无源汇的网络。按照无源汇的上下界可行流的方法，建立超级源点$ S^\ast $与超级汇点$ T^\ast $，求一遍$ S^\ast \to T^\ast $的最大流，再将从汇点$ T $到源点$ S $的这条边拆掉，求一次$ S \to T $的最大流即可。
+			\end{itemize}
+		\item 有源汇的上下界最小流
+			\begin{itemize}
+				\item 在有源汇的上下界可行流中，从汇点$ T $到源点$ S $的边改为连一条上界为$ x $，下界为$ 0 $的边。$ x $满足二分性质，找到最小的$ x $使得新网络存在有源汇的上下界可行流即为原图的最大流。
+				\item 按照无源汇的上下界可行流的方法，建立超级源点$ S^\ast $与超级汇点$ T^\ast $，求一遍$ S^\ast \to T^\ast $的最大流，但是注意不加上汇点$ T $到源点$ S $的这条边，即不使之改为无源汇的网络去求解。求完后，再加上那条汇点$ T $到源点$ S $的边，上界为$ \infty $的边。因为这条边的下界为$ 0 $，所以$ S^\ast $, $ T^\ast $无影响，再求一次$ S^\ast \to T^\ast $的最大流。若超级源点$ S^\ast $出发的边全部满流，则$ T \to S $边上的流量即为原图的最小流，否则无解。
+			\end{itemize}
 	\end{itemize}
-	\item 有源汇的上下界最小流
-	\begin{itemize}
-		\item 在有源汇的上下界可行流中，从汇点$ T $到源点$ S $的边改为连一条上界为$ x $，下界为$ 0 $的边。$ x $满足二分性质，找到最小的$ x $使得新网络存在有源汇的上下界可行流即为原图的最大流。
-		\item 按照无源汇的上下界可行流的方法，建立超级源点$ S^\ast $与超级汇点$ T^\ast $，求一遍$ S^\ast \to T^\ast $的最大流，但是注意不加上汇点$ T $到源点$ S $的这条边，即不使之改为无源汇的网络去求解。求完后，再加上那条汇点$ T $到源点$ S $的边，上界为$ \infty $的边。因为这条边的下界为$ 0 $，所以$ S^\ast $, $ T^\ast $无影响，再求一次$ S^\ast \to T^\ast $的最大流。若超级源点$ S^\ast $出发的边全部满流，则$ T \to S $边上的流量即为原图的最小流，否则无解。
-	\end{itemize}
-\end{itemize}
-\subsection{zkw费用流}
+\section{zkw费用流}
 \section{差分约束}
