@@ -108,7 +108,7 @@
 
 \begin{equation*}
 \int \sqrt{\frac{x}{a+x}}\ dx =  \sqrt{x(a+x)} 
--a\ln \left [ \sqrt{x} + \sqrt{x+a}\right] 
+-a\ln \left ( \sqrt{x} + \sqrt{x+a}\right ) 
 \end{equation*}
 
 \begin{equation*}
@@ -117,19 +117,21 @@
 \sqrt{ax+b}
 \end{equation*}
 
-\begin{equation*}
-\int \sqrt{x(ax+b)}\ dx = \frac{1}{4a^{3/2}}\left[(2ax + b)\sqrt{ax(ax+b)} 
--b^2 \ln \left| a\sqrt{x} + \sqrt{a(ax+b)} \right| \right ] 
-\end{equation*}
+\begin{multline*}
+\int \sqrt{x(ax+b)}\ dx =\\
+ \frac{1}{4a^{3/2}}\left((2ax + b)\sqrt{ax(ax+b)} 
+-b^2 \ln \left| a\sqrt{x} + \sqrt{a(ax+b)} \right| \right) 
+\end{multline*}
 
-\begin{equation*}
-\int \sqrt{x^3(ax+b)} \ dx =\left [ 
+\begin{multline*}
+\int \sqrt{x^3(ax+b)} \ dx =\\
+\left (
 \frac{b}{12a}-
 \frac{b^2}{8a^2x}+
-\frac{x}{3}\right] 
-\sqrt{x^3(ax+b)}  + 
+\frac{x}{3}\right)
+\sqrt{x^3(ax+b)}  +
 \frac{b^3}{8a^{5/2}}\ln \left | a\sqrt{x} + \sqrt{a(ax+b)} \right |
-\end{equation*}
+\end{multline*}
 
 \begin{equation*}
 \int\sqrt{x^2 \pm a^2}\ dx = \frac{1}{2}x\sqrt{x^2\pm a^2} 
@@ -166,34 +168,36 @@
 \mp \frac{1}{2}a^2 \ln \left| x + \sqrt{x^2\pm a^2} \right | 
 \end{equation*}
 
-\begin{equation*}\label{eq:Winokur1}
-\int \sqrt{a x^2 + b x + c}\ dx = 
+\begin{multline*}\label{eq:Winokur1}
+\int \sqrt{a x^2 + b x + c}\ dx = \\
 \frac{b+2ax}{4a}\sqrt{ax^2+bx+c}
 +
 \frac{4ac-b^2}{8a^{3/2}}\ln \left| 2ax + b + 2\sqrt{a(ax^2+bx^+c)}\right |
-\end{equation*}
+\end{multline*}
 
-\begin{equation*}\label{eq:Larry-Morris}\begin{split}
-\int &x \sqrt{a x^2 + bx + c}\ dx = \frac{1}{48a^{5/2}}\left ( 
+\begin{multline*}%\label{eq:Larry-Morris}
+\int x \sqrt{a x^2 + bx + c}\ dx = \\
+\begin{split}
+\frac{1}{48a^{5/2}}\left ( 
 2 \sqrt{a} \sqrt{ax^2+bx+c}
 \right .  
  \left( - 3b^2 + 2 abx + 8 a(c+ax^2) \right)
-\\ &  \left.
+\\ \left.
 + 3(b^3-4abc)\ln \left|b + 2ax + 2\sqrt{a}\sqrt{ax^2+bx+c} \right| \right)
 \end{split}
-\end{equation*}
+\end{multline*}
 
 \begin{equation*}
 \int\frac{1}{\sqrt{ax^2+bx+c}}\ dx=
 \frac{1}{\sqrt{a}}\ln \left| 2ax+b + 2 \sqrt{a(ax^2+bx+c)} \right | 
 \end{equation*}
 
-\begin{equation*}\label{eq:Duley}
-\int \frac{x}{\sqrt{ax^2+bx+c}}\ dx=
+\begin{multline*}\label{eq:Duley}
+\int \frac{x}{\sqrt{ax^2+bx+c}}\ dx=\\
 \frac{1}{a}\sqrt{ax^2+bx + c} 
 -
 \frac{b}{2a^{3/2}}\ln \left| 2ax+b + 2 \sqrt{a(ax^2+bx+c)} \right |
-\end{equation*}
+\end{multline*}
 
 \begin{equation*}\label{eq:Winokur2}
 \int\frac{dx}{(a^2+x^2)^{3/2}}=\frac{x}{a^2\sqrt{a^2+x^2}}
@@ -253,13 +257,14 @@
 \int \cos^2 ax \sin ax\ dx = -\frac{1}{3a}\cos^3{ax} 
 \end{equation*}
 
-\begin{equation*}
-\int \sin^2 ax \cos^2 bx dx = \frac{x}{4}
+\begin{multline*}
+\int \sin^2 ax \cos^2 bx dx = \\
+\frac{x}{4}
 -\frac{\sin 2ax}{8a}-
 \frac{\sin[2(a-b)x]}{16(a-b)}
 +\frac{\sin 2bx}{8b}-
 \frac{\sin[2(a+b)x]}{16(a+b)}
-\end{equation*}
+\end{multline*}
 
 \begin{equation*}
 \int \sin^2 ax \cos^2 ax\ dx = \frac{x}{8}-\frac{\sin 4ax}{32a}
@@ -271,13 +276,6 @@
 
 \begin{equation*}
 \int \tan^2 ax\ dx = -x + \frac{1}{a} \tan ax 
-\end{equation*}
-
-\begin{equation*}
-\int \tan^n ax\ dx = 
-\frac{\tan^{n+1} ax }{a(1+n)} \times
-{_2}F_1\left( \frac{n+1}{2}, 
-1, \frac{n+3}{2}, -\tan^2 ax \right) 
 \end{equation*}
 
 \begin{equation*}
@@ -358,12 +356,6 @@
 
 \begin{equation*}
 \int x^2 \sin ax\ dx =\frac{2-a^2x^2}{a^3}\cos ax +\frac{ 2 x \sin ax}{a^2} 
-\end{equation*}
-
-\begin{equation*}\label{eq:xul}
-\int x^n \sin x \ dx = -\frac{1}{2}(i)^n\left[ \Gamma(n+1, -ix) 
-%\right. \nonumber \\ & \left.
-- (-1)^n\Gamma(n+1, -ix)\right] 
 \end{equation*}
 
 \begin{equation*}
