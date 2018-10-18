@@ -48,6 +48,6 @@ int main()
     for (R int i = 1; str[i]; ++i)
         extend(str[i] - 'a');
     count();
-    printf("%lld\n", ans );
+    printf("%lld\n", ans);
     return 0;
 }
