@@ -1,19 +1,46 @@
 \chapter{Geometry}
 \section{点、直线、圆\ \small(gy)}
 	\inputminted{cpp}{Geometry/basic_geometry.cpp}
-\section{点到凸包切线}
-\section{直线凸包交点}
-\section{凸包游戏}
-\section{半平面交}
-\section{旋转卡壳}
-\section{判断圆是否有交}
-\section{最小圆覆盖}
-\section{最小球覆盖}
-\section{$ O(n ^ 2 \log n) $圆交面积和重心}
-\section{圆与多边形交}
-\section{$ O(n \log n) $凸多边形内的最大圆}
-\section{三维凸包}
-\section{三维绕轴旋转}
+\section{平面最近点对\ \small(Grimoire)}
+	\inputminted{cpp}{Geometry/nearest_points.cpp}
+\section{凸包游戏\ \small(Grimoire)}
+	给定凸包，$ O(n \log n) $完成询问：
+	\begin{itemize}
+		\item 点在凸包内
+		\item 凸包外的点到凸包的两个切点
+		\item 向量关于凸包的切点
+		\item 直线与凸包的交点
+	\end{itemize}
+	传入凸包要求$ 1 $号点为$ Pair(x, y) $最小的
+	\inputminted{cpp}{Geometry/convex_game.cpp}
+\section{半平面交\ \small(Grimoire)}
+	\inputminted{cpp}{Geometry/half_plane_intersect.cpp}
+\section{点在多边形内\ \small(Grimoire)}
+	\inputminted{cpp}{Geometry/point_in_polygon.cpp}
+\section{最小圆覆盖\ \small(Grimoire)}
+	\inputminted{cpp}{Geometry/minimal_coverage_circle.cpp}
+\section{最小球覆盖\ \small(Grimoire)}
+	\inputminted{cpp}{Geometry/minimal_coverage_ball.cpp}
+\section{圆并\ \small(Grimoire)}
+	\inputminted{cpp}{Geometry/circle_union.cpp}
+\section{圆与多边形并\ \small(Grimoire)}
+	\inputminted{cpp}{Geometry/area_union.cpp}
+\section{三角剖分\ \small(Grimoire)}
+	$ Triangulation::find $返回包含某点的三角形
+	\\$ Triangulation::add\_point $将某点加入三角剖分
+	\\某个$ Triangle $在三角剖分中当且仅当它的$ has\_children $为$ 0 $
+	\\如果要找到三角形u的邻域，则枚举它的所有$ u.edge[i].tri $，该条边的两个点为$ u.p[(i + 1) \% 3] $，$ u.p[(i + 2) \% 3] $
+	\\通过三角剖分构造V图：连接相邻三角形外接圆圆心
+	\\注意初始化内存池和$ Triangulation::LOTS $
+	\\复杂度$ O(n \log n) $
+	\inputminted{cpp}{Geometry/delaunay_triangulation.cpp}
+\section{三维几何基础\ \small(Grimoire)}
+	\inputminted{cpp}{Geometry/3d_basic.cpp}
+\section{三维凸包\ \small(Grimoire)}
+	\inputminted{cpp}{Geometry/3d_convex.cpp}
+\section{三维绕轴旋转\ \small(Grimoire)}
+	右手大拇指指向$ axis $方向，四指弯曲方向旋转$ w $弧度
+	\inputminted{cpp}{Geometry/3d_rotate.cpp}
 \section{几何知识\ \small(gy)}
 	\subsection*{Pick theorem}
 		顶点为整点的简单多边形，其面积$ A $，内部格点数$ i $，边上格点数$ b $满足：
@@ -79,6 +106,10 @@
 				\\弓形高$ h = r - \sqrt{r^2 - \frac{a^2}{4}} = r (1 - \cos \frac{A}{2}) $
 				\\扇形面积 $ S_1 = \frac{1}{2} l r = \frac{1}{2} A r^2 $
 				\\弓形面积 $ S_2 = \frac{1}{2} r^2 (A - \sin A) $
+			\item \textbf{Circles of Apollonius}
+				\\已知三个两两相切的圆，半径为$ r_1, r_2, r_3 $
+				\\与它们外切的圆半径为$ \left| \frac{r_1 r_2 r_3}{r_1 r_2 + r_2 r_3 + r_3 r_1 - 2 \sqrt{r_1 r_2 r_3 (r_1 + r_2 + r_3)}} \right| $
+				\\与它们内切的圆半径为$ \frac{r_1 r_2 r_3}{r_1 r_2 + r_2 r_3 + r_3 r_1 + 2 \sqrt{r_1 r_2 r_3 (r_1 + r_2 + r_3)}} $
 			\item \textbf{棱台}
 				\\体积$ V = \frac{1}{3} h (A_1 + A_2 + \sqrt{A_1 A_2}) $
 				\\正棱台侧面积$ S = \frac{1}{2} (p_1 + p_2) l $，$ l $为侧高
