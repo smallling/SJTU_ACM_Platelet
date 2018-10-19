@@ -7,7 +7,13 @@
 \usepackage{amsfonts}
 \usepackage{ragged2e}
 \usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{emptypage}
 \geometry{a4paper,scale=0.8}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\renewcommand{\headrulewidth}{0pt}
 \setminted[cpp]{
 	linenos,numbersep=1mm,numberblanklines=false,tabsize=4,
 	fontsize=\small,
@@ -49,7 +55,11 @@
 		\rule{\linewidth}{0.3mm}\\[0.4cm]
 		\small{Shanghai Jiao Tong University, 2018}
 	\end{titlepage}
+	\cleardoublepage
+	\setcounter{page}{1}
 	\tableofcontents
+	\cleardoublepage
+	\setcounter{page}{1}
 	\input{graph_theory.tex}
 	\input{math.tex}
 	\input{geometry.tex}

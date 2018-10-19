@@ -12,6 +12,25 @@
 \section{组合数}
 \section{高斯消元}
 \section{Miller\ Rabin\ \&\ Pollard\ Rho\ \small(gy)}
+	In Java, use BigInteger.isProbablePrime(int certainty) to replace miller\_rabin(BigInteger number)\\
+	\begin{tabular}{l r}
+		\hline
+		Test Set & First Wrong Answer\\\hline
+		$ 2 $ & $ 2047 $\\\hline
+		$ 2, 3 $ & $ 1,373,653 $\\\hline
+		$ 31, 73 $ & $ 9,080,191 $\\\hline
+		$ 2, 3, 5 $ & $ 25,326,001 $\\\hline
+		$ 2, 3, 5, 7 $ & (INT32\_MAX)$ 3,215,031,751 $\\\hline
+		$ 2, 7, 61 $ & $ 4,759,123,141 $\\\hline
+		$ 2, 13, 23, 1662803 $ & $ 1,122,004,669,633 $\\\hline
+		$ 2, 3, 5, 7, 11 $ & $ 2,152,302,898,747 $\\\hline
+		$ 2, 3, 5, 7, 11, 13 $ & $ 3,474,749,660,383 $\\\hline
+		$ 2, 3, 5, 7, 11, 13, 17 $ & $ 341,550,071,728,321 $\\\hline
+		$ 2, 3, 5, 7, 11, 13, 17, 19, 23 $ & $ 3,825,123,056,546,413,051 $\\\hline
+		$ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37 $ & (INT64\_MAX)$ 318,665,857,834,031,151,167,461 $\\\hline
+		$ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41 $ & $ 3,317,044,064,679,887,385,961,981 $\\\hline
+	\end{tabular}
+
 	\inputminted{cpp}{Math/miller_rabin_and_pollard_rho.cpp}
 \section{$ O(m ^ 2 \log n) $线性递推}
 \section{Polynomial}
@@ -19,11 +38,11 @@
 	\subsection{NTT\ \&多项式求逆}
 \section{拉格朗日插值}
 \section{杜教筛}
-\section{BSGS\ \small(ct,gy)}
-	\subsection{BSGS}
+\section{BSGS\ \small(ct,Durandal)}
+	\subsection{BSGS(ct)}
 		$ p $是素数，返回$ \min\lbrace x \geq 0 \mid y^x \equiv z \mod p \rbrace $
 		\inputminted{cpp}{Math/bsgs.cpp}
-	\subsection{扩展BSGS}
+	\subsection{扩展BSGS(Durandal)}
 		必须满足$ 0 \leq a < p $, $ 0 \leq b < p $，返回$ \min\lbrace x \geq 0 \mid a^x \equiv b \mod p\rbrace $
 		\inputminted{cpp}{Math/ex_bsgs.cpp}
 \section{直线下整点个数\ \small(gy)}

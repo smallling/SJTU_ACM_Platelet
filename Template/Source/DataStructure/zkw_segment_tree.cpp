@@ -1,4 +1,3 @@
-// must be 0-based !
 inline void build()
 {
 	for (int i = M - 1; i; --i) tr[i] = dmax(tr[i << 1], tr[i << 1 | 1]);
