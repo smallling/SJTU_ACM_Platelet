@@ -1,4 +1,3 @@
-// extend[i]表示T与S[i,n]的最长公共前缀
 int next[maxn], extend[maxn], fail[maxn];
 void getnext(R char *s, R int len)
 {

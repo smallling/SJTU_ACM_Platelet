@@ -1,4 +1,3 @@
-#define maxn 200010
 char s[maxn];
 int sa[maxn], rank[maxn], wa[maxn], wb[maxn], cnt[maxn], height[maxn];
 inline void build(int n, int m)
@@ -27,13 +26,4 @@ inline void build(int n, int m)
 	for (int i = 1; i <= n; ++i) rank[sa[i]] = i;
 	for (int i = 1, j, k = 0; i <= n; height[rank[i++]] = k)
 		for (k ? --k : 0, j = sa[rank[i] - 1]; s[i + k] == s[j + k]; ++k);
-}
-int main()
-{
-	scanf("%s", s + 1);
-	int n = strlen(s + 1);
-	build(n, 26);
-	for (int i = 1; i <= n; ++i) printf("%d ", sa[i]); puts("");
-	for (int i = 2; i <= n; ++i) printf("%d ", height[i]); puts("");
-	return 0;
 }

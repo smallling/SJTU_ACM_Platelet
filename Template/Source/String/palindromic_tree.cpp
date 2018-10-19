@@ -1,4 +1,3 @@
-#define maxn 300010
 char str[maxn];
 int next[maxn][26], fail[maxn], len[maxn], cnt[maxn], last, tot, n;
 inline int new_node(int l)
