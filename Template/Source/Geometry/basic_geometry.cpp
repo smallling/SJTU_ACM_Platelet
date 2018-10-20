@@ -107,7 +107,7 @@ point projection(const point &p, const line &l) {
     return l.a + (l.b - l.a) * dot(p - l.a, l.b - l.a) / (l.b - l.a).len2();
 }
 number dis(const point &p, const line &l) {
-    return std::abs(dot(p - l.a, l.b - l.a)) / (l.b - l.a).len();
+    return std::abs(det(p - l.a, l.b - l.a)) / (l.b - l.a).len();
 }
 point symmetry_point(const point &a, const point &o) {
     return o + o - a;
