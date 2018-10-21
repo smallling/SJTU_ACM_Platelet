@@ -1,4 +1,3 @@
-// \sum_{i=1}^{n} i^k
 const int mod = 1e9 + 7;
 int f[maxn], pre[maxn], suf[maxn], inp[maxn], p[maxn];
 inline int qpow(int base, int power)

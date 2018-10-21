@@ -2,8 +2,6 @@ db a[maxn][maxn], x[maxn];
 int main()
 {
 	int rank = 0;
-	// the size of the matrix is m * (n + 1)
-	// And it's an augmented matrix
 	for (int i = 1, now = 1; i <= m && now <= n; ++now)
 	{
 		if (fabs(a[i][now]) < eps)
