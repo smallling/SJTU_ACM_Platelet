@@ -1,4 +1,3 @@
-// BZOJ - 1500 维修数列
 int fa[maxn], ch[maxn][2], a[maxn], size[maxn], cnt;
 int sum[maxn], lmx[maxn], rmx[maxn], mx[maxn], v[maxn], id[maxn], root;
 bool rev[maxn], tag[maxn];

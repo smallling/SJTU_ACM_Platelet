@@ -1,13 +1,3 @@
-/*
-	【UOJ #46】 【清华集训2014】玄学
-	二进制分组的思想。
-	用线段树维护时间的操作序列，每次操作一个一个往线段树里面插，等到一个线段被插满的时候用归并来维护区间的信息。查询的时候如果一个线段没有被插满就递归下去。定位到一个区间的时候在区间里面归并出来的信息二分。
-*/
-#include <cstdio>
-
-#define maxn 100010
-#define maxm 600010
-#define R register
 int x[maxn], tnum;
 struct Seg {
     int l, r, a, b;

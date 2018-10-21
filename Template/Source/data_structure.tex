@@ -10,10 +10,15 @@
 \section{zkw线段树\ \small(ct)}
 	必须为$ 0 $-based
 	\inputminted{cpp}{DataStructure/zkw_segment_tree.cpp}
+\section{李超线段树}
+\section{吉利线段树}
+\section{二进制分组\ \small(ct)}
+	用线段树维护时间的操作序列，每次操作一个一个往线段树里面插，等到一个线段被插满的时候用归并来维护区间的信息。查询的时候如果一个线段没有被插满就递归下去。定位到一个区间的时候在区间里面归并出来的信息二分。
+	\inputminted{cpp}{DataStructure/binary_group.cpp}
 \section{Splay\ \small(ct)}
 	\subsection*{指针版}
 		\inputminted{cpp}{DataStructure/splay.cpp}
-	\subsection*{数组版}
+	\subsection*{维修序列}
 		\inputminted{cpp}{DataStructure/splay_arr.cpp}
 \section{Treap\ \small(ct)}
 	\inputminted{cpp}{DataStructure/treap.cpp}
@@ -23,3 +28,5 @@
 	\inputminted{cpp}{DataStructure/cdq_divide.cpp}
 \section{Bitset\ \small(ct)}
 	\inputminted{cpp}{DataStructure/bitset.cpp}
+\section{斜率优化}
+\section{DLX}
