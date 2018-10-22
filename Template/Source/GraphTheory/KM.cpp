@@ -1,4 +1,4 @@
-//不存在的边权值开到 -n * (|MAXV| +1), INF 为 3n *(|MAXV| +1) 
+//不存在的边权值开到 -n * (|MAXV| +1), INF 为 3n *(|MAXV| +1) 匹配(lk[i], i) 
 long long KM(int n, long long w[N][N])
 {
 	long long ans = 0;
