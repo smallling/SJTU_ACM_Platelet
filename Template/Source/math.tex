@@ -33,16 +33,25 @@
 		$ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41 $ & $ 3,317,044,064,679,887,385,961,981 $\\\hline
 	\end{tabular}
 	\inputminted{cpp}{Math/miller_rabin_and_pollard_rho.cpp}
-\section{$ O(m ^ 2 \log n) $线性递推}
+\section{$ O(m ^ 2 \log n) $线性递推\ \small(lhy)}
+	\inputminted{cpp}{Math/linear_rec.cpp}
 \section{线性基\ \small(ct)}
 	\inputminted{cpp}{Math/linear_base.cpp}
-\section{Polynomial}
-	\subsection{FFT}
-	\subsection{NTT\ \&多项式求逆}
+\section{FFT\ NTT\ FWT\ \small(lhy,ct,gy)}
+	\subsection*{FFT}
+		$ 0 $-based
+		\inputminted{cpp}{Math/fft.cpp}
+	\subsection*{NTT}
+		$ 0 $-based
+		\inputminted{cpp}{Math/ntt.cpp}
+	\subsection*{FWT}
+		$ 0 $-based
+		\inputminted{cpp}{Math/fwt.cpp}
 \section{Lagrange插值\ \small(ct)}
 	求解$ \sum\limits_{i = 1}^{n} i^k \bmod (10^9 + 7)$
 	\inputminted{cpp}{Math/lagrange_polynomial.cpp}
-\section{杜教筛}
+\section{杜教筛\ \small(ct)}
+	\inputminted{cpp}{Math/du_jiao_sieve.cpp}
 \section{BSGS\ \small(ct,Durandal)}
 	\subsection{BSGS(ct)}
 		$ p $是素数，返回$ \min\lbrace x \geq 0 \mid y^x \equiv z \mod p \rbrace $
