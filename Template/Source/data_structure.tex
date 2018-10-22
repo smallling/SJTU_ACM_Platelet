@@ -10,7 +10,8 @@
 \section{zkw线段树\ \small(ct)}
 	$ 0 $-based
 	\inputminted{cpp}{DataStructure/zkw_segment_tree.cpp}
-\section{李超线段树}
+\section{李超线段树\ \small(ct)}
+	\inputminted{cpp}{DataStructure/li_chao_segment_tree.cpp}
 \section{吉利线段树}
 \section{二进制分组\ \small(ct)}
 	用线段树维护时间的操作序列，每次操作一个一个往线段树里面插，等到一个线段被插满的时候用归并来维护区间的信息。查询的时候如果一个线段没有被插满就递归下去。定位到一个区间的时候在区间里面归并出来的信息二分。
@@ -28,5 +29,10 @@
 	\inputminted{cpp}{DataStructure/cdq_divide.cpp}
 \section{Bitset\ \small(ct)}
 	\inputminted{cpp}{DataStructure/bitset.cpp}
-\section{斜率优化}
+\section{斜率优化\ \small(ct)}
+	对于斜截式$ y = k x + b $，如果把$ k_i $看成斜率，那dp时需要最小化截距，把斜截式转化为$ b_i = - k_i x_j + y_j $，就可以把可以转移到这个状态的点看作是二维平面上的点$ (- x_j, y_j) $，问题转化为了在平面上找一个点使得斜率为$ k_i $的直线的截距最小。这样的点一定在凸包上，这样的点在凸包上和前一个点的斜率$ \leq k_i$，和后面一个点的斜率$ \geq k_i $。这样就可以在凸包上二分来加速转移。当点的横坐标$ x_i $和斜率$ k_i $都是单调的，还可以用单调队列来维护凸包。
+	\subsection*{单调队列}
+		\inputminted{cpp}{DataStructure/slope_optimize_queue.cpp}
+	\subsection*{线段树}
+		\inputminted{cpp}{DataStructure/slope_optimize_segment.cpp}
 \section{DLX}

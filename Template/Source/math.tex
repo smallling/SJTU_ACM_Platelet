@@ -1,7 +1,7 @@
 \chapter{Math}
 \section{int64相乘取模\ \small(Durandal)}
 	\inputminted{cpp}{Math/int64_multiply_mod.cpp}
-\section{扩展欧几里得\ \small(gy)}
+\section{ex-Euclid\ \small(gy)}
 	\inputminted{cpp}{Math/extend_gcd.cpp}
 \section{中国剩余定理\ \small(Durandal)}
 	返回是否可行，余数和模数结果为$ r_1 $, $ m_1 $
@@ -38,13 +38,13 @@
 \section{线性基\ \small(ct)}
 	\inputminted{cpp}{Math/linear_base.cpp}
 \section{FFT\ NTT\ FWT\ \small(lhy,ct,gy)}
-	\subsection*{FFT}
+	\subsection*{FFT\ \small(ct)}
 		$ 0 $-based
 		\inputminted{cpp}{Math/fft.cpp}
-	\subsection*{NTT}
+	\subsection*{NTT\ \small(gy)}
 		$ 0 $-based
 		\inputminted{cpp}{Math/ntt.cpp}
-	\subsection*{FWT}
+	\subsection*{FWT\ \small(lhy)}
 		$ 0 $-based
 		\inputminted{cpp}{Math/fwt.cpp}
 \section{Lagrange插值\ \small(ct)}
@@ -54,10 +54,10 @@
 	\inputminted{cpp}{Math/du_jiao_sieve.cpp}
 \section{BSGS\ \small(ct,Durandal)}
 	\subsection{BSGS(ct)}
-		$ p $是素数，返回$ \min\lbrace x \geq 0 \mid y^x \equiv z \mod p \rbrace $
+		$ p $是素数，返回$ \min\lbrace x \geq 0 \mid y^x \equiv z \pmod p \rbrace $
 		\inputminted{cpp}{Math/bsgs.cpp}
-	\subsection{扩展BSGS(Durandal)}
-		必须满足$ 0 \leq a < p $, $ 0 \leq b < p $，返回$ \min\lbrace x \geq 0 \mid a^x \equiv b \mod p\rbrace $
+	\subsection{ex-BSGS(Durandal)}
+		必须满足$ 0 \leq a < p $, $ 0 \leq b < p $，返回$ \min\lbrace x \geq 0 \mid a^x \equiv b \pmod p\rbrace $
 		\inputminted{cpp}{Math/ex_bsgs.cpp}
 \section{直线下整点个数\ \small(gy)}
 	必须满足$ a \geq 0 $, $ b \geq 0 $, $ m > 0 $，返回$ \sum\limits_{i=0}^{n-1} \frac{a + bi}{m} $
@@ -118,6 +118,7 @@
 			\sum\limits_{k = 0}^{n} \binom{n}{k} B_k & i > 0
 		\end{cases} $
 		\\$ B_n = \sum\limits_{k = 0}^{n} {n \brace k} $
+		\\$ B_{p^m + n} \equiv m B_n + B_{n + 1} \pmod p $
 	\subsection*{五边形数定理}
 		$ p(n) $表示将$ n $划分为若干个正整数之和的方案数
 		\\$ p(n) = \sum\limits_{k \in \mathbb{N}^\ast} (-1)^{k - 1} p(n - \frac{k(3k - 1)}{2}) $

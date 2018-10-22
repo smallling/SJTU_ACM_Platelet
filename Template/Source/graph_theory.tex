@@ -12,19 +12,23 @@
 	\inputminted{cpp}{GraphTheory/kth_minimum_path.cpp}
 \section{最大团}
 \section{一般图最大匹配}
-\section{带花树}
-\section{KM算法}
-\section{支配树}
+\section{KM算法\ \small(Nightfall)}
+	$ O(n^3) $，$ 1 $-based，最大权匹配
+	\\不存在的边权值开到$ -n \times (\left| MAXV \right|) $，$ \infty $为$ 3 n \times (\left| MAXV \right|) $
+	\\匹配为$ (lk_i, i) $
+	\inputminted{cpp}{GraphTheory/km.cpp}
+\section{支配树\ \small(Nightfall,ct)}
 	\subsection*{DAG\ \small(ct)}
-		\inputminted{cpp}{GraphTheory/dominate_tree_dag.cpp}
-	\subsection*{一般图}
+		\inputminted{cpp}{GraphTheory/dominator_tree_dag.cpp}
+	\subsection*{一般图\ \small(Nightfall)}
+		\inputminted{cpp}{GraphTheory/dominator_tree.cpp}
 \section{虚树\ \small(ct)}
 	\inputminted{cpp}{GraphTheory/virtual_tree.cpp}
-\section{树上点分治\ \small(ct)}
+\section{点分治\ \small(ct)}
 	\inputminted{cpp}{GraphTheory/divide_conquer_on_tree.cpp}
 \section{树上倍增\ \small(ct)}
 	\inputminted{cpp}{GraphTheory/multiplier_on_tree.cpp}
-\section{树上分块}
+\section{树分块}
 \section{Prufer编码}
 \section{Link-Cut\ Tree\ \small(ct)}
 	\inputminted{cpp}{GraphTheory/link_cut_tree.cpp}
