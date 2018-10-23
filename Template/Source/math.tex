@@ -144,6 +144,20 @@
 		\\$ \Eularian{n}{m} = (2n - m - 1) \Eularian{n - 1}{m - 1} + (m + 1) \Eularian{n - 1}{m} $
 		\\$ \Eularian{n}{0} = 1 $
 		\\$ \Eularian{0}{m} = [m = 0] $
+	\subsection*{Burnside lemma}
+		Let $ G $ be a finite group that acts on a set $ X $. For each $ g $ in $ G $ let $ X^g $ denote the set of elements in $ X $ that are fixed by $ g $ (also said to be left invariant by $ g $), i.e. $ X^g = \lbrace x \in X \mid g.x = x \rbrace $. Burnside's lemma asserts the following formula for the number of orbits, denoted $ \left| X / G \right| $:
+		\\$ \left| X / G \right| = \frac{1}{\left| G \right|} \sum\limits_{g \in G}^{} \left| X^g \right| $
+		\\Example application: The number of rotationally distinct colorings of the faces of a cube using $ n $ colors
+		\\Let $ X $ be the set of $ n^6 $ possible face colour combinations that can be applied to a cube in one particular orientation, and let the rotation group $ G $ of the cube act on $ X $ in the natural manner. Then two elements of $ X $ belong to the same orbit precisely when one is simply a rotation of the other. The number of rotationally distinct colourings is thus the same as the number of orbits and can be found by counting the sizes of the fixed sets for the $ 24 $ elements of $ G $.
+		\begin{itemize}
+			\item one identity element which leaves all $ n^6 $ elements of $ X $ unchanged
+			\item six $ 90 $-degree face rotations, each of which leaves $ n^3 $ of the elements of $ X $ unchanged
+			\item three $ 180 $-degree face rotations, each of which leaves $ n^4 $ of the elements of $ X $ unchanged
+			\item eight $ 120 $-degree vertex rotations, each of which leaves $ n^2 $ of the elements of $ X $ unchanged
+			\item six $ 180 $-degree edge rotations, each of which leaves $ n^3 $ of the elements of $ X $ unchanged
+		\end{itemize}
+		The average fix size is thus$ \frac {1}{24}(n^6+6\cdot n^3+3\cdot n^4+8\cdot n^2+6\cdot n^3) $
+		\\Hence there are $ 57 $ rotationally distinct colorings of the faces of a cube in $ 3 $ colours.
 	\subsection*{Möbius function}
 		$ \mu(n) = \begin{cases}
 			1 & n \text{ is a square-free positive integer with an even number of prime factors}\\
