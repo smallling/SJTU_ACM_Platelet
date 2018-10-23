@@ -51,6 +51,18 @@
 	求解$ \sum\limits_{i = 1}^{n} i^k \bmod (10^9 + 7)$
 	\inputminted{cpp}{Math/lagrange_polynomial.cpp}
 \section{杜教筛\ \small(ct)}
+	Dirichlet卷积：$ (f \ast g) (n) = \sum\limits_{d \mid n}^{} f(d) g(\frac{n}{d}) $
+	\\对于积性函数$ f(n) $，求其前缀和$ S(n) = \sum\limits_{i = 1}^{n} f(i) $
+	\\寻找一个恰当的积性函数$ g(n) $，使得$ g(n) $和$ (f \ast g) (n) $的前缀和都容易计算
+	\\则$ g(1) S(n) = \sum\limits_{i = 1}^{n} (f \ast g) (i) - \sum\limits_{i = 2}{n} g(i) S(\lfloor \frac{n}{i} \rfloor) $
+	\\$ \mu (n) $和$ \phi (n) $取$ g(n) = 1 $
+	\\两种常见形式：
+	\begin{itemize}[nosep]
+		\item $ S(n) = \sum\limits_{i = 1}^{n} (f \cdot g) (i) $且$ g(i) $为完全积性函数
+			\\$ S(n) = \sum\limits_{i = 1}^{n} ((f \ast 1) \cdot g) (i) - \sum\limits_{i = 2}^{n} S(\lfloor \frac{n}{i} \rfloor) g(i) $
+		\item $ S(n) = \sum\limits_{i = 1}^{n} (f \ast g) (i) $
+			\\$ S(n) = \sum\limits_{i = 1}^{n} g (i) \sum\limits_{ij \leq n}^{} (f \ast 1) (j) - \sum\limits_{i = 2}^{n} S(\lfloor \frac{n}{i} \rfloor) $
+	\end{itemize}
 	\inputminted{cpp}{Math/du_jiao_sieve.cpp}
 \section{BSGS\ \small(ct,Durandal)}
 	\subsection{BSGS\ \small(ct)}
@@ -63,7 +75,6 @@
 	必须满足$ a \geq 0 $, $ b \geq 0 $, $ m > 0 $，返回$ \sum\limits_{i=0}^{n-1} \frac{a + bi}{m} $
 	\inputminted{cpp}{Math/points_below_line.cpp}
 \section{单纯形}
-\section{辛普森积分}
 \section{数学知识\ \small(gy)}
 \newcommand{\eularian}{\genfrac\langle\rangle{0pt}{0}}
 \newcommand{\Eularian}[2]{\left\langle\!\!\!\eularian{#1}{#2}\!\!\!\right\rangle}
@@ -149,7 +160,7 @@
 		\\$ \left| X / G \right| = \frac{1}{\left| G \right|} \sum\limits_{g \in G}^{} \left| X^g \right| $
 		\\Example application: The number of rotationally distinct colorings of the faces of a cube using $ n $ colors
 		\\Let $ X $ be the set of $ n^6 $ possible face colour combinations that can be applied to a cube in one particular orientation, and let the rotation group $ G $ of the cube act on $ X $ in the natural manner. Then two elements of $ X $ belong to the same orbit precisely when one is simply a rotation of the other. The number of rotationally distinct colourings is thus the same as the number of orbits and can be found by counting the sizes of the fixed sets for the $ 24 $ elements of $ G $.
-		\begin{itemize}
+		\begin{itemize}[nosep]
 			\item one identity element which leaves all $ n^6 $ elements of $ X $ unchanged
 			\item six $ 90 $-degree face rotations, each of which leaves $ n^3 $ of the elements of $ X $ unchanged
 			\item three $ 180 $-degree face rotations, each of which leaves $ n^4 $ of the elements of $ X $ unchanged
