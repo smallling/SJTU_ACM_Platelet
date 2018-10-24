@@ -7,14 +7,10 @@
 	\inputminted{cpp}{Others/rsp.cpp}
 \section{O3\ \small(gy)}
 	\inputminted{cpp}{Others/o3.cpp}
-\section{Java Template\ \small(gy)}
+\section{Java\ Template\ \small(gy)}
 	\inputminted{java}{Others/Template.java}
-\section{Big Fraction\ \small(gy)}
-	\inputminted{kotlin}{Others/big_fraction.kt}
 \section{模拟退火\ \small(ct)}
 	\inputminted{cpp}{Others/simulated_annealing.cpp}
-\section{三分\ \small(ct)}
-	\inputminted{cpp}{Others/cubic_search.cpp}
 \section{Simpson积分\ \small(gy)}
 	\inputminted{cpp}{Others/simpson.cpp}
 \section{Zeller\ Congruence\ \small(gy)}
@@ -31,8 +27,21 @@
 		\item Fibonacci nim
 			\\给定一堆石子，第一次可以取至少一个、少于石子总数数量的石子，之后每次可以取至少一个、不超过上次取石子数量两倍的石子，取走最后石子的胜
 			\\先手胜当且仅当石子数为斐波那契数
+		\item anti-SG
+			\\决策集合为空的游戏者胜
+			\\先手胜当且仅当满足以下任一条件
+			\begin{itemize}[nosep]
+				\item 所有单一游戏的$ SG $值都$ < 2 $且游戏的$ SG $值为$ 0 $
+				\item 至少有一个单一游戏的$ SG $值$ \geq 2 $且游戏的$ SG $值不为$ 0 $
+			\end{itemize}
 	\end{itemize}
 \section{积分表\ \small(integral-table.com)}
 	\begin{multicols}{2}
 		\input{Others/integral-table.tex}
 	\end{multicols}
+\section{STL\ Container\ Interface\ \small(cppreference.com)}
+	\ifodd\thepage
+		\includepdf[angle=270]{Others/stl.pdf}
+	\else
+		\includepdf[angle=90]{Others/stl.pdf}
+	\fi

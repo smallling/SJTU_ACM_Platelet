@@ -6,6 +6,7 @@ public class Template {
     // Input
     private static BufferedReader reader;
     private static StringTokenizer tokenizer;
+
     private static String next() {
         try {
             while (tokenizer == null || !tokenizer.hasMoreTokens())
@@ -15,12 +16,15 @@ public class Template {
         }
         return tokenizer.nextToken();
     }
+
     private static int nextInt() {
         return Integer.parseInt(next());
     }
+
     private static double nextDouble() {
         return Double.parseDouble(next());
     }
+
     private static BigInteger nextBigInteger() {
         return new BigInteger(next());
     }
@@ -45,6 +49,7 @@ public class Template {
         BigInteger y = BigDecimal.ZERO.toBigInteger(); // RoundingMode.DOWN
         y = BigDecimal.ZERO.setScale(0, RoundingMode.HALF_EVEN).unscaledValue();
     }
+
     // sqrt for Java 8
     // can solve scale=100 for 10000 times in about 1 second
     private static BigDecimal sqrt(BigDecimal a, int scale) {
@@ -56,6 +61,7 @@ public class Template {
             ret = ret.add(a.divide(ret, scale, RoundingMode.HALF_EVEN)).divide(BigDecimal.valueOf(2), scale, RoundingMode.HALF_EVEN);
         return ret;
     }
+
     // can solve a=2^10000 for 100000 times in about 1 second
     private static BigInteger sqrt(BigInteger a) {
         int length = a.bitLength() - 1;
@@ -113,5 +119,46 @@ public class Template {
         long a = 1_000_000_000_000_000_000L;
         int b = Integer.MAX_VALUE;
         int c = 'a';
+    }
+
+    private static class BigFraction {
+        private BigInteger a, b;
+
+        BigFraction(BigInteger a, BigInteger b) {
+            BigInteger gcd = a.gcd(b);
+            this.a = a.divide(gcd);
+            this.b = b.divide(gcd);
+        }
+
+        BigFraction add(BigFraction o) {
+            BigInteger gcd = b.gcd(o.b);
+            BigInteger tempProduct = b.divide(gcd).multiply(o.b.divide(gcd));
+            BigInteger ansA = a.multiply(o.b.divide(gcd)).add(o.a.multiply(b.divide(gcd)));
+            BigInteger gcd2 = ansA.gcd(gcd);
+            ansA = ansA.divide(gcd2);
+            gcd2 = gcd.divide(gcd2);
+            return new BigFraction(ansA, gcd2.multiply(tempProduct));
+        }
+
+        BigFraction subtract(BigFraction o) {
+            BigInteger gcd = b.gcd(o.b);
+            BigInteger tempProduct = b.divide(gcd).multiply(o.b.divide(gcd));
+            BigInteger ansA = a.multiply(o.b.divide(gcd)).subtract(o.a.multiply(b.divide(gcd)));
+            BigInteger gcd2 = ansA.gcd(gcd);
+            ansA = ansA.divide(gcd2);
+            gcd = gcd.divide(gcd2);
+            return new BigFraction(ansA, gcd2.multiply(tempProduct));
+        }
+
+        BigFraction multiply(BigFraction o) {
+            BigInteger gcd1 = a.gcd(o.b);
+            BigInteger gcd2 = b.gcd(o.a);
+            return new BigFraction(a.divide(gcd1).multiply(o.a.divide(gcd2)), b.divide(gcd2).multiply(o.b.divide(gcd1)));
+        }
+
+        @Override
+        public String toString() {
+            return a + "/" + b;
+        }
     }
 }

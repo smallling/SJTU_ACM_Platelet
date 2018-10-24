@@ -74,6 +74,11 @@
 \section{直线下整点个数\ \small(gy)}
 	必须满足$ a \geq 0 $, $ b \geq 0 $, $ m > 0 $，返回$ \sum\limits_{i=0}^{n-1} \frac{a + bi}{m} $
 	\inputminted{cpp}{Math/points_below_line.cpp}
+\section{Pell\ equation\ \small(gy)}
+	$ x^2 - n y^2 $有解当且仅当$ n $不为完全平方数
+	\\求其特解$ (x_0, y_0) $
+	\\其通解为$ (x_{k + 1}, y_{k + 1}) = (x_0 x_k + n y_0 y_k, x_0 y_k + y_0 x_k ) $
+	\inputminted{cpp}{Math/pell.cpp}
 \section{单纯形\ \small(gy)}
 	返回$ x_{m \times 1} $使得$ \max \lbrace c_{1 \times m} \cdot x_{m \times 1} \mid x_{m \times 1} \geq 0_{m \times 1}, A_{n \times m} \cdot x_{m \times 1} \leq b_{n \times 1} \rbrace $
 	\inputminted{cpp}{Math/simplex.cpp}
