@@ -9,7 +9,14 @@
 \section{线性同余不等式\ \small(Durandal)}
 	必须满足$ 0 \leq d < m $, $ 0 \leq l \leq r < m $，返回$ \min\lbrace x \geq 0 \mid l \leq x \cdot d \bmod m \leq r \rbrace $，无解返回$ -1 $ 
 	\inputminted{cpp}{Math/linear_congruence_inequality.cpp}
-\section{组合数}
+\section{平方剩余\ \small(Nightfall)}
+	$ x^2 = a \pmod p, 0 \leq a < p $
+	\\返回是否存在解
+	\\$ p $必须是质数, 若是多个单次质数的乘积可以分别求解再用CRT合并
+	\\复杂度为$ O(\log n) $
+	\inputminted{cpp}{Math/square_remainder.cpp}
+\section{组合数\ \small(Nightfall)}
+	\inputminted{cpp}{Math/ex_lucas.cpp}
 \section{高斯消元\ \small(ct)}
 	增广矩阵大小为$ m \times (n + 1) $
 	\inputminted{cpp}{Math/gauss_elimination.cpp}

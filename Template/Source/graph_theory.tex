@@ -10,7 +10,13 @@
 	\inputminted{cpp}{GraphTheory/steiner_tree.cpp}
 \section{K短路\ \small(lhy)}
 	\inputminted{cpp}{GraphTheory/kth_minimum_path.cpp}
-\section{最大团}
+\section{最大团\ \small(Nightfall)}
+	时间复杂度建议$ n \leq 150 $
+	\inputminted{cpp}{GraphTheory/maximum_clique.cpp}
+\section{极大团计数\ \small(Nightfall)}
+	$ 0 $-based, 需删除自环
+	\\极大团计数, 最坏情况$ O(3^{n / 3}) $
+	\inputminted{cpp}{GraphTheory/maximum_clique_count.cpp}
 \section{二分图最大匹配\ \small(lhy)}
 	左侧$ n $个点，右侧$ m $个点，$ 1 $-based，初始化将$ matx $和$ maty $置为$ 0 $
 	\inputminted{cpp}{GraphTheory/hopcroft_karp.cpp}
@@ -21,6 +27,8 @@
 	\\不存在的边权值开到$ -n \times (\left| MAXV \right|) $，$ \infty $为$ 3 n \times (\left| MAXV \right|) $
 	\\匹配为$ (lk_i, i) $
 	\inputminted{cpp}{GraphTheory/km.cpp}
+\section{最小树形图\ \small(Nightfall)}
+	\inputminted{cpp}{GraphTheory/zhu_liu.cpp}
 \section{支配树\ \small(Nightfall,ct)}
 	\subsection*{DAG\ \small(ct)}
 		\inputminted{cpp}{GraphTheory/dominator_tree_dag.cpp}
@@ -32,13 +40,13 @@
 	\inputminted{cpp}{GraphTheory/divide_conquer_on_tree.cpp}
 \section{树上倍增\ \small(ct)}
 	\inputminted{cpp}{GraphTheory/multiplier_on_tree.cpp}
-\section{Prufer编码}
 \section{Link-Cut\ Tree\ \small(ct)}
 	\inputminted{cpp}{GraphTheory/link_cut_tree.cpp}
 \section{圆方树\ \small(ct)}
 	\inputminted{cpp}{GraphTheory/circle_square_tree.cpp}
-\section{最小割}
-\section{最大流\ \small(ct)}
+\section{无向图最小割\ \small(Nightfall)}
+	\inputminted{cpp}{GraphTheory/stoer_wagner.cpp}
+\section{最大流\ \small(lhy,ct)}
 	\subsection*{Dinic\ \small(ct)}
 		\inputminted{cpp}{GraphTheory/dinic.cpp}
 	\subsection*{SAP\ \small(lhy)}
@@ -52,6 +60,16 @@
 \section{图论知识\ \small(gy,lhy)}
 	\subsection*{Hall theorem}
 		二分图$ G = (X, Y, E) $有完备匹配的充要条件是：对于$ X $的任意一个子集$ S $都满足$ \left| S \right| \leq \left| A(S) \right| $，$ A(S) $是$ Y $的子集，是$ S $的邻集（与$ S $有边的边集）。
+	\subsection*{Prufer编码}
+		树和其prufer编码一一对应, 一颗$ n $个点的树, 其prufer编码长度为$ n − 2 $, 且度数为$ d_i $的点在prufer编码中出现$ d_i − 1 $次。
+		\\由树得到序列: 总共需要$ n − 2 $步, 第$ i $步在当前的树中寻找具有最小标号的叶子节点，将与其相连的点的标号设为Prufer序列的第$ i $个元素$ p_i $, 并将此叶子节点从树中删除, 直到最后得到一个长度为$ n − 2 $的Prufer序列和一个只有两个节点的树。
+		\\由序列得到树: 先将所有点的度赋初值为$ 1 $, 然后加上它的编号在Prufer序列中出现的次数, 得到每个点的度; 执行$ n − 2 $步, 第$ i $步选取具有最小标号的度为$ 1 $的点$ u $与$ v = p_i$相连, 得到树中的一条边, 并将$ u $和$ v $的度减$ 1 $。最后再把剩下的两个度为$ 1 $的点连边, 加入到树中。
+		\\相关结论:
+		\begin{itemize}[nosep]
+			\item $ n $个点完全图, 每个点度数依次为$ d_1, d_2 , \dots, dn $，这样生成树的棵树为：$ \frac{(n - 2) !}{(d_1 - 1)! (d_2 - 1)! \dots (d_n - 1)!} $
+			\item 左边有$ n_1 $个点, 右边有$ n_2 $个点的完全二分图的生成树棵树为：$ n_1^{n_2 - 1} + n_2^{n_1 - 1} $
+			\item $ m $个连通块, 每个连通块有$ c_i $个点, 把他们全部连通的生成树方案数：$ (\sum c_i)^{m - 2} \prod c_i $
+		\end{itemize}
 	\subsection*{弦图}
 		弦图：任意点数$ \geq 4 $的环皆有弦的无向图
 		\\单纯点：与其相邻的点的诱导子图为完全图的点
@@ -63,24 +81,33 @@
 	\subsection*{计数问题}
 		\begin{itemize}
 			\item \textbf{有根树计数}
-			\\$ a_1 = 1 $
-			\\$ a_{n + 1} = \frac{\sum\limits_{j = 1}^{n} j \cdot a_j \cdot S_{n, j}}{n} $
-			\\$ S_{n, j} = \sum\limits_{i = 1}^{n / j} a_{n + 1 - ij} = S_{n - j, j} + a_{n + 1 - j} $
+				\\$ a_1 = 1 $
+				\\$ a_{n + 1} = \frac{\sum\limits_{j = 1}^{n} j \cdot a_j \cdot S_{n, j}}{n} $
+				\\$ S_{n, j} = \sum\limits_{i = 1}^{n / j} a_{n + 1 - ij} = S_{n - j, j} + a_{n + 1 - j} $
 			\item \textbf{无根树计数}
-			\\$ \begin{cases}
-				a_n - \sum\limits_{i = 1}^{n / 2} a_i a_{n - i} & n \text{ is odd}\\
-				a_n - \sum\limits_{i = 1}^{n / 2} a_i a_{n - i} + \frac{1}{2} a_{\frac{n}{2}} (a_{\frac{n}{2}} + 1) & n \text{ is even}
-			\end{cases} $
-			\item \textbf{完全图生成树计数}
-			\\$ n^{n - 2} $
-			\item \textbf{矩阵-树定理}
-			\\设$ \mathbf{A}\lbrack G \rbrack $为图$ G $的邻接矩阵、$ \mathbf{D}\lbrack G \rbrack $为图$ G $的度数矩阵，则图$ G $的不同生成树的个数为 $ \mathbf{C}\lbrack G \rbrack = \mathbf{D}\lbrack G \rbrack - \mathbf{A}\lbrack G \rbrack $的任意一个$ n - 1 $阶主子式的行列式值。
+				\\$ \begin{cases}
+					a_n - \sum\limits_{i = 1}^{n / 2} a_i a_{n - i} & n \text{ is odd}\\
+					a_n - \sum\limits_{i = 1}^{n / 2} a_i a_{n - i} + \frac{1}{2} a_{\frac{n}{2}} (a_{\frac{n}{2}} + 1) & n \text{ is even}
+				\end{cases} $
+			\item \textbf{生成树计数}
+				\\Kirchhoff Matrix $ T = Deg − A $, $ Deg $是度数对角阵, $ A $是邻接矩阵。无向图度数矩阵是每个点度数; 有向图度数矩阵是每个点入度。邻接矩阵$ A[u][v] $表示$ u \to v $边个数, 重边按照边数计算, 自环不计入度数。
+				\\无向图生成树计数: $ c = \left|K\text{的任意}1\text{个}n−1\text{阶主子式}\right| $
+				\\有向图外向树计数: $ c = \left|\text{去掉根所在的那阶得到的主子式}\right| $
+			\item \textbf{Edmonds Matrix}
+				\\Edmonds matrix $ A $ of a balanced ($ \left| U \right| = \left| V \right| $) bipartite graph $ G = (U, V, E) $：
+				\\$ A_{ij} = \begin{cases}
+					x_{ij} & (u_i, v_j) \in E\\
+					0 & (u_i, v_j) \notin E
+				\end{cases} $
+				\\where the $ x_{ij} $ are indeterminates.
+				\\$ G $有完备匹配当且仅当关于$ x_{ij} $的多项式$ \det(A_{ij}) $不恒为$ 0 $。
+				\\完备匹配的个数等于多项式中单项式的个数
 			\item \textbf{偶数点完全图完备匹配计数}
-			\\$ (n - 1)!! $
+				\\$ (n - 1)!! $
 			\item \textbf{无根二叉树计数}
-			\\$ (2n - 5)!! $
+				\\$ (2n - 5)!! $
 			\item \textbf{有根二叉树计数}
-			\\$ (2n - 3)!! $
+				\\$ (2n - 3)!! $
 		\end{itemize}
 	\subsection*{上下界网络流}
 		$ B(u, v) $表示边$ (u, v) $流量的下界，$ C(u, v) $表示边$ (u, v) $流量的上界，设$ F(u, v) $表示边$ (u, v) $的实际流量\\
