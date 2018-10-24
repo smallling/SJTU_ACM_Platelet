@@ -74,7 +74,9 @@
 \section{直线下整点个数\ \small(gy)}
 	必须满足$ a \geq 0 $, $ b \geq 0 $, $ m > 0 $，返回$ \sum\limits_{i=0}^{n-1} \frac{a + bi}{m} $
 	\inputminted{cpp}{Math/points_below_line.cpp}
-\section{单纯形}
+\section{单纯形\ \small(gy)}
+	返回$ x_{m \times 1} $使得$ \max \lbrace c_{1 \times m} \cdot x_{m \times 1} \mid x_{m \times 1} \geq 0_{m \times 1}, A_{n \times m} \cdot x_{m \times 1} \leq b_{n \times 1} \rbrace $
+	\inputminted{cpp}{Math/simplex.cpp}
 \section{数学知识\ \small(gy)}
 \newcommand{\eularian}{\genfrac\langle\rangle{0pt}{0}}
 \newcommand{\Eularian}[2]{\left\langle\!\!\!\eularian{#1}{#2}\!\!\!\right\rangle}

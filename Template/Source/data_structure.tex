@@ -7,12 +7,23 @@
 	\inputminted{cpp}{DataStructure/union_find_weighted.cpp}
 \section{可并堆\ \small(ct)}
 	\inputminted{cpp}{DataStructure/mergeable_heap.cpp}
-\section{zkw线段树\ \small(ct)}
-	$ 0 $-based
-	\inputminted{cpp}{DataStructure/zkw_segment_tree.cpp}
-\section{李超线段树\ \small(ct)}
-	\inputminted{cpp}{DataStructure/li_chao_segment_tree.cpp}
-\section{吉利线段树}
+\section{线段树\ \small(ct)}
+	\subsection*{zkw线段树}
+		$ 0 $-based
+		\inputminted{cpp}{DataStructure/zkw_segment_tree.cpp}
+	\subsection*{李超线段树}
+		\inputminted{cpp}{DataStructure/li_chao_segment_tree.cpp}
+	\subsection*{吉利线段树}
+	\subsection*{线段树维护折线}
+		对于线段树每个结点维护两个值：$ ans $和$ max $，$ ans $表示只考虑这个区间的可视区间的答案，$ max $表示这个区间的最大值。那么问题的关键就在于如何合并两个区间，显然左区间的答案肯定可以作为总区间的答案，那么接下来就是看右区间有多少个在新加入左区间的约束后是可行的。考虑如果右区间最大值都小于等于左区间最大值那么右区间就没有贡献了，相当于是被整个挡住了。
+		\\如果大于最大值，就再考虑右区间的两个子区间：左子区间、右子区间，加入左子区间的最大值小于等于左区间最大值，那么就递归处理右子区间；否则就递归处理左子区间，然后加上右子区间原本的答案。考虑这样做的必然性：因为加入左区间最高的比左子区间最高的矮，那么相当于是左区间对于右子区间没有约束，都是左子区间产生的约束。但是右子区间的答案要用右区间答案$ - $左子区间答案，不能直接调用右子区间本身答案，因为其本身答案没有考虑左子区间的约束。
+	\subsection*{线段树维护矩形面积并}
+		线段树上维护两个值：$ Cover $和$ Len $
+		\\$ Cover $意为这个区间被覆盖了多少次（不是有没有被覆盖）
+		\\$ Len $意为区间被覆盖的总长度
+		\\Maintain的时候，如果$ Cover > 0 $，$ Len $直接为区间长
+		\\否则从左右子树递推$ Len $
+		\\修改的时候直接改$ Cover $就好
 \section{二进制分组\ \small(ct)}
 	用线段树维护时间的操作序列，每次操作一个一个往线段树里面插，等到一个线段被插满的时候用归并来维护区间的信息。查询的时候如果一个线段没有被插满就递归下去。定位到一个区间的时候在区间里面归并出来的信息二分。
 	\inputminted{cpp}{DataStructure/binary_group.cpp}
@@ -35,7 +46,11 @@
 		\inputminted{cpp}{DataStructure/slope_optimize_queue.cpp}
 	\subsection*{线段树}
 		\inputminted{cpp}{DataStructure/slope_optimize_segment.cpp}
-\section{树分块}
+\section{树分块\ \small(ct)}
 	树分块套分块：给定一棵有点权的树，每次询问链上不同点权个数
 	\inputminted{cpp}{DataStructure/tree_block.cpp}
+\section{矩形面积并\ \small(ct)}
+	\inputminted{cpp}{DataStructure/rectangle_conjunction.cpp}
+\section{KD\ tree\ \small(lhy)}
+	\inputminted{cpp}{DataStructure/kd_tree.cpp}
 \section{DLX}
