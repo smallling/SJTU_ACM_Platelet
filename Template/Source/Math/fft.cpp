@@ -1,15 +1,6 @@
 typedef double db;
 const db pi = acos(-1);
 
-char S[1 << 20], *T = S;
-inline int F()
-{
-	char ch; int cnt = 0;
-	while (ch = *T++, ch < '0' || ch > '9') ;
-	cnt = ch - '0';
-	while (ch = *T++, ch >= '0' && ch <= '9') cnt = cnt * 10 + ch - '0';
-	return cnt;
-}
 struct Complex {
 	db x, y;
 	inline Complex operator * (const Complex &that) const {return (Complex) {x * that.x - y * that.y, x * that.y + y * that.x};}
