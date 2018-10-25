@@ -10,7 +10,7 @@
 	必须满足$ 0 \leq d < m $, $ 0 \leq l \leq r < m $，返回$ \min\lbrace x \geq 0 \mid l \leq x \cdot d \bmod m \leq r \rbrace $，无解返回$ -1 $ 
 	\inputminted{cpp}{Math/linear_congruence_inequality.cpp}
 \section{平方剩余\ \small(Nightfall)}
-	$ x^2 = a \pmod p, 0 \leq a < p $
+	$ x^2 \equiv a \pmod p, 0 \leq a < p $
 	\\返回是否存在解
 	\\$ p $必须是质数, 若是多个单次质数的乘积可以分别求解再用CRT合并
 	\\复杂度为$ O(\log n) $
@@ -71,6 +71,10 @@
 			\\$ S(n) = \sum\limits_{i = 1}^{n} g (i) \sum\limits_{ij \leq n}^{} (f \ast 1) (j) - \sum\limits_{i = 2}^{n} S(\lfloor \frac{n}{i} \rfloor) $
 	\end{itemize}
 	\inputminted{cpp}{Math/du_jiao_sieve.cpp}
+\section{Extended\ Eratosthenes\ Sieve\ \small(Nightfall)}
+	一般积性函数的前缀和，要求：$ f(p) $为多项式
+	\\$ f(p^k) = \sum\limits_{i = 0}^{k} p^i $
+	\inputminted{cpp}{Math/ex_eratosthenes_sieve.cpp}
 \section{BSGS\ \small(ct,Durandal)}
 	\subsection{BSGS\ \small(ct)}
 		$ p $是素数，返回$ \min\lbrace x \geq 0 \mid y^x \equiv z \pmod p \rbrace $
@@ -92,6 +96,11 @@
 \section{数学知识\ \small(gy)}
 \newcommand{\eularian}{\genfrac\langle\rangle{0pt}{0}}
 \newcommand{\Eularian}[2]{\left\langle\!\!\!\eularian{#1}{#2}\!\!\!\right\rangle}
+	\subsection*{原根}
+		当$ \gcd(a, m) = 1 $时，使$ a^x \equiv 1 \pmod m $成立的最小正整数$ x $称为$ a $对于模$ m $的阶，计为$ \text{ord}_m(a) $。
+		\\阶的性质：$ a^n \equiv 1 \pmod m $的充要条件是$ \text{ord}_m(a) \mid n $，可推出$ \text{ord}_m(a) \mid \psi(m) $。
+		\\当$ \text{ord}_m(g) = \psi(m) $时，则称$ g $是模$ n $的一个原根，$ g^0, g^1, \dots, g^{\psi(m) - 1} $覆盖了$ m $以内所有与$ m $互素的数。
+		\\原根存在的充要条件：$ m = 2, 4, p^k, 2 p^k $，其中$ p $为奇素数，$ k \in \mathbb{N}^\ast $
 	\subsection*{求和公式}
 		\begin{itemize}
 			\item $ \sum\limits_{k=1}^{n} (2k - 1)^2 = \frac{1}{3} n(4n^2 - 1) $

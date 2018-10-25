@@ -41,6 +41,36 @@
 \section{树上倍增\ \small(ct)}
 	\inputminted{cpp}{GraphTheory/multiplier_on_tree.cpp}
 \section{Link-Cut\ Tree\ \small(ct)}
+	LCT常见应用
+	\begin{itemize}
+		\item 动态维护边双
+			\\可以通过LCT来解决一类动态边双连通分量问题。即静态的询问可以用边双连通分量来解决，而树有加边等操作的问题。
+			\\把一个边双连通分量缩到LCT的一个点中，然后在LCT上求出答案。缩点的方法为加边时判断两点的连通性，如果已经联通则把两点在目前LCT路径上的点都缩成一个点。
+		\item 动态维护基环森林
+			\\通过LCT可以动态维护基环森林，即每个点有且仅有一个出度的图。有修改操作，即改变某个点的出边。对于每颗基环森林记录
+			一个点为根，并把环上额外的一条边单独记出，剩下的边用LCT维护。一般使用有向LCT维护。
+			\\修改时分以下几种情况讨论：
+			\begin{itemize}[nosep]
+				\item 修改的点是根，如果改的父亲在同一个连通块中，直接改额外边，否则删去额外边，在LCT上加边。
+				\item 修改的点不是根，那么把这个点和其父亲的联系切除。如果该点和根在一个环上，那么把多的那条边加到LCT上。最后如果改的那个父亲和修改的点在一个联通块中，记录额外边，否则LCT上加边。
+			\end{itemize}
+		\item 子树询问
+			\\通过记录轻边信息可以快速地维护出整颗LCT的一些值。如子树和，子树最大值等。在Access时要进行虚实边切换，这时减去实边的贡献，并加上新加虚边的贡献即可。有时需要套用数据结构，如Set来维护最值等问题。
+			\\模板：
+			\begin{itemize}[nosep]
+				\item $ x \to y $链$ + z $
+				\item $ x \to y $链变为$ z $
+				\item 在以$ x $为根的树对$ y $子树的点权求和
+				\item $ x \to y $链取$ \max $
+				\item $ x \to y $链求和
+				\item 连接$ x, y $
+				\item 断开$ x, y $
+			\end{itemize}
+			$ V $单点值，$ sz $平衡树的size，$ mv $链上最大，$ S $链上和，$ sm $区间相同标记，$ lz $区间加标记，$ B $虚边之和，$ ST $子树信息和，$ SM $子树和链上信息和。更新时：
+			\\$ S[x] = S[c[x][0]] + S[c[x][1]] + V[x] $
+			\\$ ST[x] =B[x] + ST[c[x][0]] + ST[c[x][1]] $
+			\\$ SM[x] = S[x] + ST[x] $
+	\end{itemize}
 	\inputminted{cpp}{GraphTheory/link_cut_tree.cpp}
 \section{圆方树\ \small(ct)}
 	\inputminted{cpp}{GraphTheory/circle_square_tree.cpp}
@@ -56,7 +86,6 @@
 		\inputminted{cpp}{GraphTheory/min_cost_max_flow.cpp}
 	\subsection*{zkw(lhy)}
 		\inputminted{cpp}{GraphTheory/zkw_min_cost_flow.cpp}
-\section{差分约束}
 \section{图论知识\ \small(gy,lhy)}
 	\subsection*{Hall theorem}
 		二分图$ G = (X, Y, E) $有完备匹配的充要条件是：对于$ X $的任意一个子集$ S $都满足$ \left| S \right| \leq \left| A(S) \right| $，$ A(S) $是$ Y $的子集，是$ S $的邻集（与$ S $有边的边集）。
@@ -70,6 +99,8 @@
 			\item 左边有$ n_1 $个点, 右边有$ n_2 $个点的完全二分图的生成树棵树为：$ n_1^{n_2 - 1} + n_2^{n_1 - 1} $
 			\item $ m $个连通块, 每个连通块有$ c_i $个点, 把他们全部连通的生成树方案数：$ (\sum c_i)^{m - 2} \prod c_i $
 		\end{itemize}
+	\subsection*{差分约束}
+		若要使得所有量两两的值最接近, 则将如果将源点到各点的距离初始化为$ 0 $。若要使得某一变量与其余变量的差最大, 则将源点到各点的距离初始化为$ \infty $, 其中之一为$ 0 $。 若求最小方案则跑最长路, 否则跑最短路。
 	\subsection*{弦图}
 		弦图：任意点数$ \geq 4 $的环皆有弦的无向图
 		\\单纯点：与其相邻的点的诱导子图为完全图的点
