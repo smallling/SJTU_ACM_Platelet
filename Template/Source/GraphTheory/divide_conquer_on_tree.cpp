@@ -3,7 +3,7 @@ bool vis[maxn];
 void dfs_root(int x, int fa)
 {
 	size[x] = 1; son[x] = 0;
-	for (R Edge *iter = last[x]; iter; iter = iter -> next)
+	for (Edge *iter = last[x]; iter; iter = iter -> next)
 	{
 		if (iter -> to == fa || vis[iter -> to]) continue;
 		dfs_root(iter -> to, x);
@@ -13,7 +13,7 @@ void dfs_root(int x, int fa)
 	cmax(son[x], sum - size[x]);
 	if (!root || son[x] < son[root]) root = x;
 }
-void dfs_chain(int x, int fa, int st1, int st2)
+void dfs_chain(int x, int fa)
 {
 	/*
 		write your code here.
@@ -39,7 +39,7 @@ void work(int x)
 {
 	vis[x] = 1;
 	calc(x);
-	for (R Edge *iter = last[x]; iter; iter = iter -> next)
+	for (Edge *iter = last[x]; iter; iter = iter -> next)
 	{
 		if (vis[iter -> to]) continue;
 		root = 0;

@@ -9,7 +9,7 @@ poly operator - (const poly &a, const poly &b){
 poly sum_fp(LL l, LL r) { // f(p) = 1 + p
     return poly(r-l+1, (l+r) * (r-l+1) / 2);
 }
-LL fpk(LL p, LL k) {
+LL fpk(LL p, LL k) { // f(p^k) = sum{i in 0..k | p^i}
     LL res = 0, q = 1;
     for (int i = 0; i <= k; ++ i) { res += q; q *= p; }
     return res;

@@ -10,33 +10,9 @@ inline void link(int a, int b)
 int a[maxn], n, dfn[maxn], pos[maxn], timer, inv[maxn], st[maxn];
 int fa[maxn], size[maxn], dep[maxn], son[maxn], top[maxn];
 bool vis[maxn];
-void dfs1(int x)
-{
-	vis[x] = 1; size[x] = 1; dep[x] = dep[fa[x]] + 1;
-	for (R Edge *iter = last[x]; iter; iter = iter -> next)
-		if (!vis[iter -> to])
-		{
-			fa[iter -> to] = x;
-			dfs1(iter -> to);
-			size[x] += size[iter -> to];
-			size[son[x]] < size[iter -> to] ? son[x] = iter -> to : 0;
-		}
-}
-void dfs2(int x)
-{
-	vis[x] = 0; top[x] = x == son[fa[x]] ? top[fa[x]] : x;
-	dfn[x] = ++timer; pos[timer] = x;
-	if (son[x]) dfs2(son[x]);
-	for (R Edge *iter = last[x]; iter; iter = iter -> next)
-		if (vis[iter -> to]) dfs2(iter -> to);
-	inv[x] = timer;
-}
-inline int getlca(int a, int b)
-{
-	while (top[a] != top[b])
-		dep[top[a]] < dep[top[b]] ? b = fa[top[b]] : a = fa[top[a]];
-	return dep[a] < dep[b] ? a : b;
-}
+void dfs1(int x); // 树剖
+void dfs2(int x);
+inline int getlca(int a, int b);
 inline bool cmp(int a, int b)
 {
 	return dfn[a] < dfn[b];
