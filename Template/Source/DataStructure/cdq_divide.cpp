@@ -5,7 +5,7 @@ struct event
 void cdq(int left, int right)
 {
 	if (left == right) return ;
-	R int mid = left + right >> 1;
+	int mid = left + right >> 1;
 	cdq(left, mid);
 	cdq(mid + 1, right);
 	//分成若干个子问题
@@ -19,7 +19,7 @@ void cdq(int left, int right)
 		if (q[j].opt)
 			q[j].ans += query(q[j].y);
 	}
-	R int i, j, k = 0;
+	int i, j, k = 0;
 	//以下相当于归并排序
 	for (i = left, j = mid + 1; i <= mid && j <= right; )
 	{

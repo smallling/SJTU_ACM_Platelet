@@ -1,9 +1,9 @@
 int fa[maxn], ch[maxn][2], a[maxn], size[maxn], cnt;
 int sum[maxn], lmx[maxn], rmx[maxn], mx[maxn], v[maxn], id[maxn], root;
 bool rev[maxn], tag[maxn];
-inline void update(R int x)
+inline void update(int x)
 {
-	R int ls = ch[x][0], rs = ch[x][1];
+	int ls = ch[x][0], rs = ch[x][1];
 	size[x] = size[ls] + size[rs] + 1;
 	sum[x] = sum[ls] + sum[rs] + v[x];
 	mx[x] = gmax(mx[ls], mx[rs]);
@@ -11,9 +11,9 @@ inline void update(R int x)
 	lmx[x] = gmax(lmx[ls], sum[ls] + v[x] + lmx[rs]);
 	rmx[x] = gmax(rmx[rs], sum[rs] + v[x] + rmx[ls]);
 }
-inline void pushdown(R int x)
+inline void pushdown(int x)
 {
-	R int ls = ch[x][0], rs = ch[x][1];
+	int ls = ch[x][0], rs = ch[x][1];
 	if (tag[x])
 	{
 		rev[x] = tag[x] = 0;
@@ -37,29 +37,29 @@ inline void pushdown(R int x)
 		swap(ch[ls][0], ch[ls][1]); swap(ch[rs][0], ch[rs][1]);
 	}
 }
-inline void rotate(R int x)
+inline void rotate(int x)
 {
-	R int f = fa[x], gf = fa[f], d = ch[f][1] == x;
+	int f = fa[x], gf = fa[f], d = ch[f][1] == x;
 	if (f == root) root = x;
 	(ch[f][d] = ch[x][d ^ 1]) > 0 ? fa[ch[f][d]] = f : 0;
 	(fa[x] = gf) > 0 ? ch[gf][ch[gf][1] == f] = x : 0;
 	fa[ch[x][d ^ 1] = f] = x;
 	update(f);
 }
-inline void splay(R int x, R int rt)
+inline void splay(int x, int rt)
 {
 	while (fa[x] != rt)
 	{
-		R int f = fa[x], gf = fa[f];
+		int f = fa[x], gf = fa[f];
 		if (gf != rt) rotate((ch[gf][1] == f) ^ (ch[f][1] == x) ? x : f);
 		rotate(x);
 	}
 	update(x);
 }
-void build(R int l, R int r, R int rt)
+void build(int l, int r, int rt)
 {
 	if (l > r) return ;
-	R int mid = l + r >> 1, now = id[mid], last = id[rt];
+	int mid = l + r >> 1, now = id[mid], last = id[rt];
 	if (l == r)
 	{
 		sum[now] = a[l];
@@ -78,33 +78,33 @@ void build(R int l, R int r, R int rt)
 	update(now);
 	ch[last][mid >= rt] = now;
 }
-int find(R int x, R int rank)
+int find(int x, int rank)
 {
 	if (tag[x] || rev[x]) pushdown(x);
-	R int ls = ch[x][0], rs = ch[x][1], lsize = size[ls];
+	int ls = ch[x][0], rs = ch[x][1], lsize = size[ls];
 	if (lsize + 1 == rank) return x;
 	if (lsize >= rank)
 		return find(ls, rank);
 	else
 		return find(rs, rank - lsize - 1);
 }
-inline int prepare(R int l, R int tot)
+inline int prepare(int l, int tot)
 {
-	R int x = find(root, l - 1), y = find(root, l + tot);
+	int x = find(root, l - 1), y = find(root, l + tot);
 	splay(x, 0);
 	splay(y, x);
 	return ch[y][0];
 }
 std::queue <int> q;
-inline void Insert(R int left, R int tot)
+inline void Insert(int left, int tot)
 {
-	for (R int i = 1; i <= tot; ++i ) a[i] = FastIn();
-	for (R int i = 1; i <= tot; ++i )
+	for (int i = 1; i <= tot; ++i ) a[i] = FastIn();
+	for (int i = 1; i <= tot; ++i )
 		if (!q.empty()) id[i] = q.front(), q.pop();
 		else id[i] = ++cnt;
 	build(1, tot, 0);
-	R int z = id[(1 + tot) >> 1];
-	R int x = find(root, left), y = find(root, left + 1);
+	int z = id[(1 + tot) >> 1];
+	int x = find(root, left), y = find(root, left + 1);
 	splay(x, 0);
 	splay(y, x);
 	fa[z] = y;
@@ -112,31 +112,31 @@ inline void Insert(R int left, R int tot)
 	update(y);
 	update(x);
 }
-void rec(R int x)
+void rec(int x)
 {
 	if (!x) return ;
-	R int ls = ch[x][0], rs = ch[x][1];
+	int ls = ch[x][0], rs = ch[x][1];
 	rec(ls); rec(rs); q.push(x);
 	fa[x] = ch[x][0] = ch[x][1] = 0;
 	tag[x] = rev[x] = 0;
 }
-inline void Delete(R int l, R int tot)
+inline void Delete(int l, int tot)
 {
-	R int x = prepare(l, tot), f = fa[x];
+	int x = prepare(l, tot), f = fa[x];
 	rec(x); ch[f][0] = 0;
 	update(f); update(fa[f]);
 }
-inline void Makesame(R int l, R int tot, R int val)
+inline void Makesame(int l, int tot, int val)
 {
-	R int x = prepare(l, tot), y = fa[x];
+	int x = prepare(l, tot), y = fa[x];
 	v[x] = val; tag[x] = 1; sum[x] = size[x] * val;
 	if (val >= 0) lmx[x] = rmx[x] = mx[x] = sum[x];
 	else lmx[x] = rmx[x] = 0, mx[x] = val;
 	update(y); update(fa[y]);
 }
-inline void Reverse(R int l, R int tot)
+inline void Reverse(int l, int tot)
 {
-	R int x = prepare(l, tot), y = fa[x];
+	int x = prepare(l, tot), y = fa[x];
 	if (!tag[x])
 	{
 		rev[x] ^= 1;
@@ -145,25 +145,25 @@ inline void Reverse(R int l, R int tot)
 		update(y); update(fa[y]);
 	}
 }
-inline void Query(R int l, R int tot)
+inline void Query(int l, int tot)
 {
-	R int x = prepare(l, tot);
+	int x = prepare(l, tot);
 	printf("%d\n",sum[x] );
 }
 #define inf ((1 << 30))
 int main()
 {
-	R int n = FastIn(),  m = FastIn(), l, tot, val;
-	R char op, op2;
+	int n = FastIn(),  m = FastIn(), l, tot, val;
+	char op, op2;
 	mx[0] = a[1] = a[n + 2] = -inf;
-	for (R int i = 2; i <= n + 1; i++ )
+	for (int i = 2; i <= n + 1; i++ )
 	{
 		a[i] = FastIn();
 	}
-	for (R int i = 1; i <= n + 2; ++i) id[i] = i;
+	for (int i = 1; i <= n + 2; ++i) id[i] = i;
 	n += 2; cnt = n; root = (n + 1) >> 1;
 	build(1, n, 0);
-	for (R int i = 1; i <= m; i++ )
+	for (int i = 1; i <= m; i++ )
 	{
 		op = getc();
 		while (op < 'A' || op > 'Z') op = getc();

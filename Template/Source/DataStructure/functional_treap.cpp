@@ -66,7 +66,7 @@ Treap *Merge(Treap *a, Treap *b)
 Treap *Build(int l, int r)
 {
 	if (l > r) return null;
-	R int mid = l + r >> 1;
+	int mid = l + r >> 1;
 	Treap *nw = new_node(str[mid]);
 	nw -> ls = Build(l, mid - 1);
 	nw -> rs = Build(mid + 1, r);
@@ -98,7 +98,7 @@ void Print(Treap *x, int l, int r)
 {
 	if (!x) return ;
 	if (l > r) return;
-	R int mid = x -> ls -> size + 1;
+	int mid = x -> ls -> size + 1;
 	if (r < mid)
 	{
 		Print(x -> ls, l, r);
@@ -131,7 +131,7 @@ int main()
 	while (1)
 	{
 		last = tot;
-		R char opt = getc();
+		char opt = getc();
 		while (opt < 'A' || opt > 'Z')
 		{
 			if (opt == EOF) return 0;
@@ -139,23 +139,23 @@ int main()
 		}
 		if (opt == 'I')
 		{
-			R int x = F();
-			R char ch = getc();
+			int x = F();
+			char ch = getc();
 			Insert(x, ch);
 		}
 		else if (opt == 'D')
 		{
-			R int l = F(), r = F();
+			int l = F(), r = F();
 			Del(l, r);
 		}
 		else if (opt == 'C')
 		{
-			R int x = F(), y = F(), z = F();
+			int x = F(), y = F(), z = F();
 			Copy(x, y, z);
 		}
 		else if (opt == 'P')
 		{
-			R int x = F(), y = F(), z = F();
+			int x = F(), y = F(), z = F();
 			Print(root[now - x], y, z);
 			puts("");
 		}

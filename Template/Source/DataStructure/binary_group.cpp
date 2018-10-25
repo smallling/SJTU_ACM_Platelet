@@ -3,10 +3,10 @@ struct Seg {
     int l, r, a, b;
 } p[maxn * 200];
 int lef[maxm << 2], rig[maxm << 2], pcnt, ta, tb, ql, qr, n, m, k, ans;
-void update(R int o, R int l, R int r)
+void update(int o, int l, int r)
 {
     lef[o] = pcnt + 1;
-    for (R int i = lef[o << 1], j = lef[o << 1 | 1], head = 1; i <= rig[o << 1] || j <= rig[o << 1 | 1]; )
+    for (int i = lef[o << 1], j = lef[o << 1 | 1], head = 1; i <= rig[o << 1] || j <= rig[o << 1 | 1]; )
         if (p[i].r <= p[j].r)
         {
             p[++pcnt] = (Seg) {head, p[i].r, 1ll * p[i].a * p[j].a % m, (1ll * p[j].a * p[i].b + p[j].b) % m};
@@ -20,19 +20,19 @@ void update(R int o, R int l, R int r)
         }
     rig[o] = pcnt;
 }
-int find(R int o, R int t, R int &s)
+int find(int o, int t, int &s)
 {
-    R int l = lef[o], r = rig[o];
+    int l = lef[o], r = rig[o];
     while (l < r)
     {
-        R int mid = l + r >> 1;
+        int mid = l + r >> 1;
         if (t <= p[mid].r) r = mid;
         else l = mid + 1;
     }
 //    printf("%d %d t %d s %d %d %d\n", p[l].l, p[l].r, t, s, p[l].a, p[l].b);
     s = (1ll * s * p[l].a + p[l].b) % m;
 }
-void modify(R int o, R int l, R int r, R int t)
+void modify(int o, int l, int r, int t)
 {
     if (l == r)
     {
@@ -43,31 +43,31 @@ void modify(R int o, R int l, R int r, R int t)
         rig[o] = pcnt;
         return ;
     }
-    R int mid = l + r >> 1;
+    int mid = l + r >> 1;
     if (t <= mid) modify(o << 1, l, mid, t);
     else modify(o << 1 | 1, mid + 1, r, t);
 
     if (t == r) update(o, l, r);
 }
-void query(R int o, R int l, R int r)
+void query(int o, int l, int r)
 {
     if (ql <= l && r <= qr)
     {
         find(o, k, ans);
         return ;
     }
-    R int mid = l + r >> 1;
+    int mid = l + r >> 1;
     if (ql <= mid) query(o << 1, l, mid);
     if (mid < qr) query(o << 1 | 1, mid + 1, r);
 }
 int main()
 {
-    R int type; scanf("%d%d%d", &type, &n, &m);
-    for (R int i = 1; i <= n; ++i) scanf("%d", &x[i]);
-    R int Q; scanf("%d", &Q);
-    for (R int QQ = 1; QQ <= Q; ++QQ)
+    int type; scanf("%d%d%d", &type, &n, &m);
+    for (int i = 1; i <= n; ++i) scanf("%d", &x[i]);
+    int Q; scanf("%d", &Q);
+    for (int QQ = 1; QQ <= Q; ++QQ)
     {
-        R int opt, l, r; scanf("%d%d%d", &opt, &l, &r);
+        int opt, l, r; scanf("%d%d%d", &opt, &l, &r);
         type & 1 ? l ^= ans, r ^= ans : 0;
         if (opt == 1)
         {
