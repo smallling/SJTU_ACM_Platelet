@@ -1,32 +1,31 @@
-\chapter{String}
 \section{KMP\ \small(ct)}
 	\subsection*{KMP}
-		\inputminted{cpp}{String/kmp.cpp}
+		\myminted{cpp}{String/kmp.cpp}
 	\subsection*{exKMP}
 		$ extend_i $表示$ T $与$ S_{i,n} $的最长公共前缀
-		\inputminted{cpp}{String/ex_kmp.cpp}
+		\myminted{cpp}{String/ex_kmp.cpp}
 \section{AC自动机\ \small(ct)}
-	\inputminted{cpp}{String/ac_automaton.cpp}
+	\myminted{cpp}{String/ac_automaton.cpp}
 \section{Lydon\ Word\ Decomposition\ \small(Nightfall)}
 	满足$ s $的最小后缀等于$ s $本身的串称为Lyndon串.
 	\\等价于: $ s $是它自己的所有循环移位中唯一最小的一个.
 	\\任意字符串$ s $可以分解为$ s = \overline{s_1 s_2 \dots s_k} $，其中$ s_i $是Lyndon串，$ s_i \geq s_i + 1 $。且这种分解方法是唯一的。
-	\inputminted{cpp}{String/lydon.cpp}
+	\myminted{cpp}{String/lydon.cpp}
 \section{后缀数组\ \small(ct)}
-	\inputminted{cpp}{String/suffix_array.cpp}
+	\myminted{cpp}{String/suffix_array.cpp}
 \section{后缀自动机\ \small(ct,lhy)}
 	\subsection*{后缀自动机(lhy)}
-		\inputminted{cpp}{String/suffix_automaton_lhy.cpp}
+		\myminted{cpp}{String/suffix_automaton_lhy.cpp}
 	\subsection*{后缀自动机(ct)}
-		\inputminted{cpp}{String/suffix_automaton.cpp}
+		\myminted{cpp}{String/suffix_automaton.cpp}
 	\subsection*{广义后缀自动机(ct)}
-		\inputminted{cpp}{String/general_suffix_automaton.cpp}
+		\myminted{cpp}{String/general_suffix_automaton.cpp}
 \section{Manacher\ \small(ct)}
-	\inputminted{cpp}{String/manacher.cpp}
+	\myminted{cpp}{String/manacher.cpp}
 \section{回文树\ \small(ct)}
-	\inputminted{cpp}{String/palindromic_tree.cpp}
+	\myminted{cpp}{String/palindromic_tree.cpp}
 \section{最小表示法\ \small(ct)}
-	\inputminted{cpp}{String/minimal_rounding_string.cpp}
+	\myminted{cpp}{String/minimal_rounding_string.cpp}
 \section{字符串知识\ \small(Nightfall)}
 	\subsection*{双回文串}
 		如果$ s = x_1 x_2 = y_1 y_2 = z_1 z_2 $，$ \left|x_1\right| < \left|y_1\right| < \left|z_1\right| $，$ x_2, y_1, y_2, z_1 $是回文串，则$ x_1 $和$ z_2 $也是回文串。

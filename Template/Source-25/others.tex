@@ -1,24 +1,23 @@
-\chapter{Others}
 \section{vimrc\ \small(gy)}
-	\inputminted{vim}{Others/.vimrc}
+	\myminted{vim}{Others/.vimrc}
 \section{STL释放内存\ \small(Durandal)}
-	\inputminted{cpp}{Others/stl_clear.cpp}
+	\myminted{cpp}{Others/stl_clear.cpp}
 \section{开栈\ \small(Durandal)}
-	\inputminted{cpp}{Others/rsp.cpp}
+	\myminted{cpp}{Others/rsp.cpp}
 \section{O3\ \small(gy)}
-	\inputminted{cpp}{Others/o3.cpp}
+	\myminted{cpp}{Others/o3.cpp}
 \section{读入优化\ \small(ct)}
-    \inputminted{cpp}{Others/input_optimize.cpp}
+    \myminted{cpp}{Others/input_optimize.cpp}
 \section{Java\ Template\ \small(gy)}
-	\inputminted{java}{Others/Template.java}
+	\myminted{java}{Others/Template.java}
 \section{模拟退火\ \small(ct)}
-	\inputminted{cpp}{Others/simulated_annealing.cpp}
+	\myminted{cpp}{Others/simulated_annealing.cpp}
 \section{Simpson积分\ \small(gy)}
-	\inputminted{cpp}{Others/simpson.cpp}
+	\myminted{cpp}{Others/simpson.cpp}
 \section{Zeller\ Congruence\ \small(gy)}
-	\inputminted{cpp}{Others/zeller_congruence.cpp}
+	\myminted{cpp}{Others/zeller_congruence.cpp}
 \section{博弈论模型\ \small(gy)}
-	\begin{itemize}
+	\begin{itemize}[wide=0pt]
 		\item Wythoff's game
 			\\给定两堆石子，每次可以从任意一堆中取至少一个石子，或从两堆中取相同的至少一个石子，取走最后石子的胜
 			\\先手胜当且仅当石子数满足：
@@ -32,18 +31,10 @@
 		\item anti-SG
 			\\决策集合为空的游戏者胜
 			\\先手胜当且仅当满足以下任一条件
-			\begin{itemize}[nosep]
+			\begin{itemize}[nosep,wide=0pt]
 				\item 所有单一游戏的$ SG $值都$ < 2 $且游戏的$ SG $值为$ 0 $
 				\item 至少有一个单一游戏的$ SG $值$ \geq 2 $且游戏的$ SG $值不为$ 0 $
 			\end{itemize}
 	\end{itemize}
 \section{积分表\ \small(integral-table.com)}
-	\begin{multicols}{2}
-		\input{Others/integral-table.tex}
-	\end{multicols}
-\section{STL\ Container\ Interface\ \small(cppreference.com)}
-	\ifodd\thepage
-		\includepdf[angle=270]{Others/stl.pdf}
-	\else
-		\includepdf[angle=90]{Others/stl.pdf}
-	\fi
+	\input{Others/integral-table.tex}

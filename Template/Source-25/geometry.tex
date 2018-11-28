@@ -1,30 +1,29 @@
-\chapter{Geometry}
 \section{点、直线、圆\ \small(gy)}
-	\inputminted{cpp}{Geometry/basic_geometry.cpp}
+	\myminted{cpp}{Geometry/basic_geometry.cpp}
 \section{平面最近点对\ \small(Grimoire)}
-	\inputminted{cpp}{Geometry/nearest_points.cpp}
+	\myminted{cpp}{Geometry/nearest_points.cpp}
 \section{凸包游戏\ \small(Grimoire)}
 	给定凸包，$ O(n \log n) $完成询问：
-	\begin{itemize}
+	\begin{itemize}[wide=0pt]
 		\item 点在凸包内
 		\item 凸包外的点到凸包的两个切点
 		\item 向量关于凸包的切点
 		\item 直线与凸包的交点
 	\end{itemize}
 	传入凸包要求$ 1 $号点为$ Pair(x, y) $最小的
-	\inputminted{cpp}{Geometry/convex_game.cpp}
+	\myminted{cpp}{Geometry/convex_game.cpp}
 \section{半平面交\ \small(Grimoire)}
-	\inputminted{cpp}{Geometry/half_plane_intersect.cpp}
+	\myminted{cpp}{Geometry/half_plane_intersect.cpp}
 \section{点在多边形内\ \small(Grimoire)}
-	\inputminted{cpp}{Geometry/point_in_polygon.cpp}
+	\myminted{cpp}{Geometry/point_in_polygon.cpp}
 \section{最小圆覆盖\ \small(Grimoire)}
-	\inputminted{cpp}{Geometry/minimal_coverage_circle.cpp}
+	\myminted{cpp}{Geometry/minimal_coverage_circle.cpp}
 \section{最小球覆盖\ \small(Grimoire)}
-	\inputminted{cpp}{Geometry/minimal_coverage_ball.cpp}
+	\myminted{cpp}{Geometry/minimal_coverage_ball.cpp}
 \section{圆并\ \small(Grimoire)}
-	\inputminted{cpp}{Geometry/circle_union.cpp}
+	\myminted{cpp}{Geometry/circle_union.cpp}
 \section{圆与多边形并\ \small(Grimoire)}
-	\inputminted{cpp}{Geometry/area_union.cpp}
+	\myminted{cpp}{Geometry/area_union.cpp}
 \section{三角剖分\ \small(Grimoire)}
 	Triangulation::find返回包含某点的三角形
 	\\Triangulation::add\_point将某点加入三角剖分
@@ -33,27 +32,27 @@
 	\\通过三角剖分构造V图：连接相邻三角形外接圆圆心
 	\\注意初始化内存池和$ Triangulation::LOTS $
 	\\复杂度$ O(n \log n) $
-	\inputminted{cpp}{Geometry/delaunay_triangulation.cpp}
+	\myminted{cpp}{Geometry/delaunay_triangulation.cpp}
 \section{三维几何基础\ \small(Grimoire)}
-	\inputminted{cpp}{Geometry/3d_basic.cpp}
+	\myminted{cpp}{Geometry/3d_basic.cpp}
 \section{三维凸包\ \small(Grimoire)}
-	\inputminted{cpp}{Geometry/3d_convex.cpp}
+	\myminted{cpp}{Geometry/3d_convex.cpp}
 \section{三维绕轴旋转\ \small(gy)}
 	右手大拇指指向$ axis $方向，四指弯曲方向旋转$ w $弧度
-	\inputminted{cpp}{Geometry/3d_rotate.cpp}
+	\myminted{cpp}{Geometry/3d_rotate.cpp}
 \section{几何知识\ \small(gy)}
 	\subsection*{Pick theorem}
 		顶点为整点的简单多边形，其面积$ A $，内部格点数$ i $，边上格点数$ b $满足：
 		\\$ A = i + \frac{b}{2} - 1 $
 	\subsection*{欧拉示性数}
-		\begin{itemize}
+		\begin{itemize}[wide=0pt]
 			\item 三维凸包的顶点个数$ V $，边数$ E $，面数$ F $满足：
 			\\$ V - E + F = 2 $
 			\item 平面图的顶点个数$ V $，边数$ E $，平面被划分的区域数$ F $，组成图形的连通部分的数目$ C $满足：
 			\\$ V - E + F = C + 1 $
 		\end{itemize}
 	\subsection*{几何公式}
-		\begin{itemize}
+		\begin{itemize}[wide=0pt]
 			\item \textbf{三角形}
 				\\半周长$ p = \frac{a + b + c}{2} $
 				\\面积$ S = \frac{1}{2} a H_a = \frac{1}{2} a b \cdot \sin C = \sqrt{p(p - a)(p - b)(p - c)} = p r = \frac{a b c}{4R} $
