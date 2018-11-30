@@ -35,18 +35,17 @@
 \makeatother
 
 \newcommand{\mychapter}[2]{
-	\noindent\rule\linewidth{1pt}
 	\begin{multicols}{2}
 		\let\clearpage\relax\chapter{#1}
 		\input{#2}
 	\end{multicols}
-	\noindent\rule\linewidth{1pt}
+	\noindent\rule\linewidth{2pt}
 }
 \renewcommand{\theFancyVerbLine}{\sffamily\textcolor[rgb]{0.5, 0.5, 0.5}{\tiny\arabic{FancyVerbLine}}}
 \newcommand{\myminted}[2]{
 	\inputminted[
 		breaklines,
-		breakafter=()\,\&|,
+		breakafter=()\&|,
 		fontsize=\small,
 		%framerule=0.1pt,
 		linenos,

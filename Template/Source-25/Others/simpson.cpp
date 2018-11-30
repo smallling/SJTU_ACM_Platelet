@@ -1,6 +1,5 @@
 number f(number x){
-  return /* Take circle area as example */
-    std::sqrt(1-x*x)*2;
+  return /* circle area */ std::sqrt(1-x*x)*2;
 }
 number simpson(number a,number b){
   number c = (a+b)/2;
