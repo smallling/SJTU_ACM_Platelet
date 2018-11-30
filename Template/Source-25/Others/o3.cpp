@@ -1,1 +1,1 @@
-__attribute__((optimize("-O3"))) int main() { return 0; }
+__attribute__((optimize("-O3"))) void f(){}
