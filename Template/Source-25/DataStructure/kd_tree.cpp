@@ -3,7 +3,7 @@ inline int cmp(const lhy &a,const lhy &b){
 }
 inline void updata(int x){
   if(p[x].l){
-    for(int i = 0;i<2;i++){
+    for(int i=0;i<2;i++){
       p[x].min[i] =
         min(p[x].min[i],p[p[x].l].min[i]);
       p[x].max[i] =
