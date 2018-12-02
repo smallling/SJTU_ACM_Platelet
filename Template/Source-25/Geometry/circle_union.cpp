@@ -130,21 +130,12 @@ int main(){
               psh(-pi,dvd,pi,dvd);
           }else if(d+eps<sqr(cir[j].r+cir[i].r)){
             double lambda = 0.5*(1+(sqr(cir[i].r)-
-                                    sqr(
-                                      cir[j].r))/
-                                   d);
+                	sqr(cir[j].r))/d);
             Point cp(cir[i].o+
-                     lambda*(cir[j].o-cir[i].o));
+                	lambda*(cir[j].o-cir[i].o));
             Point nor((cir[j].o-cir[i].o).rev()
-                                         .zoom(
-                                           sqrt(
-                                             sqr(
-                                               cir[i]
-                                                 .r)-
-                                             (cp-
-                                              cir[i]
-                                                .o)
-                                               .sqrlen())));
+             .zoom(sqrt(sqr(cir[i].r)-
+			 (cp-cir[i].o).sqrlen())));
             Point frm(cp+nor);
             Point to(cp-nor);
             psh(atan2(frm-cir[i].o),frm,
@@ -159,16 +150,12 @@ int main(){
         //如果只算ans[1]和centre[1], 加这个if加速。
         double theta(vec[j+1].theta-vec[j].theta);
         double area(sqr(cir[i].r)*theta*0.5);
-        combine(cnt,area,cir[i].o+
-                         1./area/3*cub(cir[i].r)*
-                         Point(
-                           sin(vec[j+1].theta)-
-                           sin(vec[j].theta),
-                           cos(vec[j].theta)-
-                           cos(vec[j+1].theta)));
+        combine(cnt,area,cir[i].o+1./area/3
+		 *cub(cir[i].r)*Point(
+         sin(vec[j+1].theta)-sin(vec[j].theta),
+         cos(vec[j].theta)-cos(vec[j+1].theta)));
         combine(cnt,-sqr(cir[i].r)*sin(theta)*0.5,
-                1./3*
-                (cir[i].o+vec[j].p+vec[j+1].p));
+         1./3*(cir[i].o+vec[j].p+vec[j+1].p));
         combine(cnt,vec[j].p*vec[j+1].p*0.5,
                 1./3*(vec[j].p+vec[j+1].p));
         //}
