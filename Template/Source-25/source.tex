@@ -13,7 +13,6 @@
 \usepackage{enumitem}
 \usepackage{pdfpages}
 \usepackage{tocloft}
-\usepackage{sectsty}
 \usepackage{lipsum}
 \usepackage{xpatch}
 \usepackage{mdframed}
@@ -27,6 +26,7 @@
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
 \renewcommand{\contentsname}{目录}
+\renewcommand{\chaptertitlename}{Ch.}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
 
@@ -35,13 +35,14 @@
 \makeatother
 
 \newcommand{\mychapter}[2]{
+	\noindent\rule\linewidth{2pt}
 	\begin{multicols}{2}
 		\let\clearpage\relax\chapter{#1}
 		\input{#2}
 	\end{multicols}
-	\noindent\rule\linewidth{2pt}
 }
 \renewcommand{\theFancyVerbLine}{\sffamily\textcolor[rgb]{0.5, 0.5, 0.5}{\tiny\arabic{FancyVerbLine}}}
+\usemintedstyle{colorful}
 \newcommand{\myminted}[2]{
 	\inputminted[
 		breaklines,
@@ -55,12 +56,12 @@
 	]{#1}{#2}
 }
 
-\titleformat{\chapter}{\normalfont\bfseries\LARGE}{\thechapter.}{10pt}{}
-\titlespacing{\chapter}{0pt}{0.4cm}{0.3cm}
-\titleformat{\section}{\normalfont\bfseries\Large}{\thesection.}{10pt}{}
-\titlespacing{\section}{0pt}{0.2cm}{0.1cm}
+\titleformat{\chapter}{\normalfont\bfseries\Large}{\textcolor[rgb]{0.5, 0.5, 0.5}{\chaptertitlename}}{10pt}{}
+\titlespacing{\chapter}{0pt}{0pt}{1pt}
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{10pt}{}
+\titlespacing{\section}{0pt}{0pt}{0.5pt}
 \titleformat{\subsection}{\normalfont\bfseries\normalsize}{}{0pt}{}
-\titlespacing{\subsection}{0pt}{0.02cm}{0.01cm}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
 \setlength{\cftbeforetoctitleskip}{1.0cm}
 \setlength{\cftaftertoctitleskip}{1.0cm}
 
@@ -112,7 +113,8 @@
 	\begin{multicols}{2}
 		\tableofcontents
 	\end{multicols}
-	\clearpage
+	%\clearpage
+	%\noindent\rule\linewidth{2pt}
 	%\renewcommand{\clearpage}{}
 	\mychapter{Graph Theory}{graph_theory.tex}
 	\mychapter{Math}{math.tex}

@@ -1,7 +1,5 @@
 \section{莫队\ \small(ct)}
 	\myminted{cpp}{DataStructure/mo_dui.cpp}
-\section{ST表\ \small(ct)}
-	\myminted{cpp}{DataStructure/st_table.cpp}
 \section{带权并查集\ \small(ct)}
 	\myminted{cpp}{DataStructure/union_find_weighted.cpp}
 \section{可并堆\ \small(ct)}
@@ -33,19 +31,8 @@
 \section{二进制分组\ \small(ct)}
 	用线段树维护时间的操作序列，每次操作一个一个往线段树里面插，等到一个线段被插满的时候用归并来维护区间的信息。查询的时候如果一个线段没有被插满就递归下去。定位到一个区间的时候在区间里面归并出来的信息二分。
 	\myminted{cpp}{DataStructure/binary_group.cpp}
-\section{Splay\ \small(ct)}
-	\subsection*{指针版}
-		\myminted{cpp}{DataStructure/splay.cpp}
-	\subsection*{维修序列}
-		\myminted{cpp}{DataStructure/splay_arr.cpp}
-\section{Treap\ \small(ct)}
-	\myminted{cpp}{DataStructure/treap.cpp}
-\section{可持久化平衡树\ \small(ct)}
-	\myminted{cpp}{DataStructure/functional_treap.cpp}
 \section{CDQ分治\ \small(ct)}
 	\myminted{cpp}{DataStructure/cdq_divide.cpp}
-\section{Bitset\ \small(ct)}
-	\myminted{cpp}{DataStructure/bitset.cpp}
 \section{斜率优化\ \small(ct)}
 	对于斜截式$ y = k x + b $，如果把$ k_i $看成斜率，那dp时需要最小化截距，把斜截式转化为$ b_i = - k_i x_j + y_j $，就可以把可以转移到这个状态的点看作是二维平面上的点$ (- x_j, y_j) $，问题转化为了在平面上找一个点使得斜率为$ k_i $的直线的截距最小。这样的点一定在凸包上，这样的点在凸包上和前一个点的斜率$ \leq k_i$，和后面一个点的斜率$ \geq k_i $。这样就可以在凸包上二分来加速转移。当点的横坐标$ x_i $和斜率$ k_i $都是单调的，还可以用单调队列来维护凸包。
 	\subsection*{单调队列}

@@ -37,15 +37,13 @@
 	\myminted{cpp}{GraphTheory/virtual_tree.cpp}
 \section{点分治\ \small(ct)}
 	\myminted{cpp}{GraphTheory/divide_conquer_on_tree.cpp}
-\section{树上倍增\ \small(ct)}
-	\myminted{cpp}{GraphTheory/multiplier_on_tree.cpp}
 \section{Link-Cut\ Tree\ \small(ct)}
 	LCT常见应用
-	\begin{itemize}[wide=0pt]
-		\item 动态维护边双
+	\begin{itemize}[nosep,wide=0pt]
+        \item \textbf{动态维护边双}
 			\\可以通过LCT来解决一类动态边双连通分量问题。即静态的询问可以用边双连通分量来解决，而树有加边等操作的问题。
 			\\把一个边双连通分量缩到LCT的一个点中，然后在LCT上求出答案。缩点的方法为加边时判断两点的连通性，如果已经联通则把两点在目前LCT路径上的点都缩成一个点。
-		\item 动态维护基环森林
+        \item \textbf{动态维护基环森林}
 			\\通过LCT可以动态维护基环森林，即每个点有且仅有一个出度的图。有修改操作，即改变某个点的出边。对于每颗基环森林记录
 			一个点为根，并把环上额外的一条边单独记出，剩下的边用LCT维护。一般使用有向LCT维护。
 			\\修改时分以下几种情况讨论：
@@ -53,7 +51,7 @@
 				\item 修改的点是根，如果改的父亲在同一个连通块中，直接改额外边，否则删去额外边，在LCT上加边。
 				\item 修改的点不是根，那么把这个点和其父亲的联系切除。如果该点和根在一个环上，那么把多的那条边加到LCT上。最后如果改的那个父亲和修改的点在一个联通块中，记录额外边，否则LCT上加边。
 			\end{itemize}
-		\item 子树询问
+        \item \textbf{子树询问}
 			\\通过记录轻边信息可以快速地维护出整颗LCT的一些值。如子树和，子树最大值等。在Access时要进行虚实边切换，这时减去实边的贡献，并加上新加虚边的贡献即可。有时需要套用数据结构，如Set来维护最值等问题。
 			\\模板：
 			\begin{itemize}[nosep,wide=0pt]
@@ -75,16 +73,8 @@
 	\myminted{cpp}{GraphTheory/circle_square_tree.cpp}
 \section{无向图最小割\ \small(Nightfall)}
 	\myminted{cpp}{GraphTheory/stoer_wagner.cpp}
-\section{最大流\ \small(lhy,ct)}
-	\subsection*{Dinic\ \small(ct)}
-		\myminted{cpp}{GraphTheory/dinic.cpp}
-	\subsection*{SAP\ \small(lhy)}
-		\myminted{cpp}{GraphTheory/sap.cpp}
-\section{费用流\ \small(ct)}
-	\subsection*{SPFA(ct)}
-		\myminted{cpp}{GraphTheory/min_cost_max_flow.cpp}
-	\subsection*{zkw(lhy)}
-		\myminted{cpp}{GraphTheory/zkw_min_cost_flow.cpp}
+\section{zkw费用流\ \small(lhy)}
+    \myminted{cpp}{GraphTheory/zkw_min_cost_flow.cpp}
 \section{图论知识\ \small(gy,lhy)}
 	\subsection*{Hall theorem}
 		二分图$ G = (X, Y, E) $有完备匹配的充要条件是：对于$ X $的任意一个子集$ S $都满足$ \left| S \right| \leq \left| A(S) \right| $，$ A(S) $是$ Y $的子集，是$ S $的邻集（与$ S $有边的边集）。
@@ -109,7 +99,7 @@
 		\\最大团数$ = $最小染色数：按完美消除序列从后往前贪心地染色
 		\\最小团覆盖$ = $最大点独立集：按完美消除序列从前往后贪心地选点加入点独立集
 	\subsection*{计数问题}
-		\begin{itemize}[wide=0pt]
+		\begin{itemize}[nosep,wide=0pt]
 			\item \textbf{有根树计数}
 				\\$ a_1 = 1 $
 				\\$ a_{n + 1} = \frac{\sum\limits_{j = 1}^{n} j \cdot a_j \cdot S_{n, j}}{n} $
@@ -142,18 +132,18 @@
 	\subsection*{上下界网络流}
 		$ B(u, v) $表示边$ (u, v) $流量的下界，$ C(u, v) $表示边$ (u, v) $流量的上界，设$ F(u, v) $表示边$ (u, v) $的实际流量\\
 		设$ G(u, v) = F(u, v) - B(u, v) $，则$ 0 \leq G(u, v) \leq C(u, v) - B(u, v) $
-		\begin{itemize}[wide=0pt]
+		\begin{itemize}[nosep,wide=0pt]
 			\item 无源汇的上下界可行流
 				\\建立超级源点$ S^\ast $和超级汇点$ T^\ast $，对于原图每一条边$ (u, v) $在新网络中连如下三条边：$ S^\ast \to v $，容量为$ B(u, v) $；$ u \to T^\ast $，容量为$ B(u, v) $；$ u \to v $，容量为$ C(u, v) - B(u, v) $。最后求新网络的最大流，判断从超级源点$ S^\ast $出发的边是否都满流即可，边$ (u, v) $的最终解中的实际流量为$ G(u, v) + B(u, v) $。
 			\item 有源汇的上下界可行流
 				\\从汇点$ T $到源点$ S $连一条上界为$ \infty $，下界为$ 0 $的边。按照无源汇的上下界可行流一样做即可，流量即为$ T \to S $边上的流量。
 			\item 有源汇的上下界最大流
-				\begin{itemize}[wide=0pt]
+				\begin{itemize}[nosep,wide=0pt]
 					\item 在有源汇的上下界可行流中，从汇点$ T $到源点$ S $的边改为连一条上界为$ \infty $，下界为$ x $的边。$ x $满足二分性质，找到最大的$ x $使得新网络存在有源汇的上下界可行流即为原图的最大流。
 					\item 从汇点$ T $到源点$ S $连一条上界为$ \infty $，下界为$ 0 $的边，变成无源汇的网络。按照无源汇的上下界可行流的方法，建立超级源点$ S^\ast $与超级汇点$ T^\ast $，求一遍$ S^\ast \to T^\ast $的最大流，再将从汇点$ T $到源点$ S $的这条边拆掉，求一次$ S \to T $的最大流即可。
 				\end{itemize}
 			\item 有源汇的上下界最小流
-				\begin{itemize}[wide=0pt]
+				\begin{itemize}[nosep,wide=0pt]
 					\item 在有源汇的上下界可行流中，从汇点$ T $到源点$ S $的边改为连一条上界为$ x $，下界为$ 0 $的边。$ x $满足二分性质，找到最小的$ x $使得新网络存在有源汇的上下界可行流即为原图的最大流。
 					\item 按照无源汇的上下界可行流的方法，建立超级源点$ S^\ast $与超级汇点$ T^\ast $，求一遍$ S^\ast \to T^\ast $的最大流，但是注意不加上汇点$ T $到源点$ S $的这条边，即不使之改为无源汇的网络去求解。求完后，再加上那条汇点$ T $到源点$ S $的边，上界为$ \infty $的边。因为这条边的下界为$ 0 $，所以$ S^\ast $, $ T^\ast $无影响，再求一次$ S^\ast \to T^\ast $的最大流。若超级源点$ S^\ast $出发的边全部满流，则$ T \to S $边上的流量即为原图的最小流，否则无解。
 				\end{itemize}

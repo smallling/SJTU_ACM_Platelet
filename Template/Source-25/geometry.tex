@@ -4,7 +4,7 @@
 	\myminted{cpp}{Geometry/nearest_points.cpp}
 \section{凸包游戏\ \small(Grimoire)}
 	给定凸包，$ O(n \log n) $完成询问：
-	\begin{itemize}[wide=0pt]
+	\begin{itemize}[nosep,wide=0pt]
 		\item 点在凸包内
 		\item 凸包外的点到凸包的两个切点
 		\item 向量关于凸包的切点
@@ -45,14 +45,14 @@
 		顶点为整点的简单多边形，其面积$ A $，内部格点数$ i $，边上格点数$ b $满足：
 		\\$ A = i + \frac{b}{2} - 1 $
 	\subsection*{欧拉示性数}
-		\begin{itemize}[wide=0pt]
+		\begin{itemize}[nosep,wide=0pt]
 			\item 三维凸包的顶点个数$ V $，边数$ E $，面数$ F $满足：
 			\\$ V - E + F = 2 $
 			\item 平面图的顶点个数$ V $，边数$ E $，平面被划分的区域数$ F $，组成图形的连通部分的数目$ C $满足：
 			\\$ V - E + F = C + 1 $
 		\end{itemize}
 	\subsection*{几何公式}
-		\begin{itemize}[wide=0pt]
+		\begin{itemize}[nosep,wide=0pt]
 			\item \textbf{三角形}
 				\\半周长$ p = \frac{a + b + c}{2} $
 				\\面积$ S = \frac{1}{2} a H_a = \frac{1}{2} a b \cdot \sin C = \sqrt{p(p - a)(p - b)(p - c)} = p r = \frac{a b c}{4R} $
