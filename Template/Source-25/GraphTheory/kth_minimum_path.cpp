@@ -3,14 +3,12 @@ int n,m,cnt,S,T,Kth,N,TT,used[MN];
 int rt[MN],seq[MN],adj[MN],from[MN],dep[MN];
 LL dist[MN],w[MAXM],ans[MAXK];
 struct GivenEdge{
-  int u,v,w;
-  GivenEdge(){};
+  int u,v,w;GivenEdge(){};
   GivenEdge(int _u,int _v,int _w): u(_u),v(_v),
                                    w(_w){};
 }edge[MAXM];
 struct Edge {
-  int v,nxt,w;
-  Edge(){};
+  int v,nxt,w;Edge(){};
   Edge(int _v,int _nxt,int _w):v(_v),nxt(_nxt),
                                 w(_w){};
 }e[MAXM];
@@ -27,11 +25,9 @@ void dij(int S){
   while(!hp.empty())hp.pop();
   hp.push(make_pair(dist[S]=0,S));dep[S]=1;
   while(!hp.empty()){
-    pair<LL,int> now=hp.top();
-    hp.pop();
+    pair<LL,int> now=hp.top();hp.pop();
     int u = now.second;
-    if(used[u])continue;
-    else used[u]=true;
+    if(used[u])continue;else used[u]=true;
     for(int p=adj[u];p;p=e[p].nxt){
       int v=e[p].v;
       if(dist[u]+e[p].w<dist[v]){
@@ -41,9 +37,8 @@ void dij(int S){
     }
   }
   for(int i=1;i<=m;i++)w[i]=0;
-  for(int i=1;i<=N;i++)
-    if(from[i])w[from[i]]=-1;
-  for(int i = 1;i<=m;i++)
+  for(int i=1;i<=N;i++)if(from[i])w[from[i]]=-1;
+  for(int i=1;i<=m;i++)
     if(~w[i]&&dist[edge[i].u]<INF&&
        dist[edge[i].v]<INF)w[i]=-dist[edge[i].u]+
              (dist[edge[i].v]+edge[i].w);
@@ -72,19 +67,16 @@ inline int merge_simple(int u,int v){
   return u;
 }
 inline int merge_full(int u,int v){
-  if(!u)return v;
-  if(!v)return u;
+  if(!u)return v;if(!v)return u;
   if(hp[u].key>hp[v].key)swap(u,v);
-  int nownode=++cnt;
-  hp[nownode]=hp[u];
-  hp[nownode].rc=merge_full(hp[nownode].rc,v);
-  if(hp[hp[nownode].lc].dist<
-     hp[hp[nownode].rc].dist)
-    swap(hp[nownode].lc,hp[nownode].rc);
-  hp[nownode].dist=hp[hp[nownode].rc].dist+1;
-  return nownode;
+  int nnode=++cnt;hp[nnode]=hp[u];
+  hp[nnode].rc=merge_full(hp[nnode].rc,v);
+  if(hp[hp[nnode].lc].dist<hp[hp[nnode].rc].dist)
+    swap(hp[nnode].lc,hp[nnode].rc);
+  hp[nnode].dist=hp[hp[nnode].rc].dist+1;
+  return nnode;
 }
-using ele = pair<LL,int>;
+using ele=pair<LL,int>;
 priority_queue <ele,vector<ele>,greater<ele>> Q;
 int main(){
   while(scanf("%d%d",&n,&m)!=EOF){
@@ -96,11 +88,7 @@ int main(){
     N=n;memset(adj,0,sizeof(*adj)*(N+1));cnt=0;
     for(int i=1;i<=m;i++)
       addedge(edge[i].v,edge[i].u,edge[i].w);
-    dij(T);
-    if(dist[S]>TT){
-      puts("Whitesnake!");
-      continue;
-    }
+    dij(T);if(dist[S]>TT){/*NO PATH*/;continue;}
     for(int i=1;i<=N;i++)seq[i]=i;
     sort(seq+1,seq+N+1,cmp_dep);
     cnt=0;memset(adj,0,sizeof(*adj)*(N+1));
@@ -122,9 +110,7 @@ int main(){
     while(!Q.empty())Q.pop();
     Q.push(make_pair(dist[S],0));edge[0].v=S;
     for(int kth=1,t;kth<=Kth;kth++){
-      if(Q.empty()){
-        ans[kth] = -1;continue;
-      }
+      if(Q.empty()){ans[kth] = -1;continue;}
       pair<LL,int> now=Q.top();Q.pop();
       ans[kth]=now.first;int p=now.second;
       if(t=hp[p].lc)Q.push(make_pair(
@@ -133,7 +119,6 @@ int main(){
 	  	  hp[t].key+now.first-hp[p].key,t));
       if(t=rt[edge[hp[p].id].v])Q.push(make_pair(
           hp[t].key+now.first,t));
-    }
-    //ans[1..Kth]
+    }//ans[1..Kth]
   }
 }
