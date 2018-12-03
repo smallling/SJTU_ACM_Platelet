@@ -2,7 +2,7 @@
 
 for i in $(seq 1 $1)
 do
-    echo $i Starting...
+    echo $i Processing...
     xelatex -shell-escape -interaction=nonstopmode source.tex >> xelatex.log
     echo $i Done.
 done

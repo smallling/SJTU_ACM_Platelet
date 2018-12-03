@@ -6,8 +6,8 @@
 	\myminted{cpp}{Others/rsp.cpp}
 \section{O3\ \small(gy)}
 	\myminted{cpp}{Others/o3.cpp}
-\section{读入优化\ \small(ct)}
-    \myminted{cpp}{Others/input_optimize.cpp}
+%\section{读入优化\ \small(ct)}
+%    \myminted{cpp}{Others/input_optimize.cpp}
 \section{模拟退火\ \small(ct)}
 	\myminted{cpp}{Others/simulated_annealing.cpp}
 \section{Simpson积分\ \small(gy)}
@@ -21,8 +21,7 @@
 			\\先手胜当且仅当石子数满足：
 			\\$\lfloor (b - a) \times \phi \rfloor=a, (a \leq b, \phi = \frac{\sqrt{5} + 1}{2})$
 			\\先手胜对应的石子数构成两个序列：
-			\\Lower Wythoff sequence: $a_n = \lfloor n \times \phi \rfloor$
-			\\Upper Wythoff sequence: $b_n = \lfloor n \times \phi ^ 2 \rfloor$
+			\\$a_n = \lfloor n \times \phi \rfloor$, $b_n = \lfloor n \times \phi ^ 2 \rfloor$
 		\item Fibonacci nim
 			\\给定一堆石子，第一次可以取至少一个、少于石子总数数量的石子，之后每次可以取至少一个、不超过上次取石子数量两倍的石子，取走最后石子的胜
 			\\先手胜当且仅当石子数为斐波那契数

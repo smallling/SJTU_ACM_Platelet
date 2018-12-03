@@ -100,20 +100,20 @@
 		\\最小团覆盖$ = $最大点独立集：按完美消除序列从前往后贪心地选点加入点独立集
 	\subsection*{计数问题}
 		\begin{itemize}[nosep,wide=0pt]
-			\item \textbf{有根树计数}
+			\item 有根树计数
 				\\$ a_1 = 1 $
 				\\$ a_{n + 1} = \frac{\sum\limits_{j = 1}^{n} j \cdot a_j \cdot S_{n, j}}{n} $
 				\\$ S_{n, j} = \sum\limits_{i = 1}^{n / j} a_{n + 1 - ij} = S_{n - j, j} + a_{n + 1 - j} $
-			\item \textbf{无根树计数}
+			\item 无根树计数
 				\\$ \begin{cases}
 					a_n - \sum\limits_{i = 1}^{n / 2} a_i a_{n - i} & n \text{ is odd}\\
 					a_n - \sum\limits_{i = 1}^{n / 2} a_i a_{n - i} + \frac{1}{2} a_{\frac{n}{2}} (a_{\frac{n}{2}} + 1) & n \text{ is even}
 				\end{cases} $
-			\item \textbf{生成树计数}
+			\item 生成树计数
 				\\Kirchhoff Matrix $ T = Deg − A $, $ Deg $是度数对角阵, $ A $是邻接矩阵。无向图度数矩阵是每个点度数; 有向图度数矩阵是每个点入度。邻接矩阵$ A[u][v] $表示$ u \to v $边个数, 重边按照边数计算, 自环不计入度数。
 				\\无向图生成树计数: $ c = \left|K\text{的任意}1\text{个}n−1\text{阶主子式}\right| $
 				\\有向图外向树计数: $ c = \left|\text{去掉根所在的那阶得到的主子式}\right| $
-			\item \textbf{Edmonds Matrix}
+			\item Edmonds Matrix
 				\\Edmonds matrix $ A $ of a balanced ($ \left| U \right| = \left| V \right| $) bipartite graph $ G = (U, V, E) $：
 				\\$ A_{ij} = \begin{cases}
 					x_{ij} & (u_i, v_j) \in E\\
@@ -122,11 +122,11 @@
 				\\where the $ x_{ij} $ are indeterminates.
 				\\$ G $有完备匹配当且仅当关于$ x_{ij} $的多项式$ \det(A_{ij}) $不恒为$ 0 $。
 				\\完备匹配的个数等于多项式中单项式的个数
-			\item \textbf{偶数点完全图完备匹配计数}
+			\item 偶数点完全图完备匹配计数
 				\\$ (n - 1)!! $
-			\item \textbf{无根二叉树计数}
+			\item 无根二叉树计数
 				\\$ (2n - 5)!! $
-			\item \textbf{有根二叉树计数}
+			\item 有根二叉树计数
 				\\$ (2n - 3)!! $
 		\end{itemize}
 	\subsection*{上下界网络流}
