@@ -1,63 +1,52 @@
 point intersect(const line &a,const line &b){
   number s1 = det(a.b-a.a,b.a-a.a);
   number s2 = det(a.b-a.a,b.b-a.a);
-  return (b.a*s2-b.b*s1)/(s2-s1);
-}
+  return (b.a*s2-b.b*s1)/(s2-s1); }
 point projection(const point &p,const line &l){
   return l.a+(l.b-l.a)*dot(p-l.a,l.b-l.a)/
-             (l.b-l.a).len2();
-}
+             (l.b-l.a).len2(); }
 number dis(const point &p,const line &l){
   return std::abs(det(p-l.a,l.b-l.a))/
-         (l.b-l.a).len();
-}
+         (l.b-l.a).len(); }
 bool intersect(const line &l,const circle &a,
                point &p1,point &p2){
   number x = dot(l.a-a.o,l.b-l.a);
   number y = (l.b-l.a).len2();
   number d = x*x-y*((l.a-a.o).len2()-a.r*a.r);
   if(sgn(d)<0) return false;
-  point p = l.a-(l.b-l.a)*(x/y),
-    delta = (l.b-l.a)*(_sqrt(d)/y);
+  point p = l.a-(l.b-l.a)*(x/y);
+  point delta = (l.b-l.a)*(_sqrt(d)/y);
   p1 = p+delta,p2 = p-delta;
-  return true;
-}
+  return true; }
 bool intersect(const circle &a,const circle &b,
                point &p1,point &p2){
   if(a.o==b.o&&cmp(a.r,b.r)==0)
     return /* value for coincident circles */ false;
   number s1 = (b.o-a.o).len();
   if(cmp(s1,a.r+b.r)>0||
-     cmp(s1,std::abs(a.r-b.r))<0)
-    return false;
+     cmp(s1,std::abs(a.r-b.r))<0) return false;
   number s2 = (a.r*a.r-b.r*b.r)/s1;
   number aa = (s1+s2)/2,bb = (s1-s2)/2;
   point p = (b.o-a.o)*(aa/(aa+bb))+a.o;
   point delta = (b.o-a.o).unit().rotate90()*
                 _sqrt(a.r*a.r-aa*aa);
   p1 = p+delta,p2 = p-delta;
-  return true;
-}
-bool
-tangent(const point &p0,const circle &c,point &p1,
-        point &p2){
+  return true; }
+bool tangent(const point &p0,const circle &c,
+             point &p1,point &p2){
   number x = (p0-c.o).len2();
   number d = x-c.r*c.r;
   if(sgn(d)<0) return false;
-  if(sgn(d)==0)
-    return /* value for point_on_line */ false;
+  if(sgn(d)==0) return /* point_on_line */ false;
   point p = (p0-c.o)*(c.r*c.r/x);
   point delta =
     ((p0-c.o)*(-c.r*_sqrt(d)/x)).rotate90();
-  p1 = c.o+p+delta;
-  p2 = c.o+p-delta;
-  return true;
-}
+  p1 = c.o+p+delta; p2 = c.o+p-delta;
+  return true; }
 bool ex_tangent(const circle &a,const circle &b,
                 line &l1,line &l2){
   if(cmp(std::abs(a.r-b.r),(b.o-a.o).len())==0){
-    point p1,p2;
-    intersect(a,b,p1,p2);
+    point p1,p2; intersect(a,b,p1,p2);
     l1 = l2 = line(p1,p1+(a.o-p1).rotate90());
     return true;
   }else if(cmp(a.r,b.r)==0){
@@ -70,30 +59,19 @@ bool ex_tangent(const circle &a,const circle &b,
     point p = (b.o*a.r-a.o*b.r)/(a.r-b.r);
     point p1,p2,q1,q2;
     if(tangent(p,a,p1,p2)&&tangent(p,b,q1,q2)){
-      l1 = line(p1,q1);
-      l2 = line(p2,q2);
+      l1 = line(p1,q1); l2 = line(p2,q2);
       return true;
-    }else{
-      return false;
-    }
-  }
-}
+    }else{ return false; }}}
 bool in_tangent(const circle &a,const circle &b,
                 line &l1,line &l2){
   if(cmp(a.r+b.r,(b.o-a.o).len())==0){
-    point p1,p2;
-    intersect(a,b,p1,p2);
+    point p1,p2; intersect(a,b,p1,p2);
     l1 = l2 = line(p1,p1+(a.o-p1).rotate90());
     return true;
   }else{
     point p = (b.o*a.r+a.o*b.r)/(a.r+b.r);
     point p1,p2,q1,q2;
     if(tangent(p,a,p1,p2)&&tangent(p,b,q1,q2)){
-      l1 = line(p1,q1);
-      l2 = line(p2,q2);
+      l1 = line(p1,q1); l2 = line(p2,q2);
       return true;
-    }else{
-      return false;
-    }
-  }
-}
+    }else{ return false; }}}

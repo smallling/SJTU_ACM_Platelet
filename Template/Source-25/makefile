@@ -3,4 +3,4 @@ release.pdf: */* *.tex
 	mv source.pdf release.pdf
 
 clean:
-	rm *.log *.aux *.synctex.gz *.toc source.pdf || echo ""
+	rm *.log *.aux *.synctex.gz *.toc source.pdf || printf ""
