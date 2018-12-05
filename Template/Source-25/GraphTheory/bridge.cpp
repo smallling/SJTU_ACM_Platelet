@@ -8,6 +8,4 @@ void tarjan(int x,int fa){
         cmin(low[x],low[iter->to]);
         if(dfn[x]<low[iter->to])
           ans[x][iter->to] = ans[iter->to][x] = 1;
-      }else cmin(low[x],dfn[iter->to]);
-    }
-}
+      }else cmin(low[x],dfn[iter->to]); } }

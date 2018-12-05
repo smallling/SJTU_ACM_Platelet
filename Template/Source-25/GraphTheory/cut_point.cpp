@@ -9,16 +9,10 @@ void tarjan(int x,int fa){
         if(dfn[x]<=low[iter->to]){
           cut[x] = 1;
           if(!fa&&dfn[x]<low[iter->to]) num = 233;
-          else if(!fa) ++num;
-        }
-      }else cmin(low[x],dfn[iter->to]);
-    }
-}
+          else if(!fa) ++num;}
+      }else cmin(low[x],dfn[iter->to]);}}
 int main(){
   for(int i = 1;i<=n;++i)
     if(!dfn[i]){
-      num = 0;
-      tarjan(i,0);
-      if(num==1) cut[i] = 0;
-    }
-}
+      num = 0; tarjan(i,0);
+      if(num==1) cut[i] = 0;}}
