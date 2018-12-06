@@ -75,8 +75,9 @@
 	返回$ x_{m \times 1} $使得$ \max \lbrace c_{1 \times m} \cdot x_{m \times 1} \mid x_{m \times 1} \geq 0_{m \times 1}, A_{n \times m} \cdot x_{m \times 1} \leq b_{n \times 1} \rbrace $
 	\myminted{cpp}{Math/simplex.cpp}
 \section{数学知识\ \small(gy)}
-\newcommand{\eularian}{\genfrac\langle\rangle{0pt}{0}}
-\newcommand{\Eularian}[2]{\left\langle\!\!\!\eularian{#1}{#2}\!\!\!\right\rangle}
+\newcommand{\eularian}{\genfrac\langle\rangle{0pt}{2}}
+%\newcommand{\Eularian}[2]{\left\langle\!\eularian{#1}{#2}\!\right\rangle}
+\newcommand{\Eularian}{\genfrac{\langle\!\langle}{\rangle\!\rangle}{0pt}{2}}
 	\subsection*{原根}
 		当$ \gcd(a, m) = 1 $时，使$ a^x \equiv 1 \pmod m $成立的最小正整数$ x $称为$ a $对于模$ m $的阶，计为$ \text{ord}_m(a) $。
 		\\阶的性质：$ a^n \equiv 1 \pmod m $的充要条件是$ \text{ord}_m(a) \mid n $，可推出$ \text{ord}_m(a) \mid \psi(m) $。
@@ -95,11 +96,10 @@
 		\end{itemize}
 	\subsection*{错排公式}
 		$ D_n $表示$ n $个元素错位排列的方案数
-		\\$ D_1 = 0, D_2 = 1 $
-		\\$ D_n = (n - 1)(D_{n - 2} + D_{n - 1}), n \geq 3 $
+		\\$ D_1 = 0, D_2 = 1 $, $ D_n = (n - 1)(D_{n - 2} + D_{n - 1}), n \geq 3 $
 		\\$ D_n = n! \cdot (1 - \frac{1}{1!} + \frac{1}{2!} - \dots + (-1)^n\frac{1}{n!}) $
 	\subsection*{Fibonacci sequence}
-		$ F_0 = 0, F_1 = 1 $
+		\noindent$ F_0 = 0, F_1 = 1 $
 		\\$ F_n = F_{n - 1} + F_{n - 2} $
 		\\$ F_{n + 1} \cdot F_{n - 1} - F_{n}^2 = (-1)^n $
 		\\$ F_{-n} = (-1)^n F_n $
@@ -107,8 +107,7 @@
 		\\$ \gcd(F_m, F_n) = F_{\gcd(m, n)} $
 		\\$ F_m \mid F_n^2 \Leftrightarrow nF_n \mid m $
 		\\$ F_n = \frac{\varphi^n - \varPsi^n}{\sqrt{5}}, \varphi = \frac{1 + \sqrt{5}}{2}, \varPsi = \frac{1 - \sqrt{5}}{2} $
-		\\$ F_n = \lfloor \frac{\varphi^n}{\sqrt{5}} + \frac{1}{2} \rfloor, n \geq 0 $
-		\\$ n(F) = \lfloor \log_\varphi(F \cdot \sqrt{5} + \frac{1}{2}) \rfloor $
+		\\$ F_n = \lfloor \frac{\varphi^n}{\sqrt{5}} + \frac{1}{2} \rfloor, n \geq 0 $, $ n(F) = \lfloor \log_\varphi(F \cdot \sqrt{5} + \frac{1}{2}) \rfloor $
 	\subsection*{Stirling number (1st kind)}
 		用$ {n \brack k} $表示Stirling number (1st kind)，为将$ n $个元素分成$ k $个环的方案数
 		\\$ {n + 1 \brack k} = n {n \brack k} + {n \brack k - 1}, k > 0 $
@@ -117,15 +116,11 @@
 		\\$ {x \brack x - n} = \sum\limits_{k = 0}^{n} \Eularian{n}{k} \binom{x + k}{2 n} $
 	\subsection*{Stirling number (2nd kind)}
 		用$ {n \brace k} $表示Stirling number (2nd kind)，为将$ n $个元素划分成$ k $个非空集合的方案数
-		\\$ {n + 1 \brace k} = k {n \brace k} + {n \brace k - 1}, k > 0 $
-		\\$ {0 \brace 0} = 1, {n \brace 0} = {0 \brace n} = 0, n > 0 $
-		\\$ {n \brace k} = \frac{1}{k!} \sum\limits_{j = 0}^{k} (-1) ^ {k - j} \binom{k}{j} j^n $
-		\\$ {n \brace k} $
-		\\$ {x \brace x - n} = \sum\limits_{k = 0}^{n} \Eularian{n}{k} \binom{x + n - k - 1}{2 n} $
+		\\$ {n + 1 \brace k} = k {n \brace k} + {n \brace k - 1}, k > 0 $, $ {0 \brace 0} = 1, {n \brace 0} = {0 \brace n} = 0, n > 0 $
+		\\$ {n \brace k} = \frac{1}{k!} \sum\limits_{j = 0}^{k} (-1) ^ {k - j} \binom{k}{j} j^n $, $ {x \brace x - n} = \sum\limits_{k = 0}^{n} \Eularian{n}{k} \binom{x + n - k - 1}{2 n} $
 	\subsection*{Catalan number}
 		$ c_n $表示长度为$ 2n $的合法括号序的数量
-		\\$ c_1 = 1 $, $ c_{n+1} = \sum\limits_{i=1}^{n} c_i \times c_{n + 1 - i} $
-		\\$ c_n = \frac{\binom{2n}{n}}{n + 1} $
+		\\$ c_1 = 1 $, $ c_{n+1} = \sum\limits_{i=1}^{n} c_i \times c_{n + 1 - i} $, $ c_n = \frac{\binom{2n}{n}}{n + 1} $
 	\subsection*{Bell number}
 		$ B_n $表示基数为$ n $的集合的划分方案数
 		\\$ B_i = \begin{cases}
@@ -138,7 +133,7 @@
 		$ p(n) $表示将$ n $划分为若干个正整数之和的方案数
 		\\$ p(n) = \sum\limits_{k \in \mathbb{N}^\ast} (-1)^{k - 1} p(n - \frac{k(3k - 1)}{2}) $
 	\subsection*{Bernoulli number}
-		$ \sum\limits_{j = 0}^{m} \binom{m + 1}{j} B_j = 0, m > 0 $
+		\noindent$ \sum\limits_{j = 0}^{m} \binom{m + 1}{j} B_j = 0, m > 0 $
 		\\$ B_i = \begin{cases}
 			1 & i = 0\\
 			-\frac{\sum\limits_{j = 0}^{i - 1} \binom{i + 1}{j} B_j}{i + 1} & i > 0
@@ -149,16 +144,14 @@
 		\\排列方案数为$ (2n - 1)!! $
 	\subsection*{Eulerian number}
 		$ \eularian{n}{k} $表示$ 1 $到$ n $的排列中，恰有$ k $个数比前一个大的方案数
-		\\$ \eularian{n}{0} = \eularian{n}{n - 1} = 1 $
-		\\$ \eularian{0}{m} = [m = 0] $
+		\\$ \eularian{n}{0} = \eularian{n}{n - 1} = 1 $, $ \eularian{0}{m} = [m = 0] $
 		\\$ \eularian{n}{m} = \eularian{n}{n - 1 - m} $
 		\\$ \eularian{n}{m} = (m + 1) \eularian{n - 1}{m} + (n - m) \eularian{n - 1}{m - 1} $
 		\\$ \eularian{n}{m} = \sum\limits_{k = 0}^{m} (-1)^k \binom{n + 1}{k} (m + 1 - k)^n $
 	\subsection*{Eulerian number (2nd kind)}
 		$ \Eularian{n}{k} $表示Stirling permutation中，恰有$ k $个数比前一个大的方案数
 		\\$ \Eularian{n}{m} = (2n - m - 1) \Eularian{n - 1}{m - 1} + (m + 1) \Eularian{n - 1}{m} $
-		\\$ \Eularian{n}{0} = 1 $
-		\\$ \Eularian{0}{m} = [m = 0] $
+		\\$ \Eularian{n}{0} = 1 $, $ \Eularian{0}{m} = [m = 0] $
 	\subsection*{Burnside lemma}
 		Let $ G $ be a finite group that acts on a set $ X $. For each $ g $ in $ G $ let $ X^g $ denote the set of elements in $ X $ that are fixed by $ g $ (also said to be left invariant by $ g $), i.e. $ X^g = \lbrace x \in X \mid g.x = x \rbrace $. Burnside's lemma asserts the following formula for the number of orbits, denoted $ \left| X / G \right| $:
 		\\$ \left| X / G \right| = \frac{1}{\left| G \right|} \sum\limits_{g \in G}^{} \left| X^g \right| $
