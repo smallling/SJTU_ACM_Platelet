@@ -19,18 +19,14 @@ bool intersect(const line &l,const circle &a,
   p1 = p+delta,p2 = p-delta;
   return true; }
 bool intersect(const circle &a,const circle &b,
-               point &p1,point &p2){
-  if(a.o==b.o&&cmp(a.r,b.r)==0)
-    return /* value for coincident circles */ false;
-  number s1 = (b.o-a.o).len();
-  if(cmp(s1,a.r+b.r)>0||
-     cmp(s1,std::abs(a.r-b.r))<0) return false;
-  number s2 = (a.r*a.r-b.r*b.r)/s1;
-  number aa = (s1+s2)/2,bb = (s1-s2)/2;
-  point p = (b.o-a.o)*(aa/(aa+bb))+a.o;
-  point delta = (b.o-a.o).unit().rotate90()*
-                _sqrt(a.r*a.r-aa*aa);
-  p1 = p+delta,p2 = p-delta;
+               point &p1,point &p2) {
+  number x = (a.o-b.o).len2();
+  number y = ((a.r*a.r-b.r*b.r)/x+1)/2;
+  number d = a.r*a.r/x-y*y;
+  if (sgn(d) < 0) return false;
+  point p0 = a.o+(b.o-a.o)*y;
+  point delta = ((b.o-a.o)*_sqrt(d)).rotate90();
+  p1 = p0-delta; p2 = p0+delta;
   return true; }
 bool tangent(const point &p0,const circle &c,
              point &p1,point &p2){
