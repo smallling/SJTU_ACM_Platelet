@@ -3,7 +3,12 @@ sy on
 ino <tab> <c-n>
 ino <s-tab> <tab>
 au bufwinenter * winc L
+
+" support COPY
 nm <f6> ggVG"+y
+" do not support COPY
+nm <f6> :!gedit %<cr>
+
 nm <f7> :w<cr>:make %<<cr>
 nm <f8> :!./%<<cr>
 nm <f9> :!./%< < in<cr>
