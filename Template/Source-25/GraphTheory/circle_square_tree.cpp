@@ -19,5 +19,4 @@ void dfs(int x){
         add(scc,x,minn);
       }
     }else if(!id[iter->to])
-      cmin(low[x],dfn[iter->to]);
-}
+      cmin(low[x],dfn[iter->to]); }

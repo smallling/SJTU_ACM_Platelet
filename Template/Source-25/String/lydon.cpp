@@ -6,9 +6,8 @@ void mnsuf(char *s,int *mn,int n){
     for(;k<n&&s[j]<=s[k];++k)
       if(s[j]==s[k]) mn[k] = mn[j]+k-j,++j;
       else mn[k] = j = i;
-    for(;i<=j;i += k-j){}
-  }
-} // lyn+=s[i..i+k-j-1]
+    for(;i<=j;i += k-j){}}}
+// lyn+=s[i..i+k-j-1]
 //每个前缀的最大后缀
 void mxsuf(char *s,int *mx,int n){
   fill(mx,mx+n,-1);
@@ -17,8 +16,5 @@ void mxsuf(char *s,int *mx,int n){
     if(mx[i]==-1) mx[i] = i;
     for(;k<n&&s[j]>=s[k];++k){
       j = s[j]==s[k] ? j+1 : i;
-      if(mx[k]==-1) mx[k] = i;
-    }
-    for(;i<=j;i += k-j){}
-  }
-}
+      if(mx[k]==-1) mx[k] = i; }
+    for(;i<=j;i += k-j){}}}
