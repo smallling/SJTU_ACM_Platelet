@@ -25,7 +25,7 @@
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
-\renewcommand{\contentsname}{目录}
+\renewcommand{\contentsname}{}
 \renewcommand{\chaptertitlename}{Ch}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
@@ -83,10 +83,15 @@
 		\small{Shanghai Jiao Tong University, 2018}
 	\end{titlepage}
 	\clearpage
-	\small
 	\setcounter{page}{1}
+    \noindent\rule\linewidth{2pt}\\[0.3cm]
+    \centerline{\textbf{\Huge Platelet}}\\[\baselineskip]
+    \centerline{\large Team Reference Material}\\
+    \centerline{\small (25-page version)}\\[0.3cm]
+    \noindent\rule\linewidth{2pt}
+	\small
 	\begin{multicols}{2}
-		\tableofcontents
+        \tableofcontents
 	\end{multicols}
 	%\clearpage
 	%\noindent\rule\linewidth{2pt}
@@ -97,4 +102,7 @@
 	\mychapter{String}{string.tex}
 	\mychapter{Data Structure}{data_structure.tex}
 	\mychapter{Others}{others.tex}
+    \vfill
+    \centerline{\includegraphics[scale=0.2]{Platelet.jpg}}
+    \vfill
 \end{document}
